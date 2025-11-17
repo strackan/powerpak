@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Network Connections - MCP Universe</title>
+  <link rel="stylesheet" href="assets/marketplace.css">
+  <style>
+    .network-container {
+      background: var(--white);
+      border-radius: 12px;
+      padding: 2rem;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    }
+
+    .network-header {
+      margin-bottom: 2rem;
+    }
+
+    .network-header h2 {
+      margin-bottom: 0.5rem;
+    }
+
+    .network-visual {
+      background: linear-gradient(135deg, #f9fafb 0%, #f3f4f6 100%);
+      border-radius: 12px;
+      padding: 3rem;
+      margin-bottom: 2rem;
+      min-height: 500px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .network-node {
+      position: absolute;
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      background: white;
+      border: 3px solid var(--primary);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 1.5rem;
+      cursor: pointer;
+      transition: all 0.3s;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .network-node:hover {
+      transform: scale(1.1);
+      box-shadow: 0 8px 16px rgba(37, 99, 235, 0.3);
+    }
+
+    .network-node.center {
+      width: 100px;
+      height: 100px;
+      font-size: 2rem;
+      border-width: 4px;
+      background: linear-gradient(135deg, #2563eb 0%, #7c3aed 100%);
+      color: white;
+      z-index: 10;
+    }
+
+    .network-node-label {
+      position: absolute;
+      bottom: -25px;
+      left: 50%;
+      transform: translateX(-50%);
+      white-space: nowrap;
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: var(--text);
+    }
+
+    .network-line {
+      position: absolute;
+      height: 2px;
+      background: linear-gradient(90deg, var(--primary) 0%, transparent 100%);
+      transform-origin: left center;
+      opacity: 0.3;
+      pointer-events: none;
+    }
+
+    .connection-strength {
+      display: inline-block;
+      padding: 0.25rem 0.75rem;
+      border-radius: 12px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      margin-left: 0.5rem;
+    }
+
+    .strength-high {
+      background: #dcfce7;
+      color: #166534;
+    }
+
+    .strength-medium {
+      background: #fef3c7;
+      color: #92400e;
+    }
+
+    .strength-low {
+      background: #e5e7eb;
+      color: #4b5563;
+    }
+
+    .recommendations {
+      display: grid;
+      gap: 1rem;
+    }
+
+    .recommendation-card {
+      background: var(--background);
+      border-radius: 8px;
+      padding: 1.5rem;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      transition: all 0.2s;
+      cursor: pointer;
+    }
+
+    .recommendation-card:hover {
+      background: white;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .recommendation-avatar {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 1.5rem;
+      font-weight: 700;
+      flex-shrink: 0;
+    }
+
+    .recommendation-info {
+      flex: 1;
+    }
+
+    .recommendation-name {
+      font-weight: 700;
+      margin-bottom: 0.25rem;
+    }
+
+    .recommendation-title {
+      color: var(--muted);
+      font-size: 0.875rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .recommendation-reason {
+      color: var(--text);
+      font-size: 0.9375rem;
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="nav">
+    <div class="nav-content">
+      <a href="index.html" class="nav-logo">MCP Universe</a>
+      <ul class="nav-links">
+        <li><a href="index.html">Marketplace</a></li>
+        <li><a href="onboarding.html">Get Started</a></li>
+        <li><a href="#" class="active">Network</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="container">
+    <div class="network-container">
+      <div class="network-header">
+        <h2>Network Connections</h2>
+        <p style="color: var(--muted);">
+          Discover experts connected to Justin Strackany through shared expertise and complementary skills.
+        </p>
+      </div>
+
+      <!-- Network Visualization -->
+      <div class="network-visual">
+        <!-- Center Node -->
+        <div class="network-node center" style="top: 50%; left: 50%; transform: translate(-50%, -50%);">
+          JS
+          <div class="network-node-label">Justin Strackany</div>
+        </div>
+
+        <!-- Connected Nodes - Sales Leaders -->
+        <div class="network-node" style="top: 20%; left: 25%;" onclick="window.location.href='../profile-pages/premium.html'">
+          SL
+          <div class="network-node-label">Scott Leese</div>
+        </div>
+
+        <div class="network-node" style="top: 15%; left: 65%;" onclick="window.location.href='../profile-pages/premium.html'">
+          ET
+          <div class="network-node-label">Emily Thompson</div>
+        </div>
+
+        <!-- Customer Success -->
+        <div class="network-node" style="top: 45%; left: 15%;" onclick="window.location.href='../profile-pages/enhanced.html'">
+          AR
+          <div class="network-node-label">Alex Rivera</div>
+        </div>
+
+        <div class="network-node" style="top: 55%; left: 85%;" onclick="window.location.href='../profile-pages/enhanced.html'">
+          JL
+          <div class="network-node-label">Jennifer Lee</div>
+        </div>
+
+        <!-- Related -->
+        <div class="network-node" style="top: 75%; left: 30%;" onclick="window.location.href='../profile-pages/enhanced.html'">
+          MJ
+          <div class="network-node-label">Marcus Johnson</div>
+        </div>
+
+        <div class="network-node" style="top: 80%; left: 60%;" onclick="window.location.href='../profile-pages/premium.html'">
+          PP
+          <div class="network-node-label">Priya Patel</div>
+        </div>
+
+        <div class="network-node" style="top: 35%; right: 15%;" onclick="window.location.href='../profile-pages/enhanced.html'">
+          AW
+          <div class="network-node-label">Amanda White</div>
+        </div>
+
+        <!-- SVG for connection lines would go here in a real implementation -->
+        <svg style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none;">
+          <defs>
+            <linearGradient id="lineGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+              <stop offset="0%" style="stop-color:#2563eb;stop-opacity:0.4" />
+              <stop offset="100%" style="stop-color:#2563eb;stop-opacity:0.1" />
+            </linearGradient>
+          </defs>
+
+          <!-- Lines connecting center to nodes -->
+          <line x1="50%" y1="50%" x2="25%" y2="20%" stroke="url(#lineGradient)" stroke-width="2"/>
+          <line x1="50%" y1="50%" x2="65%" y2="15%" stroke="url(#lineGradient)" stroke-width="2"/>
+          <line x1="50%" y1="50%" x2="15%" y2="45%" stroke="url(#lineGradient)" stroke-width="2"/>
+          <line x1="50%" y1="50%" x2="85%" y2="55%" stroke="url(#lineGradient)" stroke-width="2"/>
+          <line x1="50%" y1="50%" x2="30%" y2="75%" stroke="url(#lineGradient)" stroke-width="2"/>
+          <line x1="50%" y1="50%" x2="60%" y2="80%" stroke="url(#lineGradient)" stroke-width="2"/>
+          <line x1="50%" y1="50%" x2="85%" y2="35%" stroke="url(#lineGradient)" stroke-width="2"/>
+        </svg>
+      </div>
+
+      <!-- Connection Insights -->
+      <div style="background: var(--background); border-radius: 8px; padding: 1.5rem; margin-bottom: 2rem;">
+        <h3 style="margin-bottom: 1rem;">Connection Insights</h3>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem;">
+          <div>
+            <div style="font-size: 2rem; font-weight: 700; color: var(--primary);">87%</div>
+            <div style="color: var(--muted); font-size: 0.875rem;">Users who install Justin also install Scott Leese</div>
+          </div>
+          <div>
+            <div style="font-size: 2rem; font-weight: 700; color: var(--primary);">73%</div>
+            <div style="color: var(--muted); font-size: 0.875rem;">Install customer success experts alongside</div>
+          </div>
+          <div>
+            <div style="font-size: 2rem; font-weight: 700; color: var(--primary);">62%</div>
+            <div style="color: var(--muted); font-size: 0.875rem;">Also use product and marketing experts</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Recommendations -->
+      <h3 style="margin-bottom: 1.5rem;">People Who Installed Justin Also Installed</h3>
+      <div class="recommendations">
+        <div class="recommendation-card" onclick="window.location.href='../profile-pages/premium.html'">
+          <div class="recommendation-avatar">SL</div>
+          <div class="recommendation-info">
+            <div class="recommendation-name">
+              Scott Leese
+              <span class="connection-strength strength-high">Strong Connection</span>
+            </div>
+            <div class="recommendation-title">Sales Leadership Expert</div>
+            <div class="recommendation-reason">
+              87% of Justin's users also use Scott. Both specialize in building high-performing sales teams.
+            </div>
+          </div>
+          <button class="btn btn-primary btn-small">View Profile</button>
+        </div>
+
+        <div class="recommendation-card" onclick="window.location.href='../profile-pages/enhanced.html'">
+          <div class="recommendation-avatar">AR</div>
+          <div class="recommendation-info">
+            <div class="recommendation-name">
+              Alex Rivera
+              <span class="connection-strength strength-high">Strong Connection</span>
+            </div>
+            <div class="recommendation-title">Head of CS @ Zendesk</div>
+            <div class="recommendation-reason">
+              73% correlation. Customer success pairs perfectly with Justin's sales and GTM expertise.
+            </div>
+          </div>
+          <button class="btn btn-primary btn-small">View Profile</button>
+        </div>
+
+        <div class="recommendation-card" onclick="window.location.href='../profile-pages/premium.html'">
+          <div class="recommendation-avatar">ET</div>
+          <div class="recommendation-info">
+            <div class="recommendation-name">
+              Emily Thompson
+              <span class="connection-strength strength-high">Strong Connection</span>
+            </div>
+            <div class="recommendation-title">Enterprise Sales Expert</div>
+            <div class="recommendation-reason">
+              71% correlation. Emily's enterprise sales expertise complements Justin's frameworks.
+            </div>
+          </div>
+          <button class="btn btn-primary btn-small">View Profile</button>
+        </div>
+
+        <div class="recommendation-card" onclick="window.location.href='../profile-pages/enhanced.html'">
+          <div class="recommendation-avatar">MJ</div>
+          <div class="recommendation-info">
+            <div class="recommendation-name">
+              Marcus Johnson
+              <span class="connection-strength strength-medium">Medium Connection</span>
+            </div>
+            <div class="recommendation-title">CMO @ GrowthLabs</div>
+            <div class="recommendation-reason">
+              62% correlation. Marketing and sales alignment is crucial for revenue growth.
+            </div>
+          </div>
+          <button class="btn btn-primary btn-small">View Profile</button>
+        </div>
+
+        <div class="recommendation-card" onclick="window.location.href='../profile-pages/premium.html'">
+          <div class="recommendation-avatar">PP</div>
+          <div class="recommendation-info">
+            <div class="recommendation-name">
+              Priya Patel
+              <span class="connection-strength strength-medium">Medium Connection</span>
+            </div>
+            <div class="recommendation-title">VP Product @ Stripe</div>
+            <div class="recommendation-reason">
+              58% correlation. Product strategy informs go-to-market and pricing decisions.
+            </div>
+          </div>
+          <button class="btn btn-primary btn-small">View Profile</button>
+        </div>
+
+        <div class="recommendation-card" onclick="window.location.href='../profile-pages/enhanced.html'">
+          <div class="recommendation-avatar">JL</div>
+          <div class="recommendation-info">
+            <div class="recommendation-name">
+              Jennifer Lee
+              <span class="connection-strength strength-medium">Medium Connection</span>
+            </div>
+            <div class="recommendation-title">Director of CS @ HubSpot</div>
+            <div class="recommendation-reason">
+              54% correlation. Another strong customer success expert with complementary expertise.
+            </div>
+          </div>
+          <button class="btn btn-primary btn-small">View Profile</button>
+        </div>
+
+        <div class="recommendation-card" onclick="window.location.href='../profile-pages/enhanced.html'">
+          <div class="recommendation-avatar">AW</div>
+          <div class="recommendation-info">
+            <div class="recommendation-name">
+              Amanda White
+              <span class="connection-strength strength-low">Related</span>
+            </div>
+            <div class="recommendation-title">Sales Enablement Expert</div>
+            <div class="recommendation-reason">
+              46% correlation. Sales enablement strengthens the frameworks Justin provides.
+            </div>
+          </div>
+          <button class="btn btn-primary btn-small">View Profile</button>
+        </div>
+      </div>
+
+      <div style="text-align: center; margin-top: 3rem; padding: 2rem; background: linear-gradient(135deg, #eff6ff 0%, #f3e8ff 100%); border-radius: 12px;">
+        <h3 style="margin-bottom: 1rem;">Build Your Expert Network</h3>
+        <p style="color: var(--muted); margin-bottom: 1.5rem;">
+          Install multiple MCP servers to create a comprehensive AI advisory team tailored to your needs.
+        </p>
+        <a href="index.html" class="btn btn-primary">Browse All Experts</a>
+      </div>
+    </div>
+  </div>
+
+  <script src="assets/marketplace.js"></script>
+</body>
+</html>

@@ -1,0 +1,11 @@
+{
+  "mcpServers": {
+    "justin-voice": {
+      "command": "node",
+      "args": [
+        "C:\\Users\\strac\\dev\\MCP-World\\packages\\justin-voice-server\\dist\\index.js"
+      ],
+      "env": {}
+    }
+  }
+}

@@ -13,15 +13,19 @@
     "start": "node dist/index.js",
     "test": "vitest",
     "clean": "rm -rf dist",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "extract-templates": "tsc && node dist/scripts/extract-templates.js"
   },
   "dependencies": {
     "@modelcontextprotocol/sdk": "^1.0.4",
+    "@mcp-world/shared-types": "*",
     "axios": "^1.6.0",
-    "sql.js": "^1.10.0",
     "zod": "^3.22.0"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "typescript": "^5.3.0"
+  },
   "keywords": ["mcp", "voice", "writing", "personality", "templates"],
   "author": "Justin Strackany",
   "license": "MIT"

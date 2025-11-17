@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MCP Universe - Mockups Overview</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Inter', 'SF Pro Display', 'Segoe UI', sans-serif;
+      background: linear-gradient(135deg, #2563eb 0%, #7c3aed 100%);
+      color: white;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem;
+    }
+
+    .container {
+      max-width: 900px;
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(10px);
+      border-radius: 24px;
+      padding: 3rem;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    }
+
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+      text-align: center;
+    }
+
+    .tagline {
+      font-size: 1.5rem;
+      text-align: center;
+      opacity: 0.9;
+      margin-bottom: 3rem;
+    }
+
+    .links {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+      margin-bottom: 3rem;
+    }
+
+    .link-card {
+      background: white;
+      color: #111827;
+      padding: 2rem;
+      border-radius: 12px;
+      text-decoration: none;
+      transition: all 0.2s;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .link-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+    }
+
+    .link-card-icon {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+      display: block;
+    }
+
+    .link-card-title {
+      font-size: 1.25rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+      color: #2563eb;
+    }
+
+    .link-card-description {
+      color: #6b7280;
+      font-size: 0.9375rem;
+      line-height: 1.5;
+    }
+
+    .info {
+      background: rgba(255, 255, 255, 0.15);
+      border-radius: 12px;
+      padding: 1.5rem;
+      margin-top: 2rem;
+    }
+
+    .info h3 {
+      margin-bottom: 0.5rem;
+      font-size: 1.125rem;
+    }
+
+    .info p {
+      opacity: 0.9;
+      line-height: 1.6;
+    }
+
+    .docs-links {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+      margin-top: 1rem;
+    }
+
+    .docs-link {
+      color: white;
+      text-decoration: none;
+      padding: 0.5rem 1rem;
+      background: rgba(255, 255, 255, 0.2);
+      border-radius: 6px;
+      font-size: 0.9375rem;
+      transition: all 0.2s;
+    }
+
+    .docs-link:hover {
+      background: rgba(255, 255, 255, 0.3);
+    }
+
+    .footer {
+      text-align: center;
+      margin-top: 2rem;
+      opacity: 0.8;
+      font-size: 0.875rem;
+    }
+
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 2rem;
+      }
+
+      .tagline {
+        font-size: 1.125rem;
+      }
+
+      .links {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>MCP Universe</h1>
+    <div class="tagline">LinkedIn for AI - Demo Mockups</div>
+
+    <div class="links">
+      <a href="marketplace-ui/index.html" class="link-card">
+        <span class="link-card-icon">🏪</span>
+        <div class="link-card-title">Marketplace</div>
+        <div class="link-card-description">
+          Browse 15 expert profiles, filter by category and tier, search and discover MCP servers.
+        </div>
+      </a>
+
+      <a href="profile-pages/basic.html" class="link-card">
+        <span class="link-card-icon">👤</span>
+        <div class="link-card-title">Basic Tier</div>
+        <div class="link-card-description">
+          Simple, free profile with expertise areas and basic MCP installation.
+        </div>
+      </a>
+
+      <a href="profile-pages/enhanced.html" class="link-card">
+        <span class="link-card-icon">⭐</span>
+        <div class="link-card-title">Enhanced Tier</div>
+        <div class="link-card-description">
+          Voice extraction, custom tools, personality blend, and specialized frameworks.
+        </div>
+      </a>
+
+      <a href="profile-pages/premium.html" class="link-card">
+        <span class="link-card-icon">💎</span>
+        <div class="link-card-title">Premium Tier</div>
+        <div class="link-card-description">
+          Unlimited tools, white-glove onboarding, private templates, and full customization.
+        </div>
+      </a>
+
+      <a href="marketplace-ui/onboarding.html" class="link-card">
+        <span class="link-card-icon">🚀</span>
+        <div class="link-card-title">Onboarding Flow</div>
+        <div class="link-card-description">
+          4-step installation wizard from choosing a tier to getting your first prompts.
+        </div>
+      </a>
+
+      <a href="marketplace-ui/network.html" class="link-card">
+        <span class="link-card-icon">🕸️</span>
+        <div class="link-card-title">Network Graph</div>
+        <div class="link-card-description">
+          Visual connections showing "people who installed X also installed Y" recommendations.
+        </div>
+      </a>
+    </div>
+
+    <div class="info">
+      <h3>About These Mockups</h3>
+      <p>
+        High-fidelity, clickable HTML mockups demonstrating the MCP Universe vision.
+        All pages are fully functional and interlinked. No backend required - just open
+        in any modern browser and explore.
+      </p>
+      <div class="docs-links">
+        <a href="QUICK-START.md" class="docs-link">Quick Start Guide</a>
+        <a href="DEMO-GUIDE.md" class="docs-link">Demo Script</a>
+        <a href="README.md" class="docs-link">Full Documentation</a>
+      </div>
+    </div>
+
+    <div class="footer">
+      Built for the December 4 demo • MCP Universe © 2024
+    </div>
+  </div>
+
+  <script>
+    // Add subtle animation on load
+    document.addEventListener('DOMContentLoaded', function() {
+      const cards = document.querySelectorAll('.link-card');
+      cards.forEach((card, index) => {
+        card.style.opacity = '0';
+        card.style.transform = 'translateY(20px)';
+        setTimeout(() => {
+          card.style.transition = 'all 0.5s ease';
+          card.style.opacity = '1';
+          card.style.transform = 'translateY(0)';
+        }, index * 100);
+      });
+    });
+  </script>
+</body>
+</html>

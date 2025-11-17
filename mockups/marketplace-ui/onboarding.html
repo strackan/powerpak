@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MCP Installation - MCP Universe</title>
+  <link rel="stylesheet" href="assets/marketplace.css">
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="nav">
+    <div class="nav-content">
+      <a href="index.html" class="nav-logo">MCP Universe</a>
+      <ul class="nav-links">
+        <li><a href="index.html">Marketplace</a></li>
+        <li><a href="onboarding.html" class="active">Get Started</a></li>
+        <li><a href="#">My Servers</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Wizard Container -->
+  <div class="container">
+    <div class="wizard">
+      <h1 style="text-align: center; margin-bottom: 2rem;">Install Your First MCP Server</h1>
+
+      <!-- Progress Steps -->
+      <div class="wizard-progress">
+        <div class="wizard-step active">
+          <div class="wizard-step-number">1</div>
+          <div class="wizard-step-label">Choose Tier</div>
+        </div>
+        <div class="wizard-step">
+          <div class="wizard-step-number">2</div>
+          <div class="wizard-step-label">Configure</div>
+        </div>
+        <div class="wizard-step">
+          <div class="wizard-step-number">3</div>
+          <div class="wizard-step-label">Test</div>
+        </div>
+        <div class="wizard-step">
+          <div class="wizard-step-number">4</div>
+          <div class="wizard-step-label">Get Started</div>
+        </div>
+      </div>
+
+      <!-- Step 1: Choose Tier -->
+      <div class="wizard-content step-content" id="step1">
+        <h2 style="margin-bottom: 1.5rem;">Choose Your Tier</h2>
+        <p style="color: var(--muted); margin-bottom: 2rem;">
+          Select the tier that best fits your needs. You can always upgrade later.
+        </p>
+
+        <div class="tier-option selected">
+          <div class="tier-option-header">
+            <div class="tier-option-name">Basic Tier</div>
+            <div class="tier-option-price">FREE</div>
+          </div>
+          <div class="tier-option-description">
+            General expertise and guidance. Perfect for getting started with MCP servers.
+          </div>
+        </div>
+
+        <div class="tier-option">
+          <div class="tier-option-header">
+            <div class="tier-option-name">Enhanced Tier</div>
+            <div class="tier-option-price">$49/mo</div>
+          </div>
+          <div class="tier-option-description">
+            Authentic voice, custom tools, and specialized frameworks. Get personalized AI assistance.
+          </div>
+        </div>
+
+        <div class="tier-option">
+          <div class="tier-option-header">
+            <div class="tier-option-name">Premium Tier</div>
+            <div class="tier-option-price">$25,000</div>
+          </div>
+          <div class="tier-option-description">
+            Unlimited custom tools, full personality extraction, white-glove onboarding, and private templates.
+          </div>
+        </div>
+      </div>
+
+      <!-- Step 2: Configure Credentials -->
+      <div class="wizard-content step-content" id="step2" style="display: none;">
+        <h2 style="margin-bottom: 1.5rem;">Configure MCP Server</h2>
+        <p style="color: var(--muted); margin-bottom: 2rem;">
+          Provide your credentials to install the MCP server. This connects the server to your AI assistant.
+        </p>
+
+        <div class="form-group">
+          <label class="form-label">Server Name</label>
+          <input type="text" class="form-input" value="justin-strackany" readonly>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label">Installation Path</label>
+          <input type="text" class="form-input" value="~/.config/mcp/servers/" readonly>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label">API Key (Optional for Basic Tier)</label>
+          <input type="password" class="form-input" placeholder="Enter your API key...">
+          <p style="font-size: 0.875rem; color: var(--muted); margin-top: 0.5rem;">
+            API key required for Enhanced and Premium tiers for authentication.
+          </p>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label">
+            <input type="checkbox" checked> Enable automatic updates
+          </label>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label">
+            <input type="checkbox" checked> Share usage analytics to improve the service
+          </label>
+        </div>
+      </div>
+
+      <!-- Step 3: Test Installation -->
+      <div class="wizard-content step-content" id="step3" style="display: none;">
+        <h2 style="margin-bottom: 1.5rem;">Test Installation</h2>
+        <p style="color: var(--muted); margin-bottom: 2rem;">
+          Let's verify your MCP server is installed correctly and working properly.
+        </p>
+
+        <div style="background: var(--background); border-radius: 8px; padding: 1.5rem; margin-bottom: 1.5rem;">
+          <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem;">
+            <div class="success-checkmark" style="width: 40px; height: 40px; font-size: 1.5rem; margin: 0;">✓</div>
+            <div>
+              <div style="font-weight: 600;">Server Connection</div>
+              <div style="font-size: 0.875rem; color: var(--muted);">Successfully connected to MCP server</div>
+            </div>
+          </div>
+
+          <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem;">
+            <div class="success-checkmark" style="width: 40px; height: 40px; font-size: 1.5rem; margin: 0;">✓</div>
+            <div>
+              <div style="font-weight: 600;">Authentication</div>
+              <div style="font-size: 0.875rem; color: var(--muted);">Credentials verified</div>
+            </div>
+          </div>
+
+          <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem;">
+            <div class="success-checkmark" style="width: 40px; height: 40px; font-size: 1.5rem; margin: 0;">✓</div>
+            <div>
+              <div style="font-weight: 600;">Tools Available</div>
+              <div style="font-size: 0.875rem; color: var(--muted);">5 tools loaded successfully</div>
+            </div>
+          </div>
+
+          <div style="display: flex; align-items: center; gap: 1rem;">
+            <div class="success-checkmark" style="width: 40px; height: 40px; font-size: 1.5rem; margin: 0;">✓</div>
+            <div>
+              <div style="font-weight: 600;">Configuration</div>
+              <div style="font-size: 0.875rem; color: var(--muted);">All settings configured properly</div>
+            </div>
+          </div>
+        </div>
+
+        <div style="background: #ecfdf5; border: 2px solid #10b981; border-radius: 8px; padding: 1.5rem; text-align: center;">
+          <div style="font-size: 2rem; margin-bottom: 0.5rem;">🎉</div>
+          <div style="font-weight: 600; font-size: 1.125rem; color: #065f46; margin-bottom: 0.5rem;">
+            Installation Successful!
+          </div>
+          <div style="color: #047857; font-size: 0.9375rem;">
+            Your MCP server is ready to use
+          </div>
+        </div>
+      </div>
+
+      <!-- Step 4: Get Started -->
+      <div class="wizard-content step-content" id="step4" style="display: none;">
+        <h2 style="margin-bottom: 1.5rem;">You're All Set!</h2>
+        <p style="color: var(--muted); margin-bottom: 2rem;">
+          Here are some suggested prompts to get you started with Justin Strackany's MCP server:
+        </p>
+
+        <div style="display: grid; gap: 1rem;">
+          <div style="background: var(--background); border-left: 4px solid var(--primary); padding: 1.5rem; border-radius: 4px;">
+            <div style="font-weight: 600; margin-bottom: 0.5rem;">Sales Process Optimization</div>
+            <div style="color: var(--muted); font-size: 0.9375rem; font-style: italic; margin-bottom: 1rem;">
+              "Help me optimize our sales process for mid-market deals with a 90-day sales cycle."
+            </div>
+            <button class="btn btn-secondary btn-small" onclick="alert('In the real app, this would copy the prompt to your clipboard')">
+              Copy Prompt
+            </button>
+          </div>
+
+          <div style="background: var(--background); border-left: 4px solid var(--primary); padding: 1.5rem; border-radius: 4px;">
+            <div style="font-weight: 600; margin-bottom: 0.5rem;">Customer Success Framework</div>
+            <div style="color: var(--muted); font-size: 0.9375rem; font-style: italic; margin-bottom: 1rem;">
+              "Build me a customer onboarding playbook for enterprise clients."
+            </div>
+            <button class="btn btn-secondary btn-small" onclick="alert('In the real app, this would copy the prompt to your clipboard')">
+              Copy Prompt
+            </button>
+          </div>
+
+          <div style="background: var(--background); border-left: 4px solid var(--primary); padding: 1.5rem; border-radius: 4px;">
+            <div style="font-weight: 600; margin-bottom: 0.5rem;">Pricing Strategy</div>
+            <div style="color: var(--muted); font-size: 0.9375rem; font-style: italic; margin-bottom: 1rem;">
+              "Help me think through pricing and packaging for my B2B SaaS product."
+            </div>
+            <button class="btn btn-secondary btn-small" onclick="alert('In the real app, this would copy the prompt to your clipboard')">
+              Copy Prompt
+            </button>
+          </div>
+
+          <div style="background: var(--background); border-left: 4px solid var(--primary); padding: 1.5rem; border-radius: 4px;">
+            <div style="font-weight: 600; margin-bottom: 0.5rem;">Deal Review Analysis</div>
+            <div style="color: var(--muted); font-size: 0.9375rem; font-style: italic; margin-bottom: 1rem;">
+              "Review this sales call transcript and give me coaching insights for my rep."
+            </div>
+            <button class="btn btn-secondary btn-small" onclick="alert('In the real app, this would copy the prompt to your clipboard')">
+              Copy Prompt
+            </button>
+          </div>
+
+          <div style="background: var(--background); border-left: 4px solid var(--primary); padding: 1.5rem; border-radius: 4px;">
+            <div style="font-weight: 600; margin-bottom: 0.5rem;">Revenue Team Building</div>
+            <div style="color: var(--muted); font-size: 0.9375rem; font-style: italic; margin-bottom: 1rem;">
+              "Help me design a hiring scorecard for an account executive role."
+            </div>
+            <button class="btn btn-secondary btn-small" onclick="alert('In the real app, this would copy the prompt to your clipboard')">
+              Copy Prompt
+            </button>
+          </div>
+        </div>
+
+        <div style="margin-top: 2rem; padding: 1.5rem; background: linear-gradient(135deg, #eff6ff 0%, #f3e8ff 100%); border-radius: 8px; text-align: center;">
+          <h3 style="margin-bottom: 0.5rem;">Want to explore more experts?</h3>
+          <p style="color: var(--muted); margin-bottom: 1rem;">
+            Browse the marketplace to discover MCP servers from experts in sales, engineering, marketing, and more.
+          </p>
+          <a href="index.html" class="btn btn-primary">Browse Marketplace</a>
+        </div>
+      </div>
+
+      <!-- Navigation Buttons -->
+      <div class="wizard-buttons">
+        <button class="btn btn-secondary btn-prev" style="display: none;" onclick="prevStep()">
+          Previous
+        </button>
+        <button class="btn btn-primary btn-next" onclick="nextStep()">
+          Next
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <script src="assets/marketplace.js"></script>
+  <script>
+    let currentStep = 1;
+    const totalSteps = 4;
+
+    function updateWizardStep(step) {
+      currentStep = step;
+
+      // Update progress indicators
+      document.querySelectorAll('.wizard-step').forEach((stepEl, index) => {
+        stepEl.classList.remove('active', 'completed');
+        if (index + 1 < step) {
+          stepEl.classList.add('completed');
+          stepEl.querySelector('.wizard-step-number').textContent = '✓';
+        } else if (index + 1 === step) {
+          stepEl.classList.add('active');
+          stepEl.querySelector('.wizard-step-number').textContent = index + 1;
+        } else {
+          stepEl.querySelector('.wizard-step-number').textContent = index + 1;
+        }
+      });
+
+      // Show/hide content
+      document.querySelectorAll('.step-content').forEach((content, index) => {
+        content.style.display = index + 1 === step ? 'block' : 'none';
+      });
+
+      // Update buttons
+      const prevBtn = document.querySelector('.btn-prev');
+      const nextBtn = document.querySelector('.btn-next');
+
+      if (prevBtn) {
+        prevBtn.style.display = step === 1 ? 'none' : 'inline-block';
+      }
+
+      if (nextBtn) {
+        nextBtn.textContent = step === totalSteps ? 'Complete' : 'Next';
+      }
+    }
+
+    function nextStep() {
+      if (currentStep < totalSteps) {
+        updateWizardStep(currentStep + 1);
+      } else {
+        // Complete
+        window.location.href = 'index.html';
+      }
+    }
+
+    function prevStep() {
+      if (currentStep > 1) {
+        updateWizardStep(currentStep - 1);
+      }
+    }
+
+    // Tier selection
+    document.querySelectorAll('.tier-option').forEach(option => {
+      option.addEventListener('click', function() {
+        document.querySelectorAll('.tier-option').forEach(opt => opt.classList.remove('selected'));
+        this.classList.add('selected');
+      });
+    });
+  </script>
+</body>
+</html>

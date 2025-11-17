@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MCP Universe - Marketplace</title>
+  <link rel="stylesheet" href="assets/marketplace.css">
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="nav">
+    <div class="nav-content">
+      <a href="index.html" class="nav-logo">MCP Universe</a>
+      <div class="nav-search">
+        <input type="text" class="search-input" placeholder="Search experts by name, skill, or industry...">
+      </div>
+      <ul class="nav-links">
+        <li><a href="index.html" class="active">Marketplace</a></li>
+        <li><a href="onboarding.html">Get Started</a></li>
+        <li><a href="#">My Servers</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>LinkedIn for AI</h1>
+      <p>Connect with expert MCP servers that bring real human knowledge, personality, and experience to your AI workflows.</p>
+      <div class="hero-stats">
+        <div class="stat">
+          <span class="stat-number">247</span>
+          <span class="stat-label">Expert Servers</span>
+        </div>
+        <div class="stat">
+          <span class="stat-number">12K+</span>
+          <span class="stat-label">Installations</span>
+        </div>
+        <div class="stat">
+          <span class="stat-number">4.8</span>
+          <span class="stat-label">Avg Rating</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Main Container -->
+  <div class="container">
+    <!-- Filters -->
+    <div class="filters">
+      <div class="filter-section" data-filter="category">
+        <label class="filter-label">Category</label>
+        <div class="filter-buttons">
+          <button class="filter-btn active" data-value="all">All</button>
+          <button class="filter-btn" data-value="sales">Sales</button>
+          <button class="filter-btn" data-value="customer-success">Customer Success</button>
+          <button class="filter-btn" data-value="engineering">Engineering</button>
+          <button class="filter-btn" data-value="marketing">Marketing</button>
+          <button class="filter-btn" data-value="leadership">Leadership</button>
+          <button class="filter-btn" data-value="product">Product</button>
+        </div>
+      </div>
+
+      <div class="filter-section" data-filter="tier">
+        <label class="filter-label">Tier</label>
+        <div class="filter-buttons">
+          <button class="filter-btn active" data-value="all">All Tiers</button>
+          <button class="filter-btn" data-value="basic">Basic (Free)</button>
+          <button class="filter-btn" data-value="enhanced">Enhanced</button>
+          <button class="filter-btn" data-value="premium">Premium</button>
+        </div>
+      </div>
+
+      <div class="filter-section">
+        <label class="filter-label">Sort By</label>
+        <select class="filter-select">
+          <option value="popular">Most Popular</option>
+          <option value="newest">Newest</option>
+          <option value="alphabetical">Alphabetical</option>
+        </select>
+      </div>
+    </div>
+
+    <!-- Results Header -->
+    <div class="results-header">
+      <div class="results-count">15 experts found</div>
+    </div>
+
+    <!-- Profile Grid -->
+    <div class="profile-grid">
+      <!-- Justin Strackany - Enhanced -->
+      <div class="profile-card" data-category="sales" data-tier="enhanced" data-rating="4.9" data-profile-url="../profile-pages/enhanced.html">
+        <div class="profile-card-header">
+          <div class="profile-card-avatar">JS</div>
+          <div class="profile-card-info">
+            <div class="profile-card-name">Justin Strackany</div>
+            <div class="profile-card-title">Founder @ Renubu</div>
+          </div>
+          <span class="profile-card-badge badge-enhanced">Enhanced</span>
+        </div>
+        <div class="profile-card-tagline">
+          Revenue engine builder who helps B2B companies fix broken go-to-market strategies with practical frameworks.
+        </div>
+        <div class="profile-card-meta">
+          <div class="profile-card-rating">
+            <span class="stars">★★★★★</span>
+            <span class="rating-count">(127)</span>
+          </div>
+          <div class="profile-card-actions">
+            <button class="btn btn-primary btn-small btn-install">Install</button>
+            <button class="btn btn-secondary btn-small btn-view">View</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Scott Leese - Premium -->
+      <div class="profile-card" data-category="sales" data-tier="premium" data-rating="5.0" data-profile-url="../profile-pages/premium.html">
+        <div class="profile-card-header">
+          <div class="profile-card-avatar">SL</div>
+          <div class="profile-card-info">
+            <div class="profile-card-name">Scott Leese</div>
+            <div class="profile-card-title">Sales Leadership Expert</div>
+          </div>
+          <span class="profile-card-badge badge-premium">Premium</span>
+        </div>
+        <div class="profile-card-tagline">
+          15+ years scaling sales teams from startup to unicorn. Expert in building high-performance sales organizations.
+        </div>
+        <div class="profile-card-meta">
+          <div class="profile-card-rating">
+            <span class="stars">★★★★★</span>
+            <span class="rating-count">(203)</span>
+          </div>
+          <div class="profile-card-actions">
+            <button class="btn btn-primary btn-small btn-install">Install</button>
+            <button class="btn btn-secondary btn-small btn-view">View</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Sarah Chen - Basic -->
+      <div class="profile-card" data-category="engineering" data-tier="basic" data-rating="4.7" data-profile-url="../profile-pages/basic.html">
+        <div class="profile-card-header">
+          <div class="profile-card-avatar">SC</div>
+          <div class="profile-card-info">
+            <div class="profile-card-name">Sarah Chen</div>
+            <div class="profile-card-title">Staff Engineer @ Google</div>
+          </div>
+          <span class="profile-card-badge badge-basic">Basic</span>
+        </div>
+        <div class="profile-card-tagline">
+          Distributed systems architect specializing in scalability, performance optimization, and cloud architecture.
+        </div>
+        <div class="profile-card-meta">
+          <div class="profile-card-rating">
+            <span class="stars">★★★★★</span>
+            <span class="rating-count">(89)</span>
+          </div>
+          <div class="profile-card-actions">
+            <button class="btn btn-primary btn-small btn-install">Install</button>
+            <button class="btn btn-secondary btn-small btn-view">View</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Marcus Johnson - Enhanced -->
+      <div class="profile-card" data-category="marketing" data-tier="enhanced" data-rating="4.8" data-profile-url="../profile-pages/enhanced.html">
+        <div class="profile-card-header">
+          <div class="profile-card-avatar">MJ</div>
+          <div class="profile-card-info">
+            <div class="profile-card-name">Marcus Johnson</div>
+            <div class="profile-card-title">CMO @ GrowthLabs</div>
+          </div>
+          <span class="profile-card-badge badge-enhanced">Enhanced</span>
+        </div>
+        <div class="profile-card-tagline">
+          Growth marketing expert who's scaled B2B SaaS companies from $0 to $50M ARR through data-driven strategies.
+        </div>
+        <div class="profile-card-meta">
+          <div class="profile-card-rating">
+            <span class="stars">★★★★★</span>
+            <span class="rating-count">(156)</span>
+          </div>
+          <div class="profile-card-actions">
+            <button class="btn btn-primary btn-small btn-install">Install</button>
+            <button class="btn btn-secondary btn-small btn-view">View</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Priya Patel - Premium -->
+      <div class="profile-card" data-category="product" data-tier="premium" data-rating="4.9" data-profile-url="../profile-pages/premium.html">
+        <div class="profile-card-header">
+          <div class="profile-card-avatar">PP</div>
+          <div class="profile-card-info">
+            <div class="profile-card-name">Priya Patel</div>
+            <div class="profile-card-title">VP Product @ Stripe</div>
+          </div>
+          <span class="profile-card-badge badge-premium">Premium</span>
+        </div>
+        <div class="profile-card-tagline">
+          Product strategist with 12+ years building products used by millions. Expert in product-market fit and roadmap planning.
+        </div>
+        <div class="profile-card-meta">
+          <div class="profile-card-rating">
+            <span class="stars">★★★★★</span>
+            <span class="rating-count">(178)</span>
+          </div>
+          <div class="profile-card-actions">
+            <button class="btn btn-primary btn-small btn-install">Install</button>
+            <button class="btn btn-secondary btn-small btn-view">View</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Alex Rivera - Enhanced -->
+      <div class="profile-card" data-category="customer-success" data-tier="enhanced" data-rating="4.8" data-profile-url="../profile-pages/enhanced.html">
+        <div class="profile-card-header">
+          <div class="profile-card-avatar">AR</div>
+          <div class="profile-card-info">
+            <div class="profile-card-name">Alex Rivera</div>
+            <div class="profile-card-title">Head of CS @ Zendesk</div>
+          </div>
+          <span class="profile-card-badge badge-enhanced">Enhanced</span>
+        </div>
+        <div class="profile-card-tagline">
+          Customer success leader focused on retention, expansion, and building scalable CS operations for enterprise SaaS.
+        </div>
+        <div class="profile-card-meta">
+          <div class="profile-card-rating">
+            <span class="stars">★★★★★</span>
+            <span class="rating-count">(134)</span>
+          </div>
+          <div class="profile-card-actions">
+            <button class="btn btn-primary btn-small btn-install">Install</button>
+            <button class="btn btn-secondary btn-small btn-view">View</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- David Kim - Basic -->
+      <div class="profile-card" data-category="leadership" data-tier="basic" data-rating="4.6" data-profile-url="../profile-pages/basic.html">
+        <div class="profile-card-header">
+          <div class="profile-card-avatar">DK</div>
+          <div class="profile-card-info">
+            <div class="profile-card-name">David Kim</div>
+            <div class="profile-card-title">CEO @ TechStart</div>
+          </div>
+          <span class="profile-card-badge badge-basic">Basic</span>
+        </div>
+        <div class="profile-card-tagline">
+          Serial entrepreneur and CEO coach. 3 successful exits. Expert in startup strategy and operational excellence.
+        </div>
+        <div class="profile-card-meta">
+          <div class="profile-card-rating">
+            <span class="stars">★★★★☆</span>
+            <span class="rating-count">(92)</span>
+          </div>
+          <div class="profile-card-actions">
+            <button class="btn btn-primary btn-small btn-install">Install</button>
+            <button class="btn btn-secondary btn-small btn-view">View</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Emily Thompson - Premium -->
+      <div class="profile-card" data-category="sales" data-tier="premium" data-rating="4.9" data-profile-url="../profile-pages/premium.html">
+        <div class="profile-card-header">
+          <div class="profile-card-avatar">ET</div>
+          <div class="profile-card-info">
+            <div class="profile-card-name">Emily Thompson</div>
+            <div class="profile-card-title">Enterprise Sales Expert</div>
+          </div>
+          <span class="profile-card-badge badge-premium">Premium</span>
+        </div>
+        <div class="profile-card-tagline">
+          Enterprise deal strategist who's closed $500M+ in software sales. Specializes in complex multi-stakeholder deals.
+        </div>
+        <div class="profile-card-meta">
+          <div class="profile-card-rating">
+            <span class="stars">★★★★★</span>
+            <span class="rating-count">(167)</span>
+          </div>
+          <div class="profile-card-actions">
+            <button class="btn btn-primary btn-small btn-install">Install</button>
+            <button class="btn btn-secondary btn-small btn-view">View</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- James Wilson - Enhanced -->
+      <div class="profile-card" data-category="engineering" data-tier="enhanced" data-rating="4.7" data-profile-url="../profile-pages/enhanced.html">
+        <div class="profile-card-header">
+          <div class="profile-card-avatar">JW</div>
+          <div class="profile-card-info">
+            <div class="profile-card-name">James Wilson</div>
+            <div class="profile-card-title">Principal Engineer @ Amazon</div>
+          </div>
+          <span class="profile-card-badge badge-enhanced">Enhanced</span>
+        </div>
+        <div class="profile-card-tagline">
+          Backend systems expert with deep knowledge of microservices, API design, and building for massive scale.
+        </div>
+        <div class="profile-card-meta">
+          <div class="profile-card-rating">
+            <span class="stars">★★★★★</span>
+            <span class="rating-count">(112)</span>
+          </div>
+          <div class="profile-card-actions">
+            <button class="btn btn-primary btn-small btn-install">Install</button>
+            <button class="btn btn-secondary btn-small btn-view">View</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Lisa Anderson - Enhanced -->
+      <div class="profile-card" data-category="marketing" data-tier="enhanced" data-rating="4.8" data-profile-url="../profile-pages/enhanced.html">
+        <div class="profile-card-header">
+          <div class="profile-card-avatar">LA</div>
+          <div class="profile-card-info">
+            <div class="profile-card-name">Lisa Anderson</div>
+            <div class="profile-card-title">Content Marketing Lead</div>
+          </div>
+          <span class="profile-card-badge badge-enhanced">Enhanced</span>
+        </div>
+        <div class="profile-card-tagline">
+          Content strategist who's built organic channels driving 10M+ monthly visitors. SEO and content distribution expert.
+        </div>
+        <div class="profile-card-meta">
+          <div class="profile-card-rating">
+            <span class="stars">★★★★★</span>
+            <span class="rating-count">(145)</span>
+          </div>
+          <div class="profile-card-actions">
+            <button class="btn btn-primary btn-small btn-install">Install</button>
+            <button class="btn btn-secondary btn-small btn-view">View</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Rachel Green - Basic -->
+      <div class="profile-card" data-category="product" data-tier="basic" data-rating="4.5" data-profile-url="../profile-pages/basic.html">
+        <div class="profile-card-header">
+          <div class="profile-card-avatar">RG</div>
+          <div class="profile-card-info">
+            <div class="profile-card-name">Rachel Green</div>
+            <div class="profile-card-title">Product Designer @ Figma</div>
+          </div>
+          <span class="profile-card-badge badge-basic">Basic</span>
+        </div>
+        <div class="profile-card-tagline">
+          UX/UI designer focused on creating intuitive user experiences. Expert in design systems and user research.
+        </div>
+        <div class="profile-card-meta">
+          <div class="profile-card-rating">
+            <span class="stars">★★★★☆</span>
+            <span class="rating-count">(78)</span>
+          </div>
+          <div class="profile-card-actions">
+            <button class="btn btn-primary btn-small btn-install">Install</button>
+            <button class="btn btn-secondary btn-small btn-view">View</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Michael Brown - Premium -->
+      <div class="profile-card" data-category="leadership" data-tier="premium" data-rating="5.0" data-profile-url="../profile-pages/premium.html">
+        <div class="profile-card-header">
+          <div class="profile-card-avatar">MB</div>
+          <div class="profile-card-info">
+            <div class="profile-card-name">Michael Brown</div>
+            <div class="profile-card-title">Executive Coach</div>
+          </div>
+          <span class="profile-card-badge badge-premium">Premium</span>
+        </div>
+        <div class="profile-card-tagline">
+          Leadership coach for C-suite executives. 20+ years helping leaders navigate growth, change, and strategic decisions.
+        </div>
+        <div class="profile-card-meta">
+          <div class="profile-card-rating">
+            <span class="stars">★★★★★</span>
+            <span class="rating-count">(189)</span>
+          </div>
+          <div class="profile-card-actions">
+            <button class="btn btn-primary btn-small btn-install">Install</button>
+            <button class="btn btn-secondary btn-small btn-view">View</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Jennifer Lee - Enhanced -->
+      <div class="profile-card" data-category="customer-success" data-tier="enhanced" data-rating="4.7" data-profile-url="../profile-pages/enhanced.html">
+        <div class="profile-card-header">
+          <div class="profile-card-avatar">JL</div>
+          <div class="profile-card-info">
+            <div class="profile-card-name">Jennifer Lee</div>
+            <div class="profile-card-title">Director of CS @ HubSpot</div>
+          </div>
+          <span class="profile-card-badge badge-enhanced">Enhanced</span>
+        </div>
+        <div class="profile-card-tagline">
+          Customer success strategist focused on reducing churn and increasing customer lifetime value through data-driven playbooks.
+        </div>
+        <div class="profile-card-meta">
+          <div class="profile-card-rating">
+            <span class="stars">★★★★★</span>
+            <span class="rating-count">(121)</span>
+          </div>
+          <div class="profile-card-actions">
+            <button class="btn btn-primary btn-small btn-install">Install</button>
+            <button class="btn btn-secondary btn-small btn-view">View</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Robert Garcia - Basic -->
+      <div class="profile-card" data-category="engineering" data-tier="basic" data-rating="4.6" data-profile-url="../profile-pages/basic.html">
+        <div class="profile-card-header">
+          <div class="profile-card-avatar">RG</div>
+          <div class="profile-card-info">
+            <div class="profile-card-name">Robert Garcia</div>
+            <div class="profile-card-title">DevOps Engineer @ Netflix</div>
+          </div>
+          <span class="profile-card-badge badge-basic">Basic</span>
+        </div>
+        <div class="profile-card-tagline">
+          Infrastructure and automation expert. Specializes in CI/CD, Kubernetes, and building reliable deployment pipelines.
+        </div>
+        <div class="profile-card-meta">
+          <div class="profile-card-rating">
+            <span class="stars">★★★★☆</span>
+            <span class="rating-count">(95)</span>
+          </div>
+          <div class="profile-card-actions">
+            <button class="btn btn-primary btn-small btn-install">Install</button>
+            <button class="btn btn-secondary btn-small btn-view">View</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Amanda White - Enhanced -->
+      <div class="profile-card" data-category="sales" data-tier="enhanced" data-rating="4.8" data-profile-url="../profile-pages/enhanced.html">
+        <div class="profile-card-header">
+          <div class="profile-card-avatar">AW</div>
+          <div class="profile-card-info">
+            <div class="profile-card-name">Amanda White</div>
+            <div class="profile-card-title">Sales Enablement Expert</div>
+          </div>
+          <span class="profile-card-badge badge-enhanced">Enhanced</span>
+        </div>
+        <div class="profile-card-tagline">
+          Sales enablement leader who builds training programs, content, and tools that help sales teams close more deals faster.
+        </div>
+        <div class="profile-card-meta">
+          <div class="profile-card-rating">
+            <span class="stars">★★★★★</span>
+            <span class="rating-count">(103)</span>
+          </div>
+          <div class="profile-card-actions">
+            <button class="btn btn-primary btn-small btn-install">Install</button>
+            <button class="btn btn-secondary btn-small btn-view">View</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="assets/marketplace.js"></script>
+</body>
+</html>

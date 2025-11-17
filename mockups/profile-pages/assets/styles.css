@@ -1,0 +1,576 @@
+/* MCP Universe Profile Pages - Shared Styles */
+
+:root {
+  --primary: #2563eb;
+  --secondary: #7c3aed;
+  --accent: #f59e0b;
+  --success: #10b981;
+  --background: #f9fafb;
+  --text: #111827;
+  --muted: #6b7280;
+  --border: #e5e7eb;
+  --white: #ffffff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Inter', 'SF Pro Display', 'Segoe UI', sans-serif;
+  background: var(--background);
+  color: var(--text);
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+/* Navigation */
+.nav {
+  background: var(--white);
+  border-bottom: 1px solid var(--border);
+  padding: 1rem 0;
+  margin-bottom: 2rem;
+}
+
+.nav-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--primary);
+  text-decoration: none;
+}
+
+.nav-links {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+}
+
+.nav-links a {
+  color: var(--muted);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  color: var(--primary);
+}
+
+/* Tier Navigation */
+.tier-nav {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  justify-content: center;
+}
+
+.tier-nav a {
+  padding: 0.75rem 1.5rem;
+  background: var(--white);
+  border: 2px solid var(--border);
+  border-radius: 8px;
+  text-decoration: none;
+  color: var(--text);
+  font-weight: 500;
+  transition: all 0.2s;
+}
+
+.tier-nav a:hover {
+  border-color: var(--primary);
+  color: var(--primary);
+}
+
+.tier-nav a.active {
+  background: var(--primary);
+  color: white;
+  border-color: var(--primary);
+}
+
+/* Profile Header */
+.profile-header {
+  background: var(--white);
+  border-radius: 12px;
+  padding: 3rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+.tier-badge {
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.tier-badge.basic {
+  background: #e5e7eb;
+  color: #4b5563;
+}
+
+.tier-badge.enhanced {
+  background: linear-gradient(135deg, #7c3aed 0%, #2563eb 100%);
+  color: white;
+}
+
+.tier-badge.premium {
+  background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+  color: white;
+}
+
+.profile-main {
+  display: flex;
+  gap: 2rem;
+  align-items: flex-start;
+}
+
+.profile-avatar {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 3rem;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.profile-avatar img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.profile-info {
+  flex: 1;
+}
+
+.profile-name {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: var(--text);
+}
+
+.profile-title {
+  font-size: 1.25rem;
+  color: var(--muted);
+  margin-bottom: 1.5rem;
+}
+
+.profile-bio {
+  font-size: 1.125rem;
+  line-height: 1.8;
+  color: var(--text);
+  margin-bottom: 2rem;
+}
+
+/* Sections */
+.section {
+  background: var(--white);
+  border-radius: 12px;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.section-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  color: var(--text);
+}
+
+.section-subtitle {
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
+  color: var(--text);
+}
+
+/* Lists */
+.bullet-list {
+  list-style: none;
+  margin-bottom: 1rem;
+}
+
+.bullet-list li {
+  padding: 0.75rem 0;
+  padding-left: 2rem;
+  position: relative;
+  font-size: 1.0625rem;
+}
+
+.bullet-list li:before {
+  content: "•";
+  position: absolute;
+  left: 0.5rem;
+  color: var(--primary);
+  font-size: 1.5rem;
+  line-height: 1.2;
+}
+
+/* Tools Grid */
+.tools-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.tool-card {
+  background: var(--background);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 1.5rem;
+  transition: all 0.2s;
+}
+
+.tool-card:hover {
+  border-color: var(--primary);
+  box-shadow: 0 4px 6px rgba(37, 99, 235, 0.1);
+}
+
+.tool-name {
+  font-family: 'Monaco', 'Consolas', monospace;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--secondary);
+  margin-bottom: 0.5rem;
+}
+
+.tool-description {
+  color: var(--muted);
+  margin-bottom: 1rem;
+  font-size: 0.9375rem;
+}
+
+.tool-example {
+  background: #1e1e1e;
+  color: #d4d4d4;
+  padding: 1rem;
+  border-radius: 6px;
+  font-family: 'Monaco', 'Consolas', monospace;
+  font-size: 0.875rem;
+  overflow-x: auto;
+}
+
+/* Voice Sample */
+.voice-sample {
+  background: var(--background);
+  border-left: 4px solid var(--primary);
+  padding: 1.5rem;
+  margin: 1rem 0;
+  border-radius: 4px;
+  font-style: italic;
+  color: var(--text);
+}
+
+/* Personality Blend */
+.blend-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.blend-card {
+  background: var(--background);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 1rem;
+  text-align: center;
+}
+
+.blend-percentage {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: 0.5rem;
+}
+
+.blend-name {
+  font-weight: 600;
+  color: var(--text);
+}
+
+/* Testimonials */
+.testimonials {
+  display: grid;
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+.testimonial {
+  background: var(--background);
+  border-radius: 8px;
+  padding: 1.5rem;
+  border-left: 4px solid var(--success);
+}
+
+.testimonial-text {
+  margin-bottom: 1rem;
+  font-style: italic;
+}
+
+.testimonial-author {
+  font-weight: 600;
+  color: var(--text);
+}
+
+.testimonial-role {
+  color: var(--muted);
+  font-size: 0.9375rem;
+}
+
+/* Premium Features */
+.premium-callout {
+  background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+  border: 2px solid var(--accent);
+  border-radius: 12px;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.premium-callout h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: var(--text);
+}
+
+.premium-callout p {
+  color: var(--muted);
+  font-size: 1.0625rem;
+}
+
+.video-placeholder {
+  background: #000;
+  border-radius: 12px;
+  aspect-ratio: 16/9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 3rem;
+  margin-bottom: 2rem;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.video-placeholder:hover {
+  opacity: 0.9;
+}
+
+/* Buttons */
+.btn {
+  display: inline-block;
+  padding: 1rem 2rem;
+  border-radius: 8px;
+  font-size: 1.0625rem;
+  font-weight: 600;
+  text-decoration: none;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.2s;
+  border: none;
+}
+
+.btn-primary {
+  background: var(--primary);
+  color: white;
+}
+
+.btn-primary:hover {
+  background: #1d4ed8;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+}
+
+.btn-enhanced {
+  background: linear-gradient(135deg, #7c3aed 0%, #2563eb 100%);
+  color: white;
+}
+
+.btn-enhanced:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(124, 58, 237, 0.3);
+}
+
+.btn-premium {
+  background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+  color: white;
+}
+
+.btn-premium:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(245, 158, 11, 0.3);
+}
+
+.btn-block {
+  display: block;
+  width: 100%;
+}
+
+.btn-large {
+  padding: 1.25rem 2.5rem;
+  font-size: 1.25rem;
+}
+
+/* Code Block */
+.code-block {
+  background: #1e1e1e;
+  color: #d4d4d4;
+  padding: 1.5rem;
+  border-radius: 8px;
+  font-family: 'Monaco', 'Consolas', monospace;
+  font-size: 0.9375rem;
+  overflow-x: auto;
+  margin: 1rem 0;
+  position: relative;
+}
+
+.copy-btn {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  font-size: 0.875rem;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.copy-btn:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/* Rating Stars */
+.stars {
+  color: var(--accent);
+  font-size: 1.25rem;
+  letter-spacing: 0.25rem;
+}
+
+/* Calendar Integration */
+.calendar-embed {
+  background: var(--background);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 2rem;
+  text-align: center;
+  min-height: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.calendar-icon {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+  color: var(--primary);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .profile-main {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .profile-avatar {
+    width: 120px;
+    height: 120px;
+    font-size: 2.5rem;
+  }
+
+  .profile-name {
+    font-size: 2rem;
+  }
+
+  .tier-nav {
+    flex-direction: column;
+  }
+
+  .tools-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .blend-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Success Modal */
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modal.active {
+  display: flex;
+}
+
+.modal-content {
+  background: white;
+  border-radius: 12px;
+  padding: 2rem;
+  max-width: 500px;
+  width: 90%;
+  text-align: center;
+}
+
+.modal-icon {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+}
+
+.modal-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.modal-text {
+  color: var(--muted);
+  margin-bottom: 2rem;
+}
