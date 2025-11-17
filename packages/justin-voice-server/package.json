@@ -1,0 +1,28 @@
+{
+  "name": "@mcp-world/justin-voice-server",
+  "version": "1.0.0",
+  "description": "Justin's Voice MCP server - exposes writing templates and personality system",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "bin": {
+    "justin-voice": "./dist/index.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "start": "node dist/index.js",
+    "test": "vitest",
+    "clean": "rm -rf dist",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.0.4",
+    "axios": "^1.6.0",
+    "sql.js": "^1.10.0",
+    "zod": "^3.22.0"
+  },
+  "devDependencies": {},
+  "keywords": ["mcp", "voice", "writing", "personality", "templates"],
+  "author": "Justin Strackany",
+  "license": "MIT"
+}

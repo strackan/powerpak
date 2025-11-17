@@ -1,0 +1,16 @@
+{
+  "name": "@mcp-world/shared-types",
+  "version": "1.0.0",
+  "description": "Shared TypeScript types and interfaces for MCP-World",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "clean": "rm -rf dist",
+    "typecheck": "tsc --noEmit"
+  },
+  "keywords": ["mcp", "types", "typescript"],
+  "author": "Justin Strackany",
+  "license": "MIT"
+}
