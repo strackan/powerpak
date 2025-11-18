@@ -1,0 +1,124 @@
+{
+  "platform": {
+    "totalExperts": 10,
+    "totalInstallations": 12420,
+    "averageRating": 4.82,
+    "totalTools": 87,
+    "activeVoiceProfiles": 4
+  },
+  "tierBreakdown": {
+    "basic": {
+      "count": 4,
+      "percentage": 40,
+      "totalInstallations": 1266,
+      "averageToolsPerExpert": 3.25
+    },
+    "enhanced": {
+      "count": 3,
+      "percentage": 30,
+      "totalInstallations": 2599,
+      "averageToolsPerExpert": 7.33
+    },
+    "premium": {
+      "count": 3,
+      "percentage": 30,
+      "totalInstallations": 8555,
+      "averageToolsPerExpert": 12.67
+    }
+  },
+  "categoryBreakdown": {
+    "sales": {
+      "expertCount": 5,
+      "installations": 7064,
+      "topExperts": ["scott-leese", "justin-strackany", "marcus-johnson"]
+    },
+    "engineering": {
+      "expertCount": 3,
+      "installations": 1100,
+      "topExperts": ["david-kim", "sarah-chen"]
+    },
+    "product": {
+      "expertCount": 2,
+      "installations": 2862,
+      "topExperts": ["priya-patel", "jordan-taylor"]
+    },
+    "marketing": {
+      "expertCount": 1,
+      "installations": 1876,
+      "topExperts": ["lisa-martinez"]
+    },
+    "customer-success": {
+      "expertCount": 2,
+      "installations": 645,
+      "topExperts": ["justin-strackany", "alex-rivera"]
+    },
+    "leadership": {
+      "expertCount": 3,
+      "installations": 5985,
+      "topExperts": ["scott-leese", "justin-strackany"]
+    }
+  },
+  "trendingExperts": [
+    {
+      "id": "scott-leese",
+      "name": "Scott Leese",
+      "growthRate": "+28% this month",
+      "reason": "Sales leadership in high demand"
+    },
+    {
+      "id": "priya-patel",
+      "name": "Dr. Priya Patel",
+      "growthRate": "+22% this month",
+      "reason": "Product-market fit frameworks trending"
+    },
+    {
+      "id": "lisa-martinez",
+      "name": "Lisa Martinez",
+      "growthRate": "+19% this month",
+      "reason": "B2B content strategies gaining traction"
+    }
+  ],
+  "popularCombinations": [
+    {
+      "experts": ["scott-leese", "keisha-williams"],
+      "installations": 721,
+      "description": "Sales leadership + enablement power combo"
+    },
+    {
+      "experts": ["justin-strackany", "scott-leese"],
+      "installations": 684,
+      "description": "Complete revenue engine"
+    },
+    {
+      "experts": ["priya-patel", "lisa-martinez"],
+      "installations": 512,
+      "description": "Product + marketing growth machine"
+    },
+    {
+      "experts": ["justin-strackany", "keisha-williams"],
+      "installations": 498,
+      "description": "Revenue ops + sales training"
+    },
+    {
+      "experts": ["sarah-chen", "david-kim"],
+      "installations": 287,
+      "description": "Full-stack technical leadership"
+    }
+  ],
+  "insights": {
+    "averageExpertsPerUser": 2.8,
+    "mostCommonFirstInstall": "justin-strackany",
+    "highestRetention": "scott-leese",
+    "fastestGrowing": "priya-patel",
+    "mostConnected": "scott-leese",
+    "networkDensity": 0.42
+  },
+  "usageStats": {
+    "totalToolCalls": 847230,
+    "averageToolCallsPerDay": 12103,
+    "mostUsedTool": "sales_framework_generator",
+    "peakUsageTime": "10am-2pm EST",
+    "mobileUsage": "23%",
+    "desktopUsage": "77%"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "mcpServers": {
+    "mcp-network": {
+      "command": "node",
+      "args": [
+        "C:\\Users\\strac\\dev\\MCP-World\\packages\\mcp-network-sandbox\\dist\\index.js"
+      ]
+    }
+  }
+}

@@ -1,0 +1,742 @@
+{
+  "experts": [
+    {
+      "id": "justin-strackany",
+      "name": "Justin Strackany",
+      "title": "Founder & CEO @ Renubu",
+      "tier": "enhanced",
+      "category": ["sales", "customer-success", "leadership"],
+      "tagline": "Revenue engines that don't suck",
+      "bio": "20+ years building teams, closing deals, and fixing broken go-to-market strategies. I help B2B companies build revenue machines that scale without the chaos. Known for unfiltered advice, ADHD-powered productivity hacks, and writing that sounds like a real human (shocking, I know).",
+      "stats": {
+        "installations": 1247,
+        "rating": 4.9,
+        "toolCount": 5,
+        "followers": 8400
+      },
+      "pricing": {
+        "monthly": 49,
+        "lifetime": 499
+      },
+      "tools": [
+        {
+          "name": "sales_framework_generator",
+          "description": "Generate custom sales frameworks tailored to your business model",
+          "example": "Create a discovery call framework for enterprise SaaS with 12-month sales cycles"
+        },
+        {
+          "name": "deal_review_analyzer",
+          "description": "Analyze stalled deals and identify what's actually blocking them",
+          "example": "Why hasn't this $250K deal closed after 6 months?"
+        },
+        {
+          "name": "pricing_calculator",
+          "description": "Calculate optimal pricing based on value delivered and market positioning",
+          "example": "What should I charge for this enterprise feature?"
+        },
+        {
+          "name": "customer_health_scorer",
+          "description": "Score customer health and predict churn risk with actionable interventions",
+          "example": "Analyze usage data and flag at-risk accounts"
+        },
+        {
+          "name": "onboarding_optimizer",
+          "description": "Design customer onboarding flows that drive activation and retention",
+          "example": "Build a 30-day onboarding plan for new enterprise customers"
+        }
+      ],
+      "voiceActive": true,
+      "voiceStyles": ["direct", "pragmatic", "self-deprecating", "storyteller"],
+      "specialties": [
+        "Revenue operations",
+        "Sales process design",
+        "Customer success frameworks",
+        "Pricing strategy",
+        "Team building"
+      ],
+      "testimonials": [
+        {
+          "author": "Sarah K., VP Sales @ TechCorp",
+          "text": "Justin's frameworks helped us close 3 enterprise deals in 60 days. His no-BS approach cuts through the noise."
+        },
+        {
+          "author": "Mike R., Founder @ StartupXYZ",
+          "text": "The pricing calculator alone paid for itself 10x over. Wish I'd found this 2 years ago."
+        }
+      ],
+      "connections": ["scott-leese", "keisha-williams", "marcus-johnson", "lisa-martinez"]
+    },
+    {
+      "id": "scott-leese",
+      "name": "Scott Leese",
+      "title": "Sales Leadership Icon & Founder @ Surf & Sales",
+      "tier": "premium",
+      "category": ["sales", "leadership", "coaching"],
+      "tagline": "From combat medic to 8x VP Sales. Building elite revenue teams.",
+      "bio": "Military veteran turned sales legend. Built and led sales teams at 8 high-growth startups (4 exits, 2 IPOs). Created the Surf & Sales community with 20K+ members. Known for disciplined execution, military-grade accountability, and turning average reps into closers. If you want fluff, look elsewhere.",
+      "stats": {
+        "installations": 3891,
+        "rating": 5.0,
+        "toolCount": 12,
+        "followers": 24300
+      },
+      "pricing": {
+        "oneTime": 25000,
+        "whiteGlove": true
+      },
+      "tools": [
+        {
+          "name": "sales_team_builder",
+          "description": "Design org structure, comp plans, and hiring profiles for high-performance teams",
+          "example": "Build a 50-person sales org from scratch for Series B SaaS company"
+        },
+        {
+          "name": "leadership_framework",
+          "description": "Proven frameworks for leading, coaching, and scaling revenue teams",
+          "example": "How do I coach a rep who's struggling with enterprise deals?"
+        },
+        {
+          "name": "quota_designer",
+          "description": "Design realistic quotas that drive performance without burning out your team",
+          "example": "Set quotas for a new product line with no historical data"
+        },
+        {
+          "name": "hiring_assessor",
+          "description": "Assess sales candidates with military-grade rigor",
+          "example": "Evaluate this candidate's ability to close enterprise deals"
+        },
+        {
+          "name": "performance_diagnostic",
+          "description": "Diagnose underperformance and create targeted improvement plans",
+          "example": "Why is my team only at 60% of quota?"
+        },
+        {
+          "name": "comp_plan_optimizer",
+          "description": "Design compensation plans that align incentives and drive the right behaviors",
+          "example": "Create a comp plan for hybrid AE/AM roles"
+        },
+        {
+          "name": "sales_process_auditor",
+          "description": "Audit your entire sales process and identify bottlenecks",
+          "example": "Where are we losing deals in our sales cycle?"
+        },
+        {
+          "name": "pipeline_forecaster",
+          "description": "Build accurate forecasts based on stage conversion rates and deal velocity",
+          "example": "Forecast Q4 revenue based on current pipeline"
+        },
+        {
+          "name": "onboarding_accelerator",
+          "description": "Reduce new rep ramp time from 6 months to 90 days",
+          "example": "Design a bootcamp for new enterprise AEs"
+        },
+        {
+          "name": "playbook_creator",
+          "description": "Create battle-tested playbooks for common sales scenarios",
+          "example": "Build a playbook for handling pricing objections"
+        },
+        {
+          "name": "territory_planner",
+          "description": "Design territory plans that maximize coverage and revenue potential",
+          "example": "Split North America into 8 territories"
+        },
+        {
+          "name": "metrics_dashboard",
+          "description": "Define the metrics that actually matter for your sales team",
+          "example": "What KPIs should I track for outbound SDRs?"
+        }
+      ],
+      "voiceActive": true,
+      "voiceStyles": ["commanding", "disciplined", "direct", "military-precision"],
+      "specialties": [
+        "Sales team building",
+        "Revenue leadership",
+        "Sales coaching",
+        "Organizational design",
+        "Performance management",
+        "Startup scaling"
+      ],
+      "testimonials": [
+        {
+          "author": "Jennifer L., CEO @ HyperGrowth Inc",
+          "text": "Scott rebuilt our entire sales org in 90 days. We went from $3M to $12M ARR in a year. Worth every penny."
+        },
+        {
+          "author": "Tom D., CRO @ Enterprise Software Co",
+          "text": "The most ROI-positive investment we've made. Scott's frameworks are now embedded in our DNA."
+        }
+      ],
+      "connections": ["justin-strackany", "keisha-williams", "marcus-johnson", "lisa-martinez", "priya-patel"]
+    },
+    {
+      "id": "sarah-chen",
+      "name": "Sarah Chen",
+      "title": "Engineering Leader @ TechGiant",
+      "tier": "basic",
+      "category": ["engineering", "frontend", "architecture"],
+      "tagline": "Building delightful user experiences with React",
+      "bio": "Frontend architect with 10 years building scalable web applications. Passionate about developer experience, design systems, and making complex UIs feel simple. I help teams move fast without breaking things.",
+      "stats": {
+        "installations": 427,
+        "rating": 4.7,
+        "toolCount": 3,
+        "followers": 2100
+      },
+      "pricing": {
+        "free": true
+      },
+      "tools": [
+        {
+          "name": "component_designer",
+          "description": "Generate React component architectures following best practices",
+          "example": "Design a data table component with sorting, filtering, and pagination"
+        },
+        {
+          "name": "code_reviewer",
+          "description": "Review frontend code for performance, accessibility, and maintainability",
+          "example": "Review this React component for common issues"
+        },
+        {
+          "name": "architecture_advisor",
+          "description": "Get advice on frontend architecture decisions",
+          "example": "Should I use Redux or Context API for this use case?"
+        }
+      ],
+      "voiceActive": false,
+      "specialties": [
+        "React & TypeScript",
+        "Design systems",
+        "Performance optimization",
+        "Component architecture",
+        "Frontend tooling"
+      ],
+      "connections": ["david-kim", "jordan-taylor"]
+    },
+    {
+      "id": "marcus-johnson",
+      "name": "Marcus 'The Closer' Johnson",
+      "title": "Enterprise Sales Expert",
+      "tier": "enhanced",
+      "category": ["sales", "enterprise"],
+      "tagline": "Fortune 500 deals. Complex sales cycles. Strategic partnerships.",
+      "bio": "15+ years closing 7-figure deals with enterprise buyers. I specialize in navigating complex organizations, managing multi-stakeholder processes, and building executive relationships. If your deal cycle is measured in months and your buyers have procurement departments, we should talk.",
+      "stats": {
+        "installations": 892,
+        "rating": 4.8,
+        "toolCount": 8,
+        "followers": 5200
+      },
+      "pricing": {
+        "monthly": 49,
+        "lifetime": 499
+      },
+      "tools": [
+        {
+          "name": "stakeholder_mapper",
+          "description": "Map complex buying committees and identify decision-makers",
+          "example": "Who actually needs to approve this $2M deal?"
+        },
+        {
+          "name": "enterprise_qualifier",
+          "description": "Qualify enterprise opportunities and assess deal viability",
+          "example": "Is this enterprise prospect real or am I wasting time?"
+        },
+        {
+          "name": "executive_brief_generator",
+          "description": "Create executive-level presentations that resonate with C-suite",
+          "example": "Generate a board-level ROI presentation"
+        },
+        {
+          "name": "negotiation_strategist",
+          "description": "Plan negotiation strategies for complex enterprise deals",
+          "example": "They want 40% discount and custom terms. What's my counter?"
+        },
+        {
+          "name": "rfp_responder",
+          "description": "Craft winning RFP responses that differentiate your solution",
+          "example": "Help me respond to this 80-page RFP"
+        },
+        {
+          "name": "champion_developer",
+          "description": "Build and leverage internal champions within enterprise accounts",
+          "example": "How do I turn this mid-level contact into a champion?"
+        },
+        {
+          "name": "procurement_navigator",
+          "description": "Navigate procurement processes, legal reviews, and security assessments",
+          "example": "Deal is stuck in procurement. How do I unstick it?"
+        },
+        {
+          "name": "partnership_strategist",
+          "description": "Structure strategic partnerships and channel relationships",
+          "example": "Design a partnership model with this SI partner"
+        }
+      ],
+      "voiceActive": false,
+      "specialties": [
+        "Enterprise sales",
+        "Complex deal management",
+        "Executive selling",
+        "Stakeholder management",
+        "Strategic partnerships"
+      ],
+      "testimonials": [
+        {
+          "author": "Rachel M., Head of Enterprise Sales",
+          "text": "Marcus's stakeholder mapping literally saved a $3M deal. His enterprise frameworks are gold."
+        }
+      ],
+      "connections": ["justin-strackany", "scott-leese", "keisha-williams"]
+    },
+    {
+      "id": "priya-patel",
+      "name": "Dr. Priya Patel",
+      "title": "Product Strategy Leader | Former Google PM",
+      "tier": "premium",
+      "category": ["product", "strategy", "growth"],
+      "tagline": "From zero to one. Building products people actually want.",
+      "bio": "PhD in Computer Science, 12 years in product at Google, Stripe, and 2 unicorn startups. Led products from concept to $100M+ ARR. I help founders build products that solve real problems and scale. Known for ruthless prioritization and finding product-market fit faster.",
+      "stats": {
+        "installations": 2341,
+        "rating": 4.9,
+        "toolCount": 15,
+        "followers": 18700
+      },
+      "pricing": {
+        "oneTime": 25000,
+        "whiteGlove": true
+      },
+      "tools": [
+        {
+          "name": "pmf_assessor",
+          "description": "Assess product-market fit and identify gaps",
+          "example": "Do we have PMF or are we fooling ourselves?"
+        },
+        {
+          "name": "feature_prioritizer",
+          "description": "Prioritize features using RICE, ICE, and custom frameworks",
+          "example": "We have 50 feature requests. What should we build first?"
+        },
+        {
+          "name": "roadmap_builder",
+          "description": "Build strategic roadmaps aligned with business goals",
+          "example": "Create a 6-month roadmap for our Series A"
+        },
+        {
+          "name": "user_research_analyzer",
+          "description": "Analyze user research and extract actionable insights",
+          "example": "We interviewed 30 users. What should we build?"
+        },
+        {
+          "name": "metric_definer",
+          "description": "Define North Star metrics and product KPIs",
+          "example": "What metrics actually matter for our marketplace?"
+        },
+        {
+          "name": "experiment_designer",
+          "description": "Design A/B tests and product experiments",
+          "example": "How do I test this onboarding change?"
+        },
+        {
+          "name": "pricing_strategist",
+          "description": "Design pricing models and packaging strategies",
+          "example": "Should we use usage-based or seat-based pricing?"
+        },
+        {
+          "name": "go_to_market_planner",
+          "description": "Plan product launches and GTM strategies",
+          "example": "Launch plan for our new enterprise tier"
+        },
+        {
+          "name": "competitive_analyzer",
+          "description": "Analyze competitive landscape and differentiation",
+          "example": "How do we differentiate from these 5 competitors?"
+        },
+        {
+          "name": "retention_optimizer",
+          "description": "Identify retention levers and reduce churn",
+          "example": "Why are users churning after 30 days?"
+        },
+        {
+          "name": "growth_lever_finder",
+          "description": "Identify high-impact growth opportunities",
+          "example": "What's our biggest growth lever right now?"
+        },
+        {
+          "name": "product_spec_writer",
+          "description": "Write clear, comprehensive product specs",
+          "example": "Create a PRD for this new feature"
+        },
+        {
+          "name": "stakeholder_aligner",
+          "description": "Align stakeholders on product strategy",
+          "example": "Sales wants X, engineering wants Y. How do I align them?"
+        },
+        {
+          "name": "monetization_optimizer",
+          "description": "Optimize monetization and increase revenue per user",
+          "example": "How do we increase ARPU without alienating users?"
+        },
+        {
+          "name": "market_sizer",
+          "description": "Size markets and assess TAM/SAM/SOM",
+          "example": "What's the realistic TAM for this product?"
+        }
+      ],
+      "voiceActive": true,
+      "voiceStyles": ["analytical", "strategic", "data-driven", "empathetic"],
+      "specialties": [
+        "Product strategy",
+        "Product-market fit",
+        "Growth",
+        "Prioritization",
+        "User research",
+        "Experimentation"
+      ],
+      "testimonials": [
+        {
+          "author": "Alex K., CEO @ FastGrowth",
+          "text": "Priya helped us find PMF in 90 days. Her frameworks are now how we think about product."
+        },
+        {
+          "author": "David S., VP Product",
+          "text": "The feature prioritization alone saved us 6 months of building the wrong things."
+        }
+      ],
+      "connections": ["scott-leese", "lisa-martinez", "jordan-taylor"]
+    },
+    {
+      "id": "alex-rivera",
+      "name": "Alex Rivera",
+      "title": "Customer Success Specialist",
+      "tier": "basic",
+      "category": ["customer-success", "saas"],
+      "tagline": "Turning new customers into raving fans",
+      "bio": "8 years in SaaS customer success. I help companies nail onboarding, reduce churn, and turn customers into advocates. Specialist in early-stage B2B SaaS where every customer matters.",
+      "stats": {
+        "installations": 318,
+        "rating": 4.6,
+        "toolCount": 3,
+        "followers": 1400
+      },
+      "pricing": {
+        "free": true
+      },
+      "tools": [
+        {
+          "name": "onboarding_planner",
+          "description": "Design customer onboarding flows that drive activation",
+          "example": "Create a 14-day onboarding sequence"
+        },
+        {
+          "name": "health_score_builder",
+          "description": "Build customer health scoring models",
+          "example": "What signals should I track to predict churn?"
+        },
+        {
+          "name": "playbook_generator",
+          "description": "Generate CS playbooks for common scenarios",
+          "example": "Create a playbook for handling cancellation requests"
+        }
+      ],
+      "voiceActive": false,
+      "specialties": [
+        "Customer onboarding",
+        "Churn reduction",
+        "CS operations",
+        "Customer advocacy"
+      ],
+      "connections": ["justin-strackany", "keisha-williams"]
+    },
+    {
+      "id": "david-kim",
+      "name": "David Kim",
+      "title": "DevOps & Infrastructure Expert",
+      "tier": "enhanced",
+      "category": ["engineering", "devops", "infrastructure"],
+      "tagline": "Kubernetes, AWS, and making infra invisible",
+      "bio": "12+ years building and scaling infrastructure at high-growth startups. I help engineering teams move from 'it works on my machine' to production-grade systems that handle millions of requests. Kubernetes certified, AWS obsessed, and passionate about developer experience.",
+      "stats": {
+        "installations": 673,
+        "rating": 4.8,
+        "toolCount": 7,
+        "followers": 4100
+      },
+      "pricing": {
+        "monthly": 49,
+        "lifetime": 499
+      },
+      "tools": [
+        {
+          "name": "architecture_reviewer",
+          "description": "Review infrastructure architecture for scalability and reliability",
+          "example": "Review our AWS setup before we scale to 10x traffic"
+        },
+        {
+          "name": "kubernetes_advisor",
+          "description": "Design Kubernetes deployments and troubleshoot issues",
+          "example": "Help me set up auto-scaling for this microservice"
+        },
+        {
+          "name": "ci_cd_designer",
+          "description": "Design CI/CD pipelines that are fast and reliable",
+          "example": "Build a deployment pipeline with zero-downtime deploys"
+        },
+        {
+          "name": "cost_optimizer",
+          "description": "Optimize cloud costs without sacrificing performance",
+          "example": "Our AWS bill is $50K/month. Where can we save?"
+        },
+        {
+          "name": "monitoring_strategist",
+          "description": "Design monitoring and alerting strategies",
+          "example": "What should I monitor for this distributed system?"
+        },
+        {
+          "name": "security_auditor",
+          "description": "Audit infrastructure security and compliance",
+          "example": "Are we SOC 2 compliant with this setup?"
+        },
+        {
+          "name": "disaster_recovery_planner",
+          "description": "Plan disaster recovery and business continuity",
+          "example": "Design a DR strategy with 99.99% uptime"
+        }
+      ],
+      "voiceActive": false,
+      "specialties": [
+        "Kubernetes",
+        "AWS/Cloud",
+        "CI/CD",
+        "Infrastructure as Code",
+        "Monitoring & observability",
+        "Cost optimization"
+      ],
+      "connections": ["sarah-chen", "jordan-taylor"]
+    },
+    {
+      "id": "lisa-martinez",
+      "name": "Lisa Martinez",
+      "title": "B2B Marketing Strategist",
+      "tier": "premium",
+      "category": ["marketing", "content", "growth"],
+      "tagline": "Content that converts. Demand gen that actually works.",
+      "bio": "15 years building B2B marketing engines at SaaS companies from seed to IPO. Led marketing at 3 unicorns. I help B2B companies build marketing that generates pipeline, not just MQLs. Known for content strategies that position you as the category leader.",
+      "stats": {
+        "installations": 1876,
+        "rating": 4.9,
+        "toolCount": 11,
+        "followers": 14200
+      },
+      "pricing": {
+        "oneTime": 25000,
+        "whiteGlove": true
+      },
+      "tools": [
+        {
+          "name": "content_strategist",
+          "description": "Build content strategies that drive pipeline",
+          "example": "Create a content plan to establish thought leadership"
+        },
+        {
+          "name": "positioning_framework",
+          "description": "Develop positioning and messaging that resonates",
+          "example": "How should we position against the market leader?"
+        },
+        {
+          "name": "demand_gen_planner",
+          "description": "Design demand gen campaigns that convert",
+          "example": "Build a multi-channel campaign for enterprise buyers"
+        },
+        {
+          "name": "seo_strategist",
+          "description": "Develop SEO strategies for B2B SaaS",
+          "example": "Rank for high-intent keywords in our category"
+        },
+        {
+          "name": "campaign_analyzer",
+          "description": "Analyze marketing campaigns and optimize performance",
+          "example": "Why isn't this campaign generating pipeline?"
+        },
+        {
+          "name": "funnel_optimizer",
+          "description": "Optimize conversion rates across the funnel",
+          "example": "Increase demo request to opportunity conversion"
+        },
+        {
+          "name": "account_based_marketer",
+          "description": "Design ABM strategies for enterprise accounts",
+          "example": "Create an ABM campaign targeting Fortune 500"
+        },
+        {
+          "name": "brand_builder",
+          "description": "Build brands that stand out in crowded markets",
+          "example": "Differentiate our brand from 20 competitors"
+        },
+        {
+          "name": "community_strategist",
+          "description": "Build engaged communities around your product",
+          "example": "Launch a user community that drives retention"
+        },
+        {
+          "name": "influencer_partnership",
+          "description": "Identify and partner with industry influencers",
+          "example": "Who should we partner with to reach CIOs?"
+        },
+        {
+          "name": "event_marketer",
+          "description": "Plan events and conferences that generate pipeline",
+          "example": "Should we sponsor this $100K conference?"
+        }
+      ],
+      "voiceActive": true,
+      "voiceStyles": ["strategic", "creative", "data-driven", "authentic"],
+      "specialties": [
+        "B2B marketing",
+        "Content strategy",
+        "Demand generation",
+        "Positioning",
+        "ABM",
+        "Brand building"
+      ],
+      "testimonials": [
+        {
+          "author": "Mark T., CMO @ Enterprise SaaS",
+          "text": "Lisa's positioning framework helped us win against competitors 3x our size. Game-changer."
+        }
+      ],
+      "connections": ["justin-strackany", "scott-leese", "priya-patel", "keisha-williams"]
+    },
+    {
+      "id": "jordan-taylor",
+      "name": "Jordan Taylor",
+      "title": "Startup Founder & Bootstrapping Expert",
+      "tier": "basic",
+      "category": ["startup", "founder", "bootstrapping"],
+      "tagline": "Built to $5M ARR with zero funding",
+      "bio": "Serial bootstrapper. Built and exited 2 companies without taking VC money. I help founders build sustainable, profitable businesses without the fundraising hamster wheel. If you're bootstrapping or thinking about it, let's talk.",
+      "stats": {
+        "installations": 521,
+        "rating": 4.7,
+        "toolCount": 4,
+        "followers": 3200
+      },
+      "pricing": {
+        "free": true
+      },
+      "tools": [
+        {
+          "name": "mvp_scoper",
+          "description": "Scope MVPs that validate hypotheses cheaply",
+          "example": "What's the minimum viable version of this idea?"
+        },
+        {
+          "name": "unit_economics_calculator",
+          "description": "Calculate and optimize unit economics",
+          "example": "Are our unit economics sustainable?"
+        },
+        {
+          "name": "bootstrapping_advisor",
+          "description": "Get advice on bootstrapping strategies",
+          "example": "Should I raise money or stay bootstrapped?"
+        },
+        {
+          "name": "founder_therapist",
+          "description": "Navigate the emotional rollercoaster of founding",
+          "example": "I'm burned out and questioning everything. Help?"
+        }
+      ],
+      "voiceActive": false,
+      "specialties": [
+        "Bootstrapping",
+        "Product validation",
+        "Unit economics",
+        "Founder mental health",
+        "Sustainable growth"
+      ],
+      "connections": ["sarah-chen", "priya-patel", "david-kim"]
+    },
+    {
+      "id": "keisha-williams",
+      "name": "Keisha Williams",
+      "title": "Sales Enablement & Training Expert",
+      "tier": "enhanced",
+      "category": ["sales", "enablement", "training"],
+      "tagline": "Turning average reps into quota crushers",
+      "bio": "10+ years in sales enablement at high-growth SaaS companies. I build the systems, content, and training that help sales teams actually hit quota. Specialized in onboarding programs that reduce ramp time and ongoing enablement that moves the needle.",
+      "stats": {
+        "installations": 1034,
+        "rating": 4.8,
+        "toolCount": 9,
+        "followers": 6700
+      },
+      "pricing": {
+        "monthly": 49,
+        "lifetime": 499
+      },
+      "tools": [
+        {
+          "name": "training_program_designer",
+          "description": "Design sales training programs that actually work",
+          "example": "Build a new hire bootcamp for SDRs"
+        },
+        {
+          "name": "sales_content_creator",
+          "description": "Create sales content (decks, battlecards, scripts)",
+          "example": "Create a competitive battlecard for our main competitor"
+        },
+        {
+          "name": "coaching_framework",
+          "description": "Build coaching frameworks for frontline managers",
+          "example": "How should managers coach reps on discovery calls?"
+        },
+        {
+          "name": "certification_builder",
+          "description": "Create certification programs to validate sales skills",
+          "example": "Build a certification for product knowledge"
+        },
+        {
+          "name": "skill_gap_analyzer",
+          "description": "Identify skill gaps and training needs",
+          "example": "Why is this rep struggling with objection handling?"
+        },
+        {
+          "name": "playbook_maintainer",
+          "description": "Keep sales playbooks updated and actually used",
+          "example": "Our playbook is 6 months out of date. Help?"
+        },
+        {
+          "name": "demo_optimizer",
+          "description": "Optimize demo experiences for conversion",
+          "example": "How do I structure a demo for enterprise buyers?"
+        },
+        {
+          "name": "objection_handler",
+          "description": "Build objection handling frameworks",
+          "example": "Create responses for the 10 most common objections"
+        },
+        {
+          "name": "sales_tool_integrator",
+          "description": "Integrate and optimize sales tools and tech stack",
+          "example": "Should we add this new sales tool?"
+        }
+      ],
+      "voiceActive": false,
+      "specialties": [
+        "Sales enablement",
+        "Training programs",
+        "Onboarding",
+        "Sales content",
+        "Coaching",
+        "Sales methodology"
+      ],
+      "testimonials": [
+        {
+          "author": "Carlos R., VP Sales",
+          "text": "Keisha cut our ramp time from 6 months to 3. Her training programs are world-class."
+        }
+      ],
+      "connections": ["justin-strackany", "scott-leese", "marcus-johnson", "alex-rivera", "lisa-martinez"]
+    }
+  ]
+}

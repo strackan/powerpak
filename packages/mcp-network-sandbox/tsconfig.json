@@ -1,0 +1,17 @@
+{
+  "extends": "../../tsconfig.json",
+  "compilerOptions": {
+    "outDir": "./dist",
+    "rootDir": "./src",
+    "types": ["node"],
+    "resolveJsonModule": true,
+    "module": "NodeNext",
+    "moduleResolution": "NodeNext",
+    "target": "ES2022"
+  },
+  "include": ["src/**/*", "src/**/*.json"],
+  "exclude": ["node_modules", "dist"],
+  "references": [
+    { "path": "../shared-types" }
+  ]
+}

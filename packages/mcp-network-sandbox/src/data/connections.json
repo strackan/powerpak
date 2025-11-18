@@ -1,0 +1,144 @@
+{
+  "correlations": [
+    {
+      "expertId": "justin-strackany",
+      "alsoInstalled": [
+        { "id": "scott-leese", "percentage": 85, "reason": "Both focus on revenue team building" },
+        { "id": "keisha-williams", "percentage": 72, "reason": "Sales enablement complements Justin's frameworks" },
+        { "id": "marcus-johnson", "percentage": 68, "reason": "Enterprise sales pairs with revenue ops" },
+        { "id": "lisa-martinez", "percentage": 54, "reason": "Marketing + sales alignment" },
+        { "id": "priya-patel", "percentage": 48, "reason": "Product and GTM strategy alignment" }
+      ]
+    },
+    {
+      "expertId": "scott-leese",
+      "alsoInstalled": [
+        { "id": "justin-strackany", "percentage": 78, "reason": "Complementary revenue expertise" },
+        { "id": "keisha-williams", "percentage": 81, "reason": "Enablement powers Scott's leadership frameworks" },
+        { "id": "marcus-johnson", "percentage": 74, "reason": "Enterprise sales + leadership = power combo" },
+        { "id": "lisa-martinez", "percentage": 62, "reason": "Marketing leaders need sales leadership insights" },
+        { "id": "priya-patel", "percentage": 58, "reason": "Product and revenue alignment" }
+      ]
+    },
+    {
+      "expertId": "sarah-chen",
+      "alsoInstalled": [
+        { "id": "david-kim", "percentage": 67, "reason": "Frontend + DevOps = full stack understanding" },
+        { "id": "jordan-taylor", "percentage": 52, "reason": "Technical founders building products" },
+        { "id": "priya-patel", "percentage": 43, "reason": "Engineering working with product" }
+      ]
+    },
+    {
+      "expertId": "marcus-johnson",
+      "alsoInstalled": [
+        { "id": "scott-leese", "percentage": 79, "reason": "Leadership + enterprise sales" },
+        { "id": "justin-strackany", "percentage": 71, "reason": "Revenue ops + enterprise sales" },
+        { "id": "keisha-williams", "percentage": 64, "reason": "Enablement for enterprise reps" },
+        { "id": "lisa-martinez", "percentage": 56, "reason": "ABM marketing + enterprise sales" }
+      ]
+    },
+    {
+      "expertId": "priya-patel",
+      "alsoInstalled": [
+        { "id": "lisa-martinez", "percentage": 73, "reason": "Product + marketing partnership" },
+        { "id": "scott-leese", "percentage": 61, "reason": "Product-led growth + sales leadership" },
+        { "id": "jordan-taylor", "percentage": 58, "reason": "Product strategy for founders" },
+        { "id": "justin-strackany", "percentage": 49, "reason": "GTM strategy alignment" }
+      ]
+    },
+    {
+      "expertId": "alex-rivera",
+      "alsoInstalled": [
+        { "id": "justin-strackany", "percentage": 76, "reason": "CS + revenue ops = retention focus" },
+        { "id": "keisha-williams", "percentage": 63, "reason": "Onboarding + enablement" },
+        { "id": "priya-patel", "percentage": 51, "reason": "Product feedback from CS" }
+      ]
+    },
+    {
+      "expertId": "david-kim",
+      "alsoInstalled": [
+        { "id": "sarah-chen", "percentage": 69, "reason": "Infrastructure + frontend = full platform" },
+        { "id": "jordan-taylor", "percentage": 57, "reason": "Technical founders need DevOps" },
+        { "id": "priya-patel", "percentage": 44, "reason": "Infrastructure for product scaling" }
+      ]
+    },
+    {
+      "expertId": "lisa-martinez",
+      "alsoInstalled": [
+        { "id": "priya-patel", "percentage": 77, "reason": "Marketing + product = growth engine" },
+        { "id": "scott-leese", "percentage": 68, "reason": "Marketing + sales alignment" },
+        { "id": "justin-strackany", "percentage": 59, "reason": "Demand gen + revenue ops" },
+        { "id": "keisha-williams", "percentage": 55, "reason": "Marketing content + sales enablement" }
+      ]
+    },
+    {
+      "expertId": "jordan-taylor",
+      "alsoInstalled": [
+        { "id": "priya-patel", "percentage": 71, "reason": "Founders need product strategy" },
+        { "id": "sarah-chen", "percentage": 58, "reason": "Building technical products" },
+        { "id": "david-kim", "percentage": 54, "reason": "Infrastructure for scaling" },
+        { "id": "justin-strackany", "percentage": 47, "reason": "Revenue fundamentals for founders" }
+      ]
+    },
+    {
+      "expertId": "keisha-williams",
+      "alsoInstalled": [
+        { "id": "scott-leese", "percentage": 83, "reason": "Enablement + leadership = winning combination" },
+        { "id": "justin-strackany", "percentage": 75, "reason": "Enablement supports revenue ops" },
+        { "id": "marcus-johnson", "percentage": 67, "reason": "Enterprise enablement" },
+        { "id": "alex-rivera", "percentage": 61, "reason": "Sales + CS alignment" },
+        { "id": "lisa-martinez", "percentage": 53, "reason": "Marketing content for sales" }
+      ]
+    }
+  ],
+  "networkInsights": {
+    "strongestPairs": [
+      {
+        "expert1": "scott-leese",
+        "expert2": "keisha-williams",
+        "bidirectionalScore": 82,
+        "insight": "Sales leadership + enablement creates high-performing teams"
+      },
+      {
+        "expert1": "justin-strackany",
+        "expert2": "scott-leese",
+        "bidirectionalScore": 81.5,
+        "insight": "Revenue ops + sales leadership = complete revenue engine"
+      },
+      {
+        "expert1": "priya-patel",
+        "expert2": "lisa-martinez",
+        "bidirectionalScore": 75,
+        "insight": "Product + marketing alignment drives growth"
+      },
+      {
+        "expert1": "justin-strackany",
+        "expert2": "alex-rivera",
+        "bidirectionalScore": 76,
+        "insight": "Revenue ops + CS = customer lifetime value optimization"
+      }
+    ],
+    "communityClust ers": [
+      {
+        "name": "Revenue Engine Builders",
+        "members": ["justin-strackany", "scott-leese", "marcus-johnson", "keisha-williams", "lisa-martinez"],
+        "description": "Sales, marketing, and enablement leaders building complete revenue systems"
+      },
+      {
+        "name": "Product & Growth",
+        "members": ["priya-patel", "lisa-martinez", "jordan-taylor"],
+        "description": "Product strategists and growth marketers"
+      },
+      {
+        "name": "Technical Builders",
+        "members": ["sarah-chen", "david-kim", "jordan-taylor"],
+        "description": "Engineers and technical founders building products"
+      },
+      {
+        "name": "Customer-Centric",
+        "members": ["justin-strackany", "alex-rivera", "keisha-williams"],
+        "description": "Revenue, CS, and enablement focused on customer success"
+      }
+    ]
+  }
+}
