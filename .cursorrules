@@ -1,0 +1,41 @@
+# GTM.CONSULTING - TEXT ADVENTURE TRANSFORMATION
+
+Full documentation: PROJECT.md (read at start of each session)
+
+## Project Basics
+- Converting WordPress consulting site → Zork-style text adventure
+- 10-day public transformation (Nov 19 - Dec 4)
+- Build in public marketing strategy
+- Launches Dec 4 (Scott demo day)
+
+## Technical Stack
+- Pure HTML/CSS/JS (no frameworks, no build)
+- Git-based workflow
+- Vercel/Netlify deploy
+- Eventually: Claude API + MCP integration
+
+## Working Style
+- ALWAYS ask questions before building
+- Show mockups/options for approval
+- Improvise within structure
+- Document everything in CHANGELOG.md
+- Each phase = conversational design → build
+
+## Phase Structure
+1. Review PROJECT.md
+2. Ask Justin questions about today's phase
+3. Show options/mockups
+4. Get approval
+5. Build
+6. Test
+7. Prepare deploy + LinkedIn post
+
+## Quality Standards
+- Mobile responsive
+- Fast loading
+- Clean, commented code
+- Works at every stage
+- Fun to build
+
+---
+For full context, phases, narrative structure, and marketing strategy: read PROJECT.md
