@@ -1,359 +1,591 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GTM.Consulting - Your Success Is Our Business</title>
-    <meta name="description" content="Go-to-market strategies, sales enablement, and customer success consulting.">
-    <link rel="stylesheet" href="styles/base.css">
-</head>
-<body>
-    <!-- Header / Navigation -->
-    <header class="site-header">
-        <div class="container">
-            <div class="header-content">
-                <a href="#hero" class="logo">
-                    <span class="logo-text">GTM.Consulting</span>
-                </a>
-                <nav class="main-nav">
-                    <ul class="nav-list">
-                        <li><a href="#hero">Home</a></li>
-                        <li><a href="#about">About</a></li>
-                        <li class="has-dropdown">
-                            <a href="#services">Services</a>
-                            <ul class="dropdown">
-                                <li><a href="#services?tab=startup">Startup Package</a></li>
-                                <li><a href="#services?tab=sales">Sales Strategies</a></li>
-                                <li><a href="#services?tab=success">Customer Success</a></li>
-                                <li><a href="#services?tab=leads">Lead Generation</a></li>
+    <!-- Header -->
+    <head>
+        <meta charset="utf-8">
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+        <title>GTM Consulting</title>
+        <meta content="" name="description">
+        <meta content="" name="keywords">
+
+        <!-- Icons -->
+        <script src="https://kit.fontawesome.com/c4c8fc172e.js" crossorigin="anonymous"></script>
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+        <link rel="manifest" href="/site.webmanifest">
+
+        <!-- Bootstrap Icons CDN -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+
+        <!-- Boxicons CDN -->
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+        <!-- Google Fonts -->
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+        <!-- Vendor CSS Files - CDN -->
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css">
+        <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+
+        <!-- Template Main CSS File -->
+        <link href="assets/css/style.css" rel="stylesheet">
+
+        <style>
+        .btn-action {
+          color: #FFFFFF;
+          background-color: #E0393B;
+          border-color: #E0393B;
+        }
+
+        .btn-action:hover,
+        .btn-action:focus,
+        .btn-action:active,
+        .btn-action.active,
+        .open .dropdown-toggle.btn-action {
+          color: #FFFFFF;
+          background-color: #AB282A;
+          border-color: #E0393B;
+        }
+
+        .btn-action:active,
+        .btn-action.active,
+        .open .dropdown-toggle.btn-action {
+          background-image: none;
+        }
+
+        .btn-action.disabled,
+        .btn-action[disabled],
+        fieldset[disabled] .btn-action,
+        .btn-action.disabled:hover,
+        .btn-action[disabled]:hover,
+        fieldset[disabled] .btn-action:hover,
+        .btn-action.disabled:focus,
+        .btn-action[disabled]:focus,
+        fieldset[disabled] .btn-action:focus,
+        .btn-action.disabled:active,
+        .btn-action[disabled]:active,
+        fieldset[disabled] .btn-action:active,
+        .btn-action.disabled.active,
+        .btn-action[disabled].active,
+        fieldset[disabled] .btn-action.active {
+          background-color: #E0393B;
+          border-color: #E0393B;
+        }
+
+        .btn-action .badge {
+          color: #E0393B;
+          background-color: #FFFFFF;
+        }
+        </style>
+    </head>
+    <!-- End Header -->
+    <body>
+        <!-- Navigation Section -->
+        <header id="header" class="fixed-top d-flex align-items-center">
+            <!-- ======= Nav ======= -->
+            <div class="container d-flex align-items-center">
+                <div class="logo me-auto">
+                    <a href="#hero">GTM<span>.</span>Consulting</a>
+                </div>
+
+                <nav id="navbar" class="navbar order-last order-lg-0">
+                    <ul>
+                        <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
+                        <li><a class="nav-link scrollto" href="#team">About</a></li>
+                        <li class="dropdown"><a href="#about"><span>Services</span><i class="bi bi-chevron-down"></i></a>
+                            <ul>
+                                <li><a href="#tabs">Startup Package</a></li>
+                                <li><a href="#tabs">Sales Strategies</a></li>
+                                <li><a href="#tabs">Customer Success Strategies</a></li>
+                                <li><a href="#tabs">Lead Generation</a></li>
                             </ul>
                         </li>
-                        <li><a href="#testimonials">Testimonials</a></li>
+                        <li><a class="nav-link scrollto" href="#testimonials">Testimonials</a></li>
                     </ul>
-                </nav>
-                <a href="mailto:hello@gtm.consulting" class="cta-button">Let's Chat</a>
-            </div>
-        </div>
-    </header>
+                    <i class="bi bi-list mobile-nav-toggle"></i>
+                </nav><!-- .navbar -->
 
-    <!-- Hero Section -->
-    <section id="hero" class="hero-section">
-        <div class="container">
-            <div class="hero-content">
-                <h1>Your Success Is Our Business</h1>
-                <p class="hero-subtitle">Strategic go-to-market consulting for startups and scale-ups. From product-market fit to revenue growth, we build the systems that turn vision into traction.</p>
-                <a href="mailto:hello@gtm.consulting?subject=Let's%20Talk%20Growth" class="cta-button large">Book A Meeting</a>
+                <a class="get-started-btn scrollto ms-4" data-bs-toggle="modal" data-bs-target="#contact_form">Let's Chat</a>
             </div>
+            <!-- End Nav -->
+        </header>
+        <!-- End Navigation -->
 
-            <!-- Client Logo Carousel -->
-            <div class="client-logos">
-                <p class="logos-label">Trusted by innovative companies</p>
-                <div class="logo-track">
-                    <div class="logo-item"><span>Stylo</span></div>
-                    <div class="logo-item"><span>Cast</span></div>
-                    <div class="logo-item"><span>Zoee</span></div>
-                    <div class="logo-item"><span>Eva</span></div>
-                    <div class="logo-item"><span>Replayz</span></div>
-                    <div class="logo-item"><span>SL</span></div>
-                    <div class="logo-item"><span>Techvestor</span></div>
+        <!-- ======= Hero Section ======= -->
+        <section id="hero" class="d-flex align-items-center">
+            <div class="container" data-aos="zoom-out" data-aos-delay="100">
+                <div class="row">
+                    <div class="col-xl-7">
+                        <h1>Your Success Is Our Business</h1>
+                        <h2>Go-To-Market Strategies From People Who Get It</h2>
+                        <h2 style="font-size:1.1em"></h2>
+                        <a href="" class="btn-get-started scrollto" data-bs-toggle="modal" data-bs-target="#contact_form">Book A Meeting</a>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+        <!-- End Hero -->
 
-    <!-- Services Section -->
-    <section id="services" class="services-section">
-        <div class="container">
-            <h2>How We Help</h2>
+        <main id="main">
+            <!-- ======= Clients Section ======= -->
+            <section id="clients" class="clients">
+                <div class="container" data-aos="zoom-in">
+                    <div class="clients-slider swiper">
+                        <div class="swiper-wrapper align-items-center">
+                            <div class="swiper-slide"><img src="assets/img/clients/stylo_logo.svg" class="img-fluid" alt=""></div>
+                            <div class="swiper-slide"><img src="assets/img/clients/cast_logo.svg" class="img-fluid" alt=""></div>
+                            <div class="swiper-slide"><img src="assets/img/clients/zoee_logo.svg" class="img-fluid" alt=""></div>
+                            <div class="swiper-slide"><img src="assets/img/clients/eva_logo.webp" class="img-fluid" alt=""></div>
+                            <div class="swiper-slide"><img src="assets/img/clients/Replayz_logo.png" class="img-fluid" alt=""></div>
+                            <div class="swiper-slide"><img src="assets/img/clients/SL_Logo.svg" class="img-fluid" alt=""></div>
+                            <div class="swiper-slide"><img src="assets/img/clients/techvestor_logo.png" class="img-fluid" alt=""></div>
+                        </div>
+                        <div class="swiper-pagination"></div>
+                    </div>
+                </div>
+            </section>
+            <!-- End Clients Section -->
 
-            <!-- Tabs Navigation -->
-            <div class="tabs-nav">
-                <button class="tab-button active" data-tab="startup">Startup Package</button>
-                <button class="tab-button" data-tab="sales">Sales Strategies</button>
-                <button class="tab-button" data-tab="success">Customer Success</button>
-                <button class="tab-button" data-tab="leads">Lead Generation</button>
-            </div>
-
-            <!-- Tab Content -->
-            <div class="tabs-content">
-                <!-- Startup Package Tab -->
-                <div class="tab-panel active" id="tab-startup">
-                    <div class="tab-inner">
-                        <div class="tab-text">
-                            <h3>Startup Package</h3>
-                            <div class="challenge-solution">
-                                <h4>The Challenge</h4>
-                                <p>You've built something people need, but breaking into the market feels impossible. Without established processes or dedicated sales resources, growth is slow and unpredictable.</p>
-
-                                <h4>The Solution</h4>
-                                <p>Our Startup Package gives you the foundation to scale. We build your entire go-to-market engine—from positioning to sales process to customer success—so you can focus on product while we handle the growth infrastructure.</p>
+            <!-- ======= About Section ======= -->
+            <section id="about" class="about section-bg">
+                <div class="container" data-aos="fade-up">
+                    <div class="row no-gutters">
+                        <div class="content col-xl-5 d-flex align-items-stretch">
+                            <div class="content">
+                                <h3>Cross The Chasm</h3>
+                                <p>
+                                    Need help getting to the next stage in your business?<br>Rely on experts who've been there before.
+                                </p>
+                                <a href="#tabs" class="about-btn"><span>Explore Offerings</span> <i class="bx bx-chevron-right"></i></a>
                             </div>
-
-                            <ul class="benefits-list">
-                                <li>Complete GTM strategy and positioning</li>
-                                <li>Sales playbook and process documentation</li>
-                                <li>Customer success framework</li>
-                                <li>Lead generation system setup</li>
-                                <li>Ongoing advisory support</li>
-                            </ul>
-
-                            <a href="mailto:hello@gtm.consulting?subject=Startup%20Package%20Inquiry" class="cta-button">Learn More</a>
                         </div>
-                        <div class="tab-image">
-                            <img src="assets/images/tabs-1.jpg" alt="Startup strategy session">
+                        <div class="col-xl-7 d-flex align-items-stretch">
+                            <div class="icon-boxes d-flex flex-column justify-content-center">
+                                <div class="row">
+                                    <div class="col-md-6 icon-box" data-aos="fade-up" data-aos-delay="100">
+                                        <i class="fa-solid fa-trophy"></i>
+                                        <h4>Fractional Revenue Leadership</h4>
+                                        <p>Increase sales and create a revenue center of excellence...at a fraction of the cost of a traditional VP of Sales</p>
+                                    </div>
+                                    <div class="col-md-6 icon-box" data-aos="fade-up" data-aos-delay="200">
+                                        <i class="fa-solid fa-bullhorn"></i>
+                                        <h4>Turn Your Passion Into Reality</h4>
+                                        <p>Just getting started? We'll build your outbound engine and sell your first 2-3 customers. Guaranteed!</p>
+                                    </div>
+                                    <div class="col-md-6 icon-box" data-aos="fade-up" data-aos-delay="300">
+                                        <i class="fa-regular fa-handshake"></i>
+                                        <h4>Customer Success Strategies</h4>
+                                        <p>Don't just keep your customers. Grow them!<br>Our offerings are built to maximize net retention.</p>
+                                    </div>
+                                    <div class="col-md-6 icon-box" data-aos="fade-up" data-aos-delay="400">
+                                        <i class="fa-solid fa-filter-circle-dollar"></i>
+                                        <h4>Get More Leads</h4>
+                                        <p>Getting customer attention is harder than ever. Let us create your predictable revenue machine!</p>
+                                    </div>
+                                </div>
+                            </div><!-- End .content-->
                         </div>
                     </div>
                 </div>
+            </section>
+            <!-- End About Section -->
 
-                <!-- Sales Strategies Tab -->
-                <div class="tab-panel" id="tab-sales">
-                    <div class="tab-inner">
-                        <div class="tab-text">
-                            <h3>Sales Strategies</h3>
-                            <div class="challenge-solution">
-                                <h4>The Challenge</h4>
-                                <p>Your sales team is working hard but results are inconsistent. Deals stall, discounting is common, and you're not sure which activities actually drive revenue.</p>
+            <!-- ======= Tabs Section ======= -->
+            <section id="tabs" class="tabs">
+                <div class="container" data-aos="fade-up">
+                    <ul class="nav nav-tabs row d-flex">
+                        <li class="nav-item tab col-3">
+                            <a class="nav-link active show" data-bs-toggle="tab" data-bs-target="#tab-startup">
+                                <i class="fa-solid fa-bullhorn"></i>
+                                <h4 class="d-none d-lg-block">Startup Launch Package</h4>
+                            </a>
+                        </li>
+                        <li class="nav-item col-3">
+                            <a class="nav-link" data-bs-toggle="tab" data-bs-target="#tab-sales">
+                                <i class="fa-solid fa-trophy"></i>
+                                <h4 class="d-none d-lg-block">Fractional Revenue</h4>
+                            </a>
+                        </li>
+                        <li class="nav-item col-3">
+                            <a class="nav-link" data-bs-toggle="tab" data-bs-target="#tab-cs">
+                                <i class="fa-regular fa-handshake"></i>
+                                <h4 class="d-none d-lg-block">Customer Success</h4>
+                            </a>
+                        </li>
+                        <li class="nav-item col-3">
+                            <a class="nav-link" data-bs-toggle="tab" data-bs-target="#tab-leadgen">
+                                <i class="fa-solid fa-filter-circle-dollar"></i>
+                                <h4 class="d-none d-lg-block">Lead Generation</h4>
+                            </a>
+                        </li>
+                    </ul>
 
-                                <h4>The Solution</h4>
-                                <p>We analyze your sales motion end-to-end and build a repeatable system that converts. From qualification frameworks to negotiation strategies, we optimize every stage of your funnel.</p>
+                    <div class="tab-content">
+                        <div class="tab-pane active show" id="tab-startup">
+                            <div class="row">
+                                <div class="col-lg-6 order-2 order-lg-1 mt-3 mt-lg-0" data-aos="fade-up" data-aos-delay="100">
+                                    <h3>Bring Your Great Idea To Market</h3>
+                                    <p>
+                                        <strong>The challenge:</strong><br>
+                                        You built your MVP and have gotten positive response from potential investors and peers, but you need 5-10 customers to really prove the model and get initial traction. You want to put a repeatable process in place you can expand on, but aren't really sure where to start. in order to really get traction.
+                                    </p>
+                                    <p><strong>The solution:</strong><br>
+                                        Our "startup in a box" offering is streamlined to provide everything you need to get your initial set of customers. We'll provide the following:</p>
+                                    <ul>
+                                        <li><i class="ri-check-double-line"></i>Define your Ideal Customer</li>
+                                        <li><i class="ri-check-double-line"></i>Create targeted messaging cadences that map to your solution</li>
+                                        <li><i class="ri-check-double-line"></i>Put the tech stack in place to ensure your message gets sent and delivered successfully at scale</li>
+                                        <li><i class="ri-check-double-line"></i>Execute cold calls and social media outreach when customers raise their hand</li>
+                                        <li><i class="ri-check-double-line"></i>Assist with discovery calls and CRM to build and manage pipeline</li>
+                                    </ul>
+                                    <p>
+                                        Our system is designed to bring those first few customers in the door, so you can focus on building a great product. Once we've completed our engagement, we can stay on for the next phase, or help you raise money and hire a team to expand on our initial blueprint.
+                                    </p>
+                                    <a class="get-started-btn scrollto" data-bs-toggle="modal" data-bs-target="#contact_form">Schedule A Meeting</a>
+                                </div>
+                                <div class="col-lg-6 order-1 order-lg-2 text-center" data-aos="fade-up" data-aos-delay="200">
+                                    <img src="assets/img/tabs-1.jpg" alt="" class="img-fluid">
+                                </div>
                             </div>
-
-                            <ul class="benefits-list">
-                                <li>Sales process audit and optimization</li>
-                                <li>Win/loss analysis and insights</li>
-                                <li>Qualification and scoring frameworks</li>
-                                <li>Pitch and demo refinement</li>
-                                <li>Sales enablement materials</li>
-                            </ul>
-
-                            <a href="mailto:hello@gtm.consulting?subject=Sales%20Strategy%20Inquiry" class="cta-button">Schedule A Call</a>
                         </div>
-                        <div class="tab-image">
-                            <img src="assets/images/tabs-2.jpg" alt="Sales team collaboration">
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Customer Success Tab -->
-                <div class="tab-panel" id="tab-success">
-                    <div class="tab-inner">
-                        <div class="tab-text">
-                            <h3>Customer Success</h3>
-                            <div class="challenge-solution">
-                                <h4>The Challenge</h4>
-                                <p>You're acquiring customers but retention is suffering. Churn is eating into growth, and you don't have the systems to proactively drive adoption and expansion.</p>
-
-                                <h4>The Solution</h4>
-                                <p>We build customer success programs that maximize lifetime value. From onboarding to health monitoring to expansion plays, we create the frameworks that turn customers into advocates.</p>
+                        <div class="tab-pane" id="tab-sales">
+                            <div class="row">
+                                <div class="col-lg-6 order-2 order-lg-1 mt-3 mt-lg-0">
+                                    <h3>Bring Your Revenue Machine To The Next Level</h3>
+                                    <p>
+                                        <strong>The challenge:</strong><br>
+                                        You have your first few customers, are headed towards product market fit, and are ready to scale. But these next steps are critical. Should you hire that expensive sales pro from BigCo, Inc.? A VP of Sales for $250k-$400k per year? And what about branding, lead generation, customer success, and everything else?
+                                    </p>
+                                    <p><strong>The solution:</strong><br>
+                                        Hire a revenue-generating team that's done this before. Beyond traditional Fractional CROs, we'll roll up our sleeves and make sure your systems are correct, your demand engine is ship-shape, and you are maximizing your revenue potential. Our solutions are designed to grow with you, and are tailored to your specific use-case. Examples include:</p>
+                                    <ul>
+                                        <li><i class="ri-check-double-line"></i>Optimizing The Ideal Customer Profile and Personas</li>
+                                        <li><i class="ri-check-double-line"></i>Creating a forecast &amp; systems aligned with your growth</li>
+                                        <li><i class="ri-check-double-line"></i>Coach and manage your reps to their fullest potential</li>
+                                        <li><i class="ri-check-double-line"></i>Refining your buyers journey to optimize win rate and ACV</li>
+                                    </ul>
+                                    <p>
+                                        Before you spend considerable time, money, and equity on an in-house revenue leader, given our proven leaders a try for a <em>fraction</em> (see what we did there?) of the cost.
+                                    </p>
+                                    <a class="get-started-btn scrollto" data-bs-toggle="modal" data-bs-target="#contact_form">Learn More</a>
+                                </div>
+                                <div class="col-lg-6 order-1 order-lg-2 text-center">
+                                    <img src="assets/img/tabs-2.jpg" alt="" class="img-fluid">
+                                </div>
                             </div>
-
-                            <ul class="benefits-list">
-                                <li>Customer journey mapping</li>
-                                <li>Onboarding program design</li>
-                                <li>Health scoring and risk detection</li>
-                                <li>Expansion and upsell strategies</li>
-                                <li>Voice of customer programs</li>
-                            </ul>
-
-                            <a href="mailto:hello@gtm.consulting?subject=Customer%20Success%20Inquiry" class="cta-button">Learn More</a>
                         </div>
-                        <div class="tab-image">
-                            <img src="assets/images/tabs-3.jpg" alt="Customer success meeting">
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Lead Generation Tab -->
-                <div class="tab-panel" id="tab-leads">
-                    <div class="tab-inner">
-                        <div class="tab-text">
-                            <h3>Lead Generation</h3>
-                            <div class="challenge-solution">
-                                <h4>The Challenge</h4>
-                                <p>Your pipeline is empty or full of unqualified leads. Marketing and sales aren't aligned, and you're wasting time on prospects that will never close.</p>
-
-                                <h4>The Solution</h4>
-                                <p>We design integrated demand generation systems that fill your pipeline with qualified opportunities. From ideal customer profiles to channel strategy to lead nurturing, we build the engine that feeds your sales team.</p>
+                        <div class="tab-pane" id="tab-cs">
+                            <div class="row">
+                                <div class="col-lg-6 order-2 order-lg-1 mt-3 mt-lg-0">
+                                    <h3>Your Customers Fuel Your Success</h3>
+                                    <p>
+                                        <strong>The challenge:</strong><br>
+                                        You've done a great job closing new business, but something is wrong. Lately, customers haven't been adopting the solution like you thought they would. And several have sent in cancellation notices. You feel like you don't have relationships with the people who control the budget, and, if you don't get a handle on this, you'll have to close twice as much new business to make up for the churn. Your CSMs are working their butts off, so effort isn't the issue. So what is?
+                                    </p>
+                                    <p><strong>The solution:</strong><br>
+                                        Many Customer Success organizations are too busy or have never been properly coached to build mutually strategic relationships with customers. As a result, they end up working with them at the most tactical levels -- product use and support. In some organizations, that may be enough, but when customers start to churn, it's a sign you are setting yourself up to be a vendor instead of a pertner. Our CS playbook has been honed by some of the leading voices in CS, and it is designed to reduce churn, increase adoption, and build long-term value with your customers:</p>
+                                    <ul>
+                                        <li><i class="ri-check-double-line"></i>Create a proactive workflow that prioritizes the most critical issues</li>
+                                        <li><i class="ri-check-double-line"></i>Leverage mutual success plans to take pressure off renewals</li>
+                                        <li><i class="ri-check-double-line"></i>Optimize sales handoff, implementation, and adoption phases</li>
+                                        <li><i class="ri-check-double-line"></i>Architect a key account program drive executive engagement</li>
+                                    </ul>
+                                    <p>
+                                        It's no longer enough to provide excellent service. You need to anticipate customer needs and become an integral part of their business. We can show you how.
+                                    </p>
+                                    <a class="get-started-btn scrollto" data-bs-toggle="modal" data-bs-target="#contact_form">Take The Next Step</a>
+                                </div>
+                                <div class="col-lg-6 order-1 order-lg-2 text-center">
+                                    <img src="assets/img/tabs-3.jpg" alt="" class="img-fluid">
+                                </div>
                             </div>
-
-                            <ul class="benefits-list">
-                                <li>Ideal customer profile development</li>
-                                <li>Channel strategy and mix optimization</li>
-                                <li>Lead scoring and qualification</li>
-                                <li>Nurture campaign design</li>
-                                <li>Marketing and sales alignment</li>
-                            </ul>
-
-                            <a href="mailto:hello@gtm.consulting?subject=Lead%20Generation%20Inquiry" class="cta-button">Schedule A Call</a>
                         </div>
-                        <div class="tab-image">
-                            <img src="assets/images/tabs-4.jpg" alt="Lead generation strategy">
+                        <div class="tab-pane" id="tab-leadgen">
+                            <div class="row">
+                                <div class="col-lg-6 order-2 order-lg-1 mt-3 mt-lg-0">
+                                    <h3>Everything's Harder Without Leads</h3>
+                                    <p>
+                                        <strong>The challenge:</strong><br>
+                                        You've built a great product and have a handful of great champions using your solution. Everything seems to be on track to hit the gas and accelerate the growth of your business. Now you just need some leads. But you're not sure where to start, who to hire, or how to put a process together.
+                                    </p>
+                                    <p><strong>The solution:</strong><br>
+                                        Getting leads has never been more challenging. Decision-makers are inundated with countless options. But that doesn't mean there's not a way to stand out from the crown. Unlike many lead-generation systems, we're focused on putting a holistic, repeatable process in place. Our solutions include:</p>
+                                    <ul>
+                                        <li><i class="ri-check-double-line"></i>Creating an outbound process that works and gets results with or without SDRs</li>
+                                        <li><i class="ri-check-double-line"></i>Leveraging LinkedIn to maximize reach</li>
+                                        <li><i class="ri-check-double-line"></i>Optimizing your tech stack with the essentials for your stage</li>
+                                        <li><i class="ri-check-double-line"></i>Providing dedicated lead-gen resources to get you to market FAST</li>
+                                    </ul>
+                                    <p>
+                                        Your work is too important to entrust to an agency that hasn't been there before. Let us take your pipeline growth to the next level.
+                                    </p>
+                                    <a class="get-started-btn scrollto" data-bs-toggle="modal" data-bs-target="#contact_form">Get Started</a>
+                                </div>
+                                <div class="col-lg-6 order-1 order-lg-2 text-center">
+                                    <img src="assets/img/tabs-4.jpg" alt="" class="img-fluid">
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
-    </section>
+            </section>
+            <!-- End Tabs Section -->
 
-    <!-- Process Section -->
-    <section id="process" class="process-section">
-        <div class="container">
-            <h2>Our Approach</h2>
-            <p class="section-intro">Six proven steps to transform your go-to-market motion</p>
-
-            <div class="process-grid">
-                <div class="process-card">
-                    <div class="step-number">01</div>
-                    <h3>Discovery</h3>
-                    <p>Deep dive into your business model, market position, and growth challenges. We listen first, prescribe second.</p>
-                </div>
-
-                <div class="process-card">
-                    <div class="step-number">02</div>
-                    <h3>Analysis</h3>
-                    <p>Audit your existing systems, processes, and data. Identify gaps, bottlenecks, and quick wins.</p>
-                </div>
-
-                <div class="process-card">
-                    <div class="step-number">03</div>
-                    <h3>Strategy</h3>
-                    <p>Build a comprehensive GTM roadmap aligned to your business goals. Prioritized, practical, and actionable.</p>
-                </div>
-
-                <div class="process-card">
-                    <div class="step-number">04</div>
-                    <h3>Implementation</h3>
-                    <p>Roll out new processes, train your team, and establish metrics. We don't just advise—we execute alongside you.</p>
-                </div>
-
-                <div class="process-card">
-                    <div class="step-number">05</div>
-                    <h3>Optimization</h3>
-                    <p>Monitor performance, iterate on what's working, and course-correct quickly. Continuous improvement is built in.</p>
-                </div>
-
-                <div class="process-card">
-                    <div class="step-number">06</div>
-                    <h3>Scale</h3>
-                    <p>Transition to self-sustaining systems. We equip your team to own and evolve the processes we build together.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Testimonials Section -->
-    <section id="testimonials" class="testimonials-section">
-        <div class="container">
-            <h2>What Clients Say</h2>
-
-            <div class="testimonials-grid">
-                <div class="testimonial-card">
-                    <div class="testimonial-photo">
-                        <img src="assets/images/testimonial-1.jpg" alt="Client testimonial">
+            <!-- ======= Process Section ======= -->
+            <section id="process" class="services section-bg ">
+                <div class="container" data-aos="fade-up">
+                    <div class="section-title">
+                        <h2>Our Process</h2>
+                        <p>Our playbook has been honed by decades of work in startups, leading VCs, and some of the largest PE firms in the world. </p>
                     </div>
-                    <blockquote>
-                        <p>"We absolutely would not have survived without Justin. His ability to shift focus areas based on our immediate needs was invaluable during our most critical growth phase."</p>
-                    </blockquote>
-                    <cite>
-                        <strong>Sarah Chen</strong>
-                        <span>CEO, TechStartup</span>
-                    </cite>
-                </div>
 
-                <div class="testimonial-card">
-                    <div class="testimonial-photo">
-                        <img src="assets/images/testimonial-2.jpg" alt="Client testimonial">
-                    </div>
-                    <blockquote>
-                        <p>"Justin brought structure to our chaos. Within 90 days we had a repeatable sales process and our close rate doubled."</p>
-                    </blockquote>
-                    <cite>
-                        <strong>Michael Rodriguez</strong>
-                        <span>VP Sales, GrowthCo</span>
-                    </cite>
-                </div>
-
-                <div class="testimonial-card">
-                    <div class="testimonial-photo">
-                        <img src="assets/images/testimonial-3.jpg" alt="Client testimonial">
-                    </div>
-                    <blockquote>
-                        <p>"The customer success framework Justin built became the foundation for our expansion revenue. We went from 95% to 115% net retention in six months."</p>
-                    </blockquote>
-                    <cite>
-                        <strong>Emily Thompson</strong>
-                        <span>COO, ScaleUp Inc</span>
-                    </cite>
-                </div>
-
-                <div class="testimonial-card">
-                    <div class="testimonial-photo">
-                        <img src="assets/images/testimonial-4.jpg" alt="Client testimonial">
-                    </div>
-                    <blockquote>
-                        <p>"Working with Justin felt like having a fractional CRO who actually understood our business. Strategic thinking with hands-on execution."</p>
-                    </blockquote>
-                    <cite>
-                        <strong>David Park</strong>
-                        <span>Founder, InnovateLab</span>
-                    </cite>
-                </div>
-
-                <div class="testimonial-card">
-                    <div class="testimonial-photo">
-                        <img src="assets/images/testimonial-5.jpg" alt="Client testimonial">
-                    </div>
-                    <blockquote>
-                        <p>"The lead generation system Justin designed generated more qualified pipeline in one quarter than we'd seen all previous year. Game changer."</p>
-                    </blockquote>
-                    <cite>
-                        <strong>Rachel Martinez</strong>
-                        <span>CMO, MarketLeader</span>
-                    </cite>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- About Section -->
-    <section id="about" class="about-section">
-        <div class="container">
-            <h2>About GTM.Consulting</h2>
-
-            <div class="about-intro">
-                <p>We help ambitious companies build the revenue engines that power sustainable growth. No cookie-cutter frameworks—just strategic thinking and tactical execution tailored to your unique market position.</p>
-            </div>
-
-            <div class="founder-bio">
-                <h3>Meet Justin Strackany</h3>
-                <div class="bio-content">
-                    <div class="bio-text">
-                        <p>Justin brings 15+ years of go-to-market experience from early-stage startups to successful exits. As Employee #1 at SecureLink, he built the sales and customer success functions from scratch, scaling the company from concept to acquisition.</p>
-
-                        <p>Since then, he's led GTM strategy for multiple B2B SaaS companies, advised dozens of startups through accelerators and direct engagements, and developed a reputation for building systems that actually work in the real world.</p>
-
-                        <p>His approach combines strategic frameworks with pragmatic execution. Whether it's diagnosing why deals are stalling, designing onboarding that drives adoption, or building lead generation engines that scale, Justin focuses on the levers that move revenue.</p>
-
-                        <p>When he's not optimizing funnels, you'll find him mentoring founders, speaking at industry events, or experimenting with new GTM plays in his own ventures.</p>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="icon-box" data-aos="fade-up" data-aos-delay="100">
+                                <i class="bi bi-binoculars"></i>
+                                <h4><a href="#">Step One: Discovery</a></h4>
+                                <p>Conduct personalized interviews with all stakeholders, coupled with our own expertise, to create a personalized action plan addressed to your specific business challenges</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mt-4 mt-md-0">
+                            <div class="icon-box" data-aos="fade-up" data-aos-delay="200">
+                                <i class="bi bi-card-checklist"></i>
+                                <h4><a href="#">Step Four: Fractional Role Definition</a></h4>
+                                <p>At this stage, the consulting engagement has concluded, and clients often elect to have GTM.Consulting execute and oversee portions of the remediation plan. We'll define the role &amp; success criteria that defines our ongoing work.</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mt-4 mt-md-0">
+                            <div class="icon-box" data-aos="fade-up" data-aos-delay="300">
+                                <i class="bi bi-bar-chart"></i>
+                                <h4><a href="#">Step Two: Consulting Engagement</a></h4>
+                                <p>Execute the consulting project to the agreed upon deliverables, which may include training plans, customer journey packet, or coaching engagements.</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mt-4 mt-md-0">
+                            <div class="icon-box" data-aos="fade-up" data-aos-delay="400">
+                                <i class="bi bi-person-badge"></i>
+                                <h4><a href="#">Step Five: Step Five: Fractional Execution</a></h4>
+                                <p>The GTM.Team will execute to plan, reporting on success metrics to the executive stakeholder team. A typical engagement is six months, but may last indefinitely.</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mt-4 mt-md-0">
+                            <div class="icon-box" data-aos="fade-up" data-aos-delay="500">
+                                <i class="bi bi-journal"></i>
+                                <h4><a href="#">Step Three: Engagement Report &amp; Recommendations</a></h4>
+                                <p>Deliver the personalized Engagement Report, which will include before & after states of the business, summary of findings, and remediation plans</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mt-4 mt-md-0">
+                            <div class="icon-box" data-aos="fade-up" data-aos-delay="600">
+                                <i class="bi bi-arrow-repeat"></i>
+                                <h4><a href="#">Step Six: Continuity Planning</a></h4>
+                                <p>When the engagement plans, a final report and recommendations will be delivered. At this stage, the team may work with the client minimize any disruption.</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </div>
-    </section>
+            </section>
+            <!-- End Process Section -->
 
-    <!-- Footer -->
-    <footer class="site-footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-links">
-                    <a href="mailto:hello@gtm.consulting" class="footer-link mail-link">hello@gtm.consulting</a>
-                    <a href="https://linkedin.com/in/justinstrackany" target="_blank" rel="noopener" class="footer-link">LinkedIn</a>
+            <!-- ======= Testimonials Section ======= -->
+            <section id="testimonials" class="testimonials">
+                <div class="container" data-aos="fade-up">
+                    <div class="section-title">
+                        <h2>Testimonials</h2>
+                        <p>Don't just take our word for it. We've worked with some of the leading technology companies and most promising founders in the world.</p>
+                        <a href="#" class="get-started-btn scrollto mt-3" data-bs-toggle="modal" data-bs-target="#contact_form">Join The Club!</a>
+                    </div>
+
+                    <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="100">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="testimonial-wrap">
+                                    <div class="testimonial-item">
+                                        <img src="assets/img/testimonials/swearingen.jpeg" class="testimonial-img" alt="">
+                                        <h3>Jeff Swearingen</h3>
+                                        <h4>CEO &amp; Co-Founder, SecureLink</h4>
+                                        <p>
+                                            <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                                            We absolutely would not have survived without Justin.
+                                            <br><br>
+                                            Exceptionally few people have the talent stack of tech, people, numbers, and sales, coupled with a strong ambition to learn. He is one in a million.
+                                            <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div><!-- End testimonial item -->
+
+                            <div class="swiper-slide">
+                                <div class="testimonial-wrap">
+                                    <div class="testimonial-item">
+                                        <img src="assets/img/testimonials/nichole_zoee.jpeg" class="testimonial-img" alt="">
+                                        <h3>Nichole Lowe</h3>
+                                        <h4>CEO &amp; Founder, Zoee</h4>
+                                        <p>
+                                            <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                                            Justin has quickly distinguished himself as one of our most trusted advisors. I've been continually impressed by his ability to shift focus areas -- demand generation, revenue forecasting, content, customer success -- you name it. I can't recommend him enough as a holistic go-to-market resource for any organization.
+                                            <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div><!-- End testimonial item -->
+
+                            <div class="swiper-slide">
+                                <div class="testimonial-wrap">
+                                    <div class="testimonial-item">
+                                        <img src="assets/img/testimonials/austin_stylo.jpeg" class="testimonial-img" alt="">
+                                        <h3>Austin Emser</h3>
+                                        <h4>CEO &amp; Co-Founder, Stylo</h4>
+                                        <p>
+                                            <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                                            It took Justin all of about ten minutes to diagnose the key gaps in our enterprise sales process. Through his guidance, we developed an ROI-centric approach to sales that continues to pay dividends. He even built a Salesforce product integration for a large client demo -- what VP of Sales does that?? If you get a chance to work with Justin, take it. He is worth the hype.
+                                            <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div><!-- End testimonial item -->
+
+                            <div class="swiper-slide">
+                                <div class="testimonial-wrap">
+                                    <div class="testimonial-item">
+                                        <img src="assets/img/testimonials/channing-eva.jpeg" class="testimonial-img" alt="">
+                                        <h3>Channing Moreland</h3>
+                                        <h4>CEO &amp; Co-Founder, Eva</h4>
+                                        <p>
+                                            <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                                            Justin designed a Go-To-Market plan for our artist marketplace. From our first conversation, we were immediately in sync. What struck me most about working with Justin was his ability to quickly arrive at insights it took us months to discover. Our primary regret is not working with him sooner.
+                                            <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div><!-- End testimonial item -->
+
+                            <div class="swiper-slide">
+                                <div class="testimonial-wrap">
+                                    <div class="testimonial-item">
+                                        <img src="assets/img/testimonials/lindsey-textiq.jpeg" class="testimonial-img" alt="">
+                                        <h3>Lindsey Scott</h3>
+                                        <h4>Head of Sales, Text IQ</h4>
+                                        <p>
+                                            <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                                            Justin helped me navigate the start of my Head of Sales role and was a game-changer at helping me balance my professional &amp; personal goals. I would walk out of each of our sessions feeling reconnected to my values with renewed focus on how to achieve my goals. He has an incredible way of relating to everyone, being magically disarming, asking tough questions, and...he's just fun to speak with. Anyone would be lucky to have him as a mentor or manager and I'm grateful to know I can call on him throughout my career.
+                                            <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div><!-- End testimonial item -->
+                        </div>
+                        <div class="swiper-pagination"></div>
+                    </div>
                 </div>
-                <p class="copyright">&copy; 2024 GTM.Consulting. All rights reserved.</p>
-            </div>
-        </div>
-    </footer>
+            </section>
+            <!-- End Testimonials Section -->
 
-    <script src="scripts/main.js"></script>
-</body>
+            <!-- ======= Team Section ======= -->
+            <section id="team" class="team section-bg">
+                <div class="container" data-aos="fade-up">
+                    <div class="section-title">
+                        <h2>About Us</h2>
+                        <p>A boutique SaaS firm combining fractional go-to-market expertise with consulting best practices, GTM.Consulting aims to be your one-stop shop for getting to the crucial next step in your company's journey.</p>
+                    </div>
+
+                    <div class="row">
+                        <div>
+                            <div class="row">
+                                <div class="col-lg-6 order-2 order-lg-1 mt-3 mt-lg-0" data-aos="fade-up" data-aos-delay="100">
+                                    <h3>About GTM<strong><span style="color:#E03A3B">.</span></strong>Consulting</h3>
+                                    <p>GTM.Consulting was founded in 2022 to serve a lack of affordable options for software startup companies that actually solved real business problems. After a thorough review of the market, Principal Consultant Justin Strackany recongnized many consulting companies loved to give advice, but rarely rolled up their sleeves and worked shoulder-to-shoulder with their clients. Justin envisioned a new kind of firm -- one that could provide strategic advice across multiple disciplines, followed by work as a tactical resource to actually solve and implement the recommended solutions. Justin believes in "walking the walk", and GTM.Consulting is a reflection of that commitment.
+                                    </p>
+                                    <a href="#about_justin" class="btn btn-action" data-bs-toggle="modal" data-bs-target="#about_justin">
+                                        Meet Justin </a>
+                                </div>
+
+                                <div class="col-lg-6 order-1 order-lg-2 text-center" data-aos="fade-up" data-aos-delay="200">
+                                    <img src="assets/img/tabs-1.jpg" alt="" class="img-fluid">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Modal -->
+                <div class="modal fade" tabindex="-1" role="dialog" aria-labelledby="about_justin" aria-hidden="true" id="about_justin">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content" style="color:#000">
+                            <div class="modal-header">
+                                <h5 class="modal-title">About Justin</h5>
+                                <button type="button" class="btn-close btn-sm" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <p>
+                                    Justin began his software career in 2003 as Employee #1 for SecureLink, a Privileged Access Management solution based in Austin, TX. He spent the next seven years building multiple business units, including Sales Development, Sales Engineering, and Customer Success. His 5-year stint as VP of Sales led to 3x increases in ACV, 4x increases in ARR, and 8x increase in revenue, culminating in a successful exit to Vista Private Equity.
+                                </p>
+                                <p>
+                                    As Chief Customer Officer, he averaged 115% NRR while maintaining less than 2% net churn and a 75 NPS, coupled with two more successful exits. </p>
+                                <p>Justin now serves as an investor and advisor to multiple growth-stage companies, both as an angel investor and an LP of several VC funds, including <a href="https://gtmfund.com" target="_blank">GTMFund</a>. In his spare time, Justin is a proud husband and father to three wonderful children. When not busy leading GTM.Consulting, Justin enjoys hosting dinner parties in Cary, NC, writing music in his home studio, and investing in real estate.</p>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- End Team Section -->
+
+            <!-- ======= Contact Section ======= -->
+            <section id="contact" class="contact">
+                <div class="modal fade" tabindex="-1" role="dialog" aria-labelledby="contact_form" aria-hidden="true" id="contact_form">
+                    <div class="modal-dialog modal-xl" role="document">
+                        <div class="modal-content" style="color:#000">
+                            <div class="modal-header">
+                                <h5 class="modal-title">Contact</h5>
+                                <button type="button" class="btn-close btn-sm" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <iframe width="1000" height="800" loading="lazy" src="https://calendly.com/jstrackany/gtm-consulting-intro-call" title="GTM Consulting Discovery Call" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- End Contact Section -->
+        </main><!-- End #main -->
+
+        <!--Footer Section -->
+        <footer id="footer">
+            <div class="container d-md-flex py-4">
+                <div class="me-md-auto text-center text-md-start">
+                    <div class="copyright">
+                        &copy; <strong><span>GTM Consulting, LLC</span></strong>. All Rights Reserved
+                    </div>
+                </div>
+                <div class="social-links text-center text-md-end pt-3 pt-md-0">
+                    <a href="mailto:hello@gtm.consulting"><i class='bx bx-envelope bx-tada bx-rotate-90' ></i></a>
+                    <a href="https://www.linkedin.com/company/gtmdotconsulting/" target="_blank" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+                </div>
+            </div>
+        </footer>
+        <!-- End footer section -->
+
+        <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+        <!-- Vendor JS Files - CDN -->
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/gh/mcstudios/glightbox/dist/js/glightbox.min.js"></script>
+        <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+        <!-- Template Main JS File -->
+        <script src="assets/js/main.js"></script>
+    </body>
 </html>
