@@ -46,6 +46,30 @@ export type {
 // Schemas for validation
 export { UpdateMetadataSchema, SkillConfigSchema } from './types.js';
 
+// Workflow management
+export { WorkflowManager, createWorkflowManager } from './workflow-manager.js';
+export { UpdateQueue, createUpdateQueue } from './update-queue.js';
+export {
+  NotificationSystem,
+  createNotificationSystem,
+} from './notification-system.js';
+export { ArchiveSystem, createArchiveSystem } from './archive-system.js';
+
+// Types - Workflow
+export type {
+  WorkflowState,
+  QueuedUpdate,
+  WorkflowEvent,
+  ApprovalRequest,
+  ApprovalDecision,
+  Notification,
+  NotificationType,
+  NotificationChannel,
+  ArchiveMetadata,
+  QueueStats,
+  WorkflowConfig,
+} from './workflow-types.js';
+
 // Utilities
 export {
   loadSkillConfig,
