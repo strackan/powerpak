@@ -1,10 +1,11 @@
 #!/usr/bin/env node
 
 /**
- * MCP Network Sandbox Server
+ * MCP Skill Discovery Service
  *
- * An interactive MCP server exposing a pre-seeded network of 10 expert profiles.
- * Demonstrates network effects, discovery, and recommendation features.
+ * An interactive MCP server for discovering and recommending Claude Skills.
+ * Demonstrates skill tiering (PLATINUM/Premium/Regular/Spotlight), network effects,
+ * and recommendation features for the MCP-World Skills marketplace.
  */
 
 import { Server } from '@modelcontextprotocol/sdk/server/index.js';
@@ -25,9 +26,8 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
 // Load data
-const profilesData = JSON.parse(readFileSync(join(__dirname, 'data/profiles.json'), 'utf-8'));
-const connectionsData = JSON.parse(readFileSync(join(__dirname, 'data/connections.json'), 'utf-8'));
-const networkStatsData = JSON.parse(readFileSync(join(__dirname, 'data/network-stats.json'), 'utf-8'));
+const skillsData = JSON.parse(readFileSync(join(__dirname, 'data/skills.json'), 'utf-8'));
+const correlationsData = JSON.parse(readFileSync(join(__dirname, 'data/skill-correlations.json'), 'utf-8'));
 
 // Types
 interface ExpertProfile {

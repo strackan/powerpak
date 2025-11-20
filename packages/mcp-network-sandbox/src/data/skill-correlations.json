@@ -1,0 +1,244 @@
+{
+  "correlations": [
+    {
+      "skillId": "scott-leese",
+      "alsoUsed": [
+        {
+          "id": "priya-sharma",
+          "percentage": 78,
+          "reason": "Sales leaders need sales ops expertise for forecasting and territory design"
+        },
+        {
+          "id": "justin-strackany",
+          "percentage": 65,
+          "reason": "Combine sales execution with authentic personal brand building"
+        },
+        {
+          "id": "jordan-williams",
+          "percentage": 62,
+          "reason": "Sales and CS alignment critical for revenue retention"
+        },
+        {
+          "id": "jill-rowley",
+          "percentage": 58,
+          "reason": "Traditional and social selling complement each other"
+        }
+      ]
+    },
+    {
+      "skillId": "justin-strackany",
+      "alsoUsed": [
+        {
+          "id": "gary-vaynerchuk",
+          "percentage": 72,
+          "reason": "Authentic writing voice pairs perfectly with volume content strategy"
+        },
+        {
+          "id": "scott-leese",
+          "percentage": 65,
+          "reason": "Personal brand building for sales leaders"
+        },
+        {
+          "id": "jill-rowley",
+          "percentage": 61,
+          "reason": "Writing + social selling = powerful LinkedIn presence"
+        },
+        {
+          "id": "david-martinez",
+          "percentage": 54,
+          "reason": "Founders need authentic voice to tell their company story"
+        }
+      ]
+    },
+    {
+      "skillId": "gary-vaynerchuk",
+      "alsoUsed": [
+        {
+          "id": "justin-strackany",
+          "percentage": 72,
+          "reason": "Content volume strategy needs authentic writing voice"
+        },
+        {
+          "id": "jill-rowley",
+          "percentage": 68,
+          "reason": "Social media strategy + social selling methodology"
+        },
+        {
+          "id": "maya-chen",
+          "percentage": 48,
+          "reason": "Product marketers using content to drive growth"
+        }
+      ]
+    },
+    {
+      "skillId": "jill-rowley",
+      "alsoUsed": [
+        {
+          "id": "gary-vaynerchuk",
+          "percentage": 68,
+          "reason": "Social selling requires strong content strategy"
+        },
+        {
+          "id": "justin-strackany",
+          "percentage": 61,
+          "reason": "LinkedIn presence needs authentic writing voice"
+        },
+        {
+          "id": "scott-leese",
+          "percentage": 58,
+          "reason": "Modern sales leaders blend traditional and social selling"
+        },
+        {
+          "id": "priya-sharma",
+          "percentage": 52,
+          "reason": "Sales ops needs to track and optimize social selling efforts"
+        }
+      ]
+    },
+    {
+      "skillId": "andrew-ng",
+      "alsoUsed": [
+        {
+          "id": "maya-chen",
+          "percentage": 71,
+          "reason": "AI/ML teams need strong product management"
+        },
+        {
+          "id": "marcus-thompson",
+          "percentage": 64,
+          "reason": "Building and leading AI teams requires leadership skills"
+        },
+        {
+          "id": "david-martinez",
+          "percentage": 59,
+          "reason": "AI startups need founder expertise on PMF and scaling"
+        }
+      ]
+    },
+    {
+      "skillId": "maya-chen",
+      "alsoUsed": [
+        {
+          "id": "jordan-williams",
+          "percentage": 74,
+          "reason": "Product and CS must align on customer feedback and roadmap"
+        },
+        {
+          "id": "andrew-ng",
+          "percentage": 71,
+          "reason": "Product managers building AI-powered products"
+        },
+        {
+          "id": "marcus-thompson",
+          "percentage": 63,
+          "reason": "First-time PM leaders need management skills"
+        },
+        {
+          "id": "scott-leese",
+          "percentage": 56,
+          "reason": "Product-sales alignment critical for B2B SaaS success"
+        }
+      ]
+    },
+    {
+      "skillId": "jordan-williams",
+      "alsoUsed": [
+        {
+          "id": "maya-chen",
+          "percentage": 74,
+          "reason": "CS teams need product context to drive adoption"
+        },
+        {
+          "id": "scott-leese",
+          "percentage": 62,
+          "reason": "Sales-to-CS handoff and expansion revenue alignment"
+        },
+        {
+          "id": "priya-sharma",
+          "percentage": 67,
+          "reason": "CS ops and sales ops share analytics and forecasting needs"
+        },
+        {
+          "id": "marcus-thompson",
+          "percentage": 59,
+          "reason": "CS managers building and coaching teams"
+        }
+      ]
+    },
+    {
+      "skillId": "priya-sharma",
+      "alsoUsed": [
+        {
+          "id": "scott-leese",
+          "percentage": 78,
+          "reason": "Every sales leader needs sales ops partnership"
+        },
+        {
+          "id": "jordan-williams",
+          "percentage": 67,
+          "reason": "Revenue operations spans sales and customer success"
+        },
+        {
+          "id": "jill-rowley",
+          "percentage": 52,
+          "reason": "Measuring and optimizing social selling performance"
+        },
+        {
+          "id": "marcus-thompson",
+          "percentage": 48,
+          "reason": "Sales ops leaders managing teams and processes"
+        }
+      ]
+    },
+    {
+      "skillId": "marcus-thompson",
+      "alsoUsed": [
+        {
+          "id": "scott-leese",
+          "percentage": 69,
+          "reason": "Sales leaders need foundational leadership and coaching skills"
+        },
+        {
+          "id": "andrew-ng",
+          "percentage": 64,
+          "reason": "Technical leaders need management and people skills"
+        },
+        {
+          "id": "maya-chen",
+          "percentage": 63,
+          "reason": "Product leaders managing cross-functional teams"
+        },
+        {
+          "id": "jordan-williams",
+          "percentage": 59,
+          "reason": "CS leaders building and coaching teams"
+        }
+      ]
+    },
+    {
+      "skillId": "david-martinez",
+      "alsoUsed": [
+        {
+          "id": "maya-chen",
+          "percentage": 76,
+          "reason": "Founders need product management skills to find PMF"
+        },
+        {
+          "id": "scott-leese",
+          "percentage": 71,
+          "reason": "Early-stage founders building first sales team"
+        },
+        {
+          "id": "jordan-williams",
+          "percentage": 68,
+          "reason": "Founders setting up customer success from scratch"
+        },
+        {
+          "id": "justin-strackany",
+          "percentage": 54,
+          "reason": "Founder storytelling and authentic brand building"
+        }
+      ]
+    }
+  ]
+}

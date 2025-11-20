@@ -1,0 +1,270 @@
+{
+  "skills": [
+    {
+      "id": "justin-strackany",
+      "name": "Justin Strackany",
+      "tier": "platinum",
+      "category": ["sales", "marketing", "writing", "content"],
+      "tagline": "Voice, writing systems, and authentic content for B2B",
+      "description": "Complete writing system with 11 opening templates, 7 middle templates, 12 ending patterns, and proven blend recipes. Includes sales deal frameworks and customer success playbooks.",
+      "path": "skills/platinum/justin-strackany/SKILL.md",
+      "stats": {
+        "size": "~15KB",
+        "examples": 2,
+        "frameworks": 30,
+        "rating": 5.0
+      },
+      "pricing": {
+        "type": "premium",
+        "monthly": 199,
+        "annual": 1999,
+        "whiteGlove": true
+      },
+      "specialties": [
+        "Writing voice and authenticity",
+        "LinkedIn content strategy",
+        "Sales deal analysis",
+        "Customer success frameworks",
+        "Authentic founder storytelling"
+      ]
+    },
+    {
+      "id": "scott-leese",
+      "name": "Scott Leese",
+      "tier": "platinum",
+      "category": ["sales", "leadership", "hiring", "management"],
+      "tagline": "Elite sales leadership - Military discipline meets revenue execution",
+      "description": "Battle-tested frameworks for hiring, coaching, quota design, and scaling high-performance sales teams. From military combat medic to 8x VP Sales.",
+      "path": "skills/platinum/scott-leese/SKILL.md",
+      "stats": {
+        "size": "~18KB",
+        "examples": 1,
+        "frameworks": 25,
+        "rating": 5.0
+      },
+      "pricing": {
+        "type": "premium",
+        "monthly": 199,
+        "annual": 1999,
+        "enterprise": true
+      },
+      "specialties": [
+        "Sales team hiring and development",
+        "Military-inspired accountability systems",
+        "Quota and comp plan design",
+        "Performance management and PIPs",
+        "Scaling from 5 to 50+ reps"
+      ]
+    },
+    {
+      "id": "gary-vaynerchuk",
+      "name": "Gary Vaynerchuk",
+      "tier": "premium",
+      "category": ["marketing", "social-media", "content", "personal-brand"],
+      "tagline": "Day trading attention - Build authentic brands in the digital age",
+      "description": "Social media strategy, content creation frameworks, and personal branding methodology. Jab, jab, jab, right hook philosophy and document don't create approach.",
+      "path": "skills/premium/gary-vaynerchuk/SKILL.md",
+      "stats": {
+        "size": "~17KB",
+        "examples": 2,
+        "frameworks": 15,
+        "rating": 4.9
+      },
+      "pricing": {
+        "type": "standard",
+        "monthly": 49,
+        "annual": 399
+      },
+      "specialties": [
+        "Social media platform strategy",
+        "Content volume and repurposing",
+        "Personal brand building",
+        "Day trading attention philosophy",
+        "Long-term vs short-term thinking"
+      ]
+    },
+    {
+      "id": "jill-rowley",
+      "name": "Jill Rowley",
+      "tier": "premium",
+      "category": ["sales", "social-selling", "linkedin", "account-based"],
+      "tagline": "Social selling pioneer - Modern B2B sales and LinkedIn mastery",
+      "description": "Social selling frameworks, LinkedIn strategy, account-based everything, and relationship-driven enterprise sales. CEO of You, Inc. philosophy.",
+      "path": "skills/premium/jill-rowley/SKILL.md",
+      "stats": {
+        "size": "~15KB",
+        "examples": 1,
+        "frameworks": 12,
+        "rating": 4.9
+      },
+      "pricing": {
+        "type": "standard",
+        "monthly": 49,
+        "annual": 399
+      },
+      "specialties": [
+        "Social selling methodology",
+        "LinkedIn optimization for sales",
+        "Account-Based Everything (ABE)",
+        "Content strategy for sellers",
+        "Building digital personal brands"
+      ]
+    },
+    {
+      "id": "andrew-ng",
+      "name": "Andrew Ng",
+      "tier": "premium",
+      "category": ["ai", "machine-learning", "technical", "strategy"],
+      "tagline": "AI pioneer - Practical machine learning for business",
+      "description": "AI strategy, ML project workflows, data-centric AI, and building AI teams. Making AI accessible and practical for businesses.",
+      "path": "skills/premium/andrew-ng/SKILL.md",
+      "stats": {
+        "size": "~14KB",
+        "examples": 0,
+        "frameworks": 10,
+        "rating": 5.0
+      },
+      "pricing": {
+        "type": "standard",
+        "monthly": 49,
+        "annual": 399
+      },
+      "specialties": [
+        "AI transformation playbooks",
+        "Machine learning project lifecycle",
+        "Data-centric AI approaches",
+        "Building and scaling AI teams",
+        "Practical AI implementation"
+      ]
+    },
+    {
+      "id": "maya-chen",
+      "name": "Maya Chen",
+      "tier": "regular",
+      "category": ["product", "saas", "strategy"],
+      "tagline": "Product management for B2B SaaS",
+      "description": "Customer-centric product strategy, prioritization frameworks, user research methods, and product-led growth tactics for B2B companies.",
+      "path": "skills/regular/maya-chen/SKILL.md",
+      "stats": {
+        "size": "~9KB",
+        "examples": 0,
+        "frameworks": 8,
+        "rating": 4.7
+      },
+      "pricing": {
+        "type": "free"
+      },
+      "specialties": [
+        "Product roadmap prioritization",
+        "Customer research and validation",
+        "Product-led growth strategies",
+        "Engineering-product alignment",
+        "Jobs-to-be-Done framework"
+      ]
+    },
+    {
+      "id": "jordan-williams",
+      "name": "Jordan Williams",
+      "tier": "regular",
+      "category": ["customer-success", "saas", "retention"],
+      "tagline": "Customer Success as a revenue function",
+      "description": "Data-driven customer success operations, health scoring, onboarding excellence, expansion strategies, and reducing churn in B2B SaaS.",
+      "path": "skills/regular/jordan-williams/SKILL.md",
+      "stats": {
+        "size": "~10KB",
+        "examples": 0,
+        "frameworks": 10,
+        "rating": 4.8
+      },
+      "pricing": {
+        "type": "free"
+      },
+      "specialties": [
+        "Customer health scoring",
+        "30-60-90 onboarding frameworks",
+        "Net Revenue Retention optimization",
+        "Expansion and upsell strategies",
+        "CS team building and structure"
+      ]
+    },
+    {
+      "id": "priya-sharma",
+      "name": "Priya Sharma",
+      "tier": "regular",
+      "category": ["sales-ops", "analytics", "sales"],
+      "tagline": "Sales operations and revenue analytics",
+      "description": "Sales forecasting accuracy, territory design, compensation planning, CRM optimization, and data-driven sales operations.",
+      "path": "skills/regular/priya-sharma/SKILL.md",
+      "stats": {
+        "size": "~9KB",
+        "examples": 0,
+        "frameworks": 8,
+        "rating": 4.7
+      },
+      "pricing": {
+        "type": "free"
+      },
+      "specialties": [
+        "Sales forecasting methodology",
+        "Territory design and optimization",
+        "Compensation plan structures",
+        "Sales technology stack",
+        "Pipeline analytics and metrics"
+      ]
+    },
+    {
+      "id": "marcus-thompson",
+      "name": "Marcus Thompson",
+      "tier": "regular",
+      "category": ["leadership", "management", "coaching"],
+      "tagline": "Executive coaching and leadership development",
+      "description": "First-time manager success, delivering difficult feedback, building executive presence, running effective 1:1s, and building high-performing teams.",
+      "path": "skills/regular/marcus-thompson/SKILL.md",
+      "stats": {
+        "size": "~9KB",
+        "examples": 0,
+        "frameworks": 9,
+        "rating": 4.9
+      },
+      "pricing": {
+        "type": "free"
+      },
+      "specialties": [
+        "First-time manager transitions",
+        "Delivering effective feedback (SBI)",
+        "Executive presence development",
+        "Psychological safety in teams",
+        "Difficult conversation frameworks"
+      ]
+    },
+    {
+      "id": "david-martinez",
+      "name": "David Martinez",
+      "tier": "spotlight",
+      "category": ["startup", "founder", "saas", "strategy"],
+      "tagline": "B2B SaaS founder - Zero to exit playbooks",
+      "description": "Product-market fit methodology, fundraising playbooks, go-to-market strategy, first team hiring, and scaling from $0 to exit. Available in BASIC (free preview) and PREMIUM (full access) tiers.",
+      "path": "skills/spotlight/david-martinez/SKILL-BASIC.md",
+      "pathPremium": "skills/spotlight/david-martinez/SKILL-PREMIUM.md",
+      "stats": {
+        "size": "~8KB basic / ~25KB premium",
+        "examples": "0 basic / 5 premium",
+        "frameworks": "5 basic / 30+ premium",
+        "rating": 4.8
+      },
+      "pricing": {
+        "type": "freemium",
+        "free": true,
+        "monthly": 49,
+        "annual": 399
+      },
+      "specialties": [
+        "Finding product-market fit",
+        "Fundraising from seed to Series B",
+        "Go-to-market strategy selection",
+        "Hiring first 10 employees",
+        "Scaling without breaking"
+      ]
+    }
+  ]
+}
