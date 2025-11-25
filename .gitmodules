@@ -1,0 +1,3 @@
+[submodule "packages/better-chatbot"]
+	path = packages/better-chatbot
+	url = https://github.com/cgoinglove/better-chatbot.git
