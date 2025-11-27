@@ -22,8 +22,23 @@ const store = new Store({
     startMinimized: false,
     launchAtStartup: false,
     mcpServers: {
-      'justin-strackany': true,
+      // Advanced Systems
+      'justin-voice': true,
+      'founder-os': true,
+      // Platinum Tier
       'scott-leese': true,
+      // Premium Tier
+      'gary-vaynerchuk': true,
+      'jill-rowley': true,
+      'andrew-ng': true,
+      // Regular Tier
+      'maya-chen': true,
+      'jordan-williams': true,
+      'priya-sharma': true,
+      'marcus-thompson': true,
+      // Spotlight
+      'david-martinez': true,
+      // Knowledge Graph
       'memento-powerpak': true,
     },
   },
@@ -160,25 +175,132 @@ function updateTrayMenu() {
     },
     { type: 'separator' },
     {
-      label: 'PowerPak Profiles',
+      label: 'Advanced Systems',
       submenu: [
         {
-          label: 'Justin Strackany',
+          label: "Justin's Voice (30 Templates)",
           type: 'checkbox',
-          checked: mcpServers['justin-strackany'],
+          checked: mcpServers['justin-voice'],
           click: (item) => {
-            store.set('mcpServers.justin-strackany', item.checked);
+            store.set('mcpServers.justin-voice', item.checked);
             updateTrayMenu();
           },
         },
         {
-          label: 'Scott Leese',
+          label: 'Founder OS (Chief of Staff)',
           type: 'checkbox',
-          checked: mcpServers['scott-leese'],
+          checked: mcpServers['founder-os'],
           click: (item) => {
-            store.set('mcpServers.scott-leese', item.checked);
+            store.set('mcpServers.founder-os', item.checked);
             updateTrayMenu();
           },
+        },
+      ],
+    },
+    { type: 'separator' },
+    {
+      label: 'PowerPak Profiles',
+      submenu: [
+        {
+          label: 'Platinum Tier',
+          submenu: [
+            {
+              label: 'Scott Leese',
+              type: 'checkbox',
+              checked: mcpServers['scott-leese'],
+              click: (item) => {
+                store.set('mcpServers.scott-leese', item.checked);
+                updateTrayMenu();
+              },
+            },
+          ],
+        },
+        {
+          label: 'Premium Tier',
+          submenu: [
+            {
+              label: 'Gary Vaynerchuk',
+              type: 'checkbox',
+              checked: mcpServers['gary-vaynerchuk'],
+              click: (item) => {
+                store.set('mcpServers.gary-vaynerchuk', item.checked);
+                updateTrayMenu();
+              },
+            },
+            {
+              label: 'Jill Rowley',
+              type: 'checkbox',
+              checked: mcpServers['jill-rowley'],
+              click: (item) => {
+                store.set('mcpServers.jill-rowley', item.checked);
+                updateTrayMenu();
+              },
+            },
+            {
+              label: 'Andrew Ng',
+              type: 'checkbox',
+              checked: mcpServers['andrew-ng'],
+              click: (item) => {
+                store.set('mcpServers.andrew-ng', item.checked);
+                updateTrayMenu();
+              },
+            },
+          ],
+        },
+        {
+          label: 'Regular Tier',
+          submenu: [
+            {
+              label: 'Maya Chen',
+              type: 'checkbox',
+              checked: mcpServers['maya-chen'],
+              click: (item) => {
+                store.set('mcpServers.maya-chen', item.checked);
+                updateTrayMenu();
+              },
+            },
+            {
+              label: 'Jordan Williams',
+              type: 'checkbox',
+              checked: mcpServers['jordan-williams'],
+              click: (item) => {
+                store.set('mcpServers.jordan-williams', item.checked);
+                updateTrayMenu();
+              },
+            },
+            {
+              label: 'Priya Sharma',
+              type: 'checkbox',
+              checked: mcpServers['priya-sharma'],
+              click: (item) => {
+                store.set('mcpServers.priya-sharma', item.checked);
+                updateTrayMenu();
+              },
+            },
+            {
+              label: 'Marcus Thompson',
+              type: 'checkbox',
+              checked: mcpServers['marcus-thompson'],
+              click: (item) => {
+                store.set('mcpServers.marcus-thompson', item.checked);
+                updateTrayMenu();
+              },
+            },
+          ],
+        },
+        {
+          label: 'Spotlight',
+          submenu: [
+            {
+              label: 'David Martinez',
+              type: 'checkbox',
+              checked: mcpServers['david-martinez'],
+              click: (item) => {
+                store.set('mcpServers.david-martinez', item.checked);
+                updateTrayMenu();
+              },
+            },
+          ],
         },
       ],
     },
@@ -253,24 +375,13 @@ async function startNextJsServer(): Promise<void> {
 
     const nextJsPath = path.join(__dirname, '../../better-chatbot');
 
-    // Check if running in production or development
-    const isDev = process.env.NODE_ENV === 'development';
-
-    if (isDev) {
-      // Development: Run `pnpm dev`
-      nextJsServer = spawn('pnpm', ['dev'], {
-        cwd: nextJsPath,
-        stdio: 'pipe',
-        shell: true,
-      });
-    } else {
-      // Production: Run `pnpm start` (assumes already built)
-      nextJsServer = spawn('pnpm', ['start'], {
-        cwd: nextJsPath,
-        stdio: 'pipe',
-        shell: true,
-      });
-    }
+    // Always run in development mode for now (no build required)
+    // TODO: For production, build Next.js first and use 'pnpm start'
+    nextJsServer = spawn('pnpm', ['dev'], {
+      cwd: nextJsPath,
+      stdio: 'pipe',
+      shell: true,
+    });
 
     nextJsServer.stdout?.on('data', (data) => {
       const output = data.toString();

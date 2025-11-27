@@ -3,8 +3,8 @@
  * Extracts entities and relationships from PowerPak SKILL.md files
  */
 
-import { SkillParser } from '../../powerpak-server/src/parser.js';
-import type { PowerPakData } from '../../powerpak-server/src/types.js';
+import { SkillParser } from '../../powerpak-server/dist/parser.js';
+import type { PowerPakData } from '../../powerpak-server/dist/types.js';
 import type { GraphEntity, GraphRelation, PowerPakGraphData } from './types.js';
 
 export class GraphExtractor {

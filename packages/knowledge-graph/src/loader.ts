@@ -55,9 +55,9 @@ async function main() {
 
   // Validate configuration
   if (!config.openai.apiKey) {
-    console.error('✗ OPENAI_API_KEY environment variable is required');
-    console.error('  Set it with: export OPENAI_API_KEY=your-key');
-    process.exit(1);
+    console.log('⚠ OPENAI_API_KEY not set - semantic search will be limited');
+    console.log('  (Basic graph relationships will still work)');
+    console.log();
   }
 
   console.log('Configuration:');

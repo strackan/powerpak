@@ -3,7 +3,7 @@
  * Loads PowerPak knowledge graph data into Neo4j via Memento MCP
  */
 
-import { MCPClient } from '../../powerpak-server/src/mcp-client.js';
+import { MCPClient } from '../../powerpak-server/dist/mcp-client.js';
 import type { PowerPakGraphData, MementoConfig } from './types.js';
 
 export class GraphLoader {
