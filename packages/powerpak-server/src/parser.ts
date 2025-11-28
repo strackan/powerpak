@@ -114,7 +114,9 @@ export class SkillParser {
    * Extract all sections from markdown content
    */
   private extractSections(content: string): PowerPakSection[] {
-    const lines = content.split('\n');
+    // Normalize line endings (handle Windows \r\n)
+    const normalizedContent = content.replace(/\r\n/g, '\n').replace(/\r/g, '\n');
+    const lines = normalizedContent.split('\n');
     const sections: PowerPakSection[] = [];
     let currentSection: PowerPakSection | null = null;
     let currentContent: string[] = [];
