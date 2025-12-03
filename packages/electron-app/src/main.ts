@@ -14,6 +14,10 @@ import path from 'path';
 import Store from 'electron-store';
 import { registerIpcHandlers, cleanupIpcHandlers } from './ipc-handlers';
 
+// Parse command line arguments
+const args = process.argv.slice(2);
+const isPresentationMode = args.includes('--presentation');
+
 // Configuration store
 const store = new Store({
   defaults: {
@@ -48,8 +52,11 @@ let mainWindow: BrowserWindow | null = null;
 let tray: Tray | null = null;
 let nextJsServer: ChildProcess | null = null;
 let isQuitting = false;
+let currentMode: 'chatbot' | 'presentation' = isPresentationMode ? 'presentation' : 'chatbot';
+
 const NEXT_JS_PORT = 3000;
 const NEXT_JS_URL = `http://localhost:${NEXT_JS_PORT}`;
+const PRESENTATION_PATH = path.join(__dirname, '../../../mockups/presentation/index.html');
 
 /**
  * Create the main application window
@@ -57,9 +64,13 @@ const NEXT_JS_URL = `http://localhost:${NEXT_JS_PORT}`;
 function createWindow() {
   const bounds = store.get('windowBounds') as { width: number; height: number };
 
+  const windowTitle = currentMode === 'presentation'
+    ? 'PowerPak - Demo Presentation'
+    : 'PowerPak Desktop';
+
   mainWindow = new BrowserWindow({
-    width: bounds.width,
-    height: bounds.height,
+    width: currentMode === 'presentation' ? 1920 : bounds.width,
+    height: currentMode === 'presentation' ? 1080 : bounds.height,
     minWidth: 800,
     minHeight: 600,
     webPreferences: {
@@ -69,12 +80,17 @@ function createWindow() {
       sandbox: true,
     },
     icon: path.join(__dirname, '../assets/icon.png'),
-    title: 'PowerPak Desktop',
+    title: windowTitle,
     show: false, // Don't show until ready
+    fullscreen: currentMode === 'presentation', // Start fullscreen for presentations
   });
 
-  // Load Next.js app
-  mainWindow.loadURL(NEXT_JS_URL);
+  // Load based on current mode
+  if (currentMode === 'presentation') {
+    mainWindow.loadFile(PRESENTATION_PATH);
+  } else {
+    mainWindow.loadURL(NEXT_JS_URL);
+  }
 
   // Show window when ready
   mainWindow.once('ready-to-show', () => {
@@ -121,6 +137,37 @@ function createWindow() {
   if (process.env.NODE_ENV === 'development') {
     mainWindow.webContents.openDevTools();
   }
+}
+
+/**
+ * Switch between presentation and chatbot modes
+ */
+async function switchMode(mode: 'chatbot' | 'presentation') {
+  if (mode === currentMode) return;
+
+  currentMode = mode;
+
+  // Start/stop Next.js server as needed
+  if (mode === 'chatbot' && !nextJsServer) {
+    await startNextJsServer();
+    await new Promise((resolve) => setTimeout(resolve, 2000));
+  }
+
+  // Reload the window with new content
+  if (mainWindow) {
+    if (mode === 'presentation') {
+      mainWindow.setFullScreen(true);
+      mainWindow.setTitle('PowerPak - Demo Presentation');
+      mainWindow.loadFile(PRESENTATION_PATH);
+    } else {
+      mainWindow.setFullScreen(false);
+      mainWindow.setTitle('PowerPak Desktop');
+      mainWindow.loadURL(NEXT_JS_URL);
+    }
+  }
+
+  // Update tray menu to reflect current mode
+  updateTrayMenu();
 }
 
 /**
@@ -172,6 +219,24 @@ function updateTrayMenu() {
           createWindow();
         }
       },
+    },
+    { type: 'separator' },
+    {
+      label: 'Mode',
+      submenu: [
+        {
+          label: 'Presentation Mode',
+          type: 'radio',
+          checked: currentMode === 'presentation',
+          click: () => switchMode('presentation'),
+        },
+        {
+          label: 'Chatbot Mode',
+          type: 'radio',
+          checked: currentMode === 'chatbot',
+          click: () => switchMode('chatbot'),
+        },
+      ],
     },
     { type: 'separator' },
     {
@@ -432,11 +497,12 @@ app.whenReady().then(async () => {
     // Register IPC handlers
     registerIpcHandlers();
 
-    // Start Next.js server
-    await startNextJsServer();
-
-    // Wait a bit for server to be fully ready
-    await new Promise((resolve) => setTimeout(resolve, 2000));
+    // Only start Next.js server if not in presentation mode
+    if (!isPresentationMode) {
+      await startNextJsServer();
+      // Wait a bit for server to be fully ready
+      await new Promise((resolve) => setTimeout(resolve, 2000));
+    }
 
     // Create window and tray
     createWindow();
@@ -448,9 +514,13 @@ app.whenReady().then(async () => {
     }
 
     // Show welcome notification
+    const notificationBody = isPresentationMode
+      ? 'Presentation mode active. Press ESC to exit fullscreen.'
+      : 'Your AI-powered knowledge assistant is ready!';
+
     new Notification({
       title: 'PowerPak Desktop Started',
-      body: 'Your AI-powered knowledge assistant is ready!',
+      body: notificationBody,
     }).show();
   } catch (error) {
     console.error('Failed to start app:', error);

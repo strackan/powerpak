@@ -36,6 +36,9 @@ import {
 import { SkillParser } from './parser.js';
 import { PowerPakData, SkillQuery } from './types.js';
 import { BackendIntegrator } from './backend-integrator.js';
+import { extractVoiceContext } from './voice-context.js';
+import { buildLinkedInPrompt, buildAskJustinPrompt } from './prompts.js';
+import Anthropic from '@anthropic-ai/sdk';
 import { z } from 'zod';
 import path from 'path';
 import { fileURLToPath } from 'url';
@@ -59,6 +62,15 @@ const skillPath = path.resolve(
 
 console.error(`Loading PowerPak: ${skillId} (${tier})`);
 console.error(`Path: ${skillPath}`);
+
+// Initialize Claude client for voice generation
+const anthropic = new Anthropic({
+  apiKey: process.env.ANTHROPIC_API_KEY,
+});
+
+if (!process.env.ANTHROPIC_API_KEY) {
+  console.error('WARNING: ANTHROPIC_API_KEY not set - voice generation tools will return errors');
+}
 
 // Initialize parser and load PowerPak data
 const parser = new SkillParser();
@@ -362,6 +374,52 @@ server.setRequestHandler(ListToolsRequestSchema, async () => {
           required: ['topic', 'duration', 'contactEmail'],
         },
       },
+      {
+        name: 'generate_linkedin_post',
+        description: `Generate an authentic LinkedIn post in ${powerpakData.profile?.expert || powerpakData.metadata.name}'s voice using the 11-7-12 template system`,
+        inputSchema: {
+          type: 'object',
+          properties: {
+            topic: {
+              type: 'string',
+              description: 'Topic or theme for the post',
+            },
+            context: {
+              type: 'string',
+              description: 'Additional context (recent event, insight, experience)',
+            },
+            tone: {
+              type: 'string',
+              enum: ['vulnerable', 'provocative', 'tactical', 'reflective', 'energized'],
+              description: 'Tone/energy of the post',
+            },
+            blendRecipe: {
+              type: 'string',
+              enum: ['THE AUTHENTIC FOUNDER', 'THE PATTERN SPOTTER', 'THE STORYTELLER', 'THE PROVOCATEUR', 'THE CONNECTOR'],
+              description: 'Specific blend recipe to use (optional)',
+            },
+          },
+          required: ['topic'],
+        },
+      },
+      {
+        name: 'ask_justin',
+        description: `Ask ${powerpakData.profile?.expert || powerpakData.metadata.name} a question and get an authentic response in their voice`,
+        inputSchema: {
+          type: 'object',
+          properties: {
+            question: {
+              type: 'string',
+              description: 'The question to ask',
+            },
+            context: {
+              type: 'string',
+              description: 'Additional context for the question (optional)',
+            },
+          },
+          required: ['question'],
+        },
+      },
     ],
   };
 });
@@ -594,6 +652,90 @@ server.setRequestHandler(CallToolRequestSchema, async (request) => {
             }),
           },
         ],
+      };
+    }
+
+    if (name === 'generate_linkedin_post') {
+      if (!process.env.ANTHROPIC_API_KEY) {
+        return {
+          content: [{ type: 'text', text: JSON.stringify({ error: 'ANTHROPIC_API_KEY not configured' }) }],
+          isError: true,
+        };
+      }
+
+      const schema = z.object({
+        topic: z.string(),
+        context: z.string().optional(),
+        tone: z.enum(['vulnerable', 'provocative', 'tactical', 'reflective', 'energized']).optional(),
+        blendRecipe: z.enum(['THE AUTHENTIC FOUNDER', 'THE PATTERN SPOTTER', 'THE STORYTELLER', 'THE PROVOCATEUR', 'THE CONNECTOR']).optional(),
+      });
+
+      const { topic, context, tone, blendRecipe } = schema.parse(args);
+
+      const voiceContext = extractVoiceContext(powerpakData);
+      const systemPrompt = buildLinkedInPrompt(voiceContext);
+
+      let userMessage = `Write a LinkedIn post about: ${topic}`;
+      if (context) userMessage += `\n\nContext: ${context}`;
+      if (tone) userMessage += `\n\nTone/energy: ${tone}`;
+      if (blendRecipe) userMessage += `\n\nUse the "${blendRecipe}" blend recipe.`;
+
+      const response = await anthropic.messages.create({
+        model: 'claude-sonnet-4-20250514',
+        max_tokens: 1024,
+        system: systemPrompt,
+        messages: [{ role: 'user', content: userMessage }],
+      });
+
+      const generatedContent = response.content[0].type === 'text'
+        ? response.content[0].text
+        : '';
+
+      return {
+        content: [{
+          type: 'text',
+          text: generatedContent,
+        }],
+      };
+    }
+
+    if (name === 'ask_justin') {
+      if (!process.env.ANTHROPIC_API_KEY) {
+        return {
+          content: [{ type: 'text', text: JSON.stringify({ error: 'ANTHROPIC_API_KEY not configured' }) }],
+          isError: true,
+        };
+      }
+
+      const schema = z.object({
+        question: z.string(),
+        context: z.string().optional(),
+      });
+
+      const { question, context } = schema.parse(args);
+
+      const voiceContext = extractVoiceContext(powerpakData);
+      const systemPrompt = buildAskJustinPrompt(voiceContext);
+
+      let userMessage = question;
+      if (context) userMessage += `\n\nAdditional context: ${context}`;
+
+      const response = await anthropic.messages.create({
+        model: 'claude-sonnet-4-20250514',
+        max_tokens: 1024,
+        system: systemPrompt,
+        messages: [{ role: 'user', content: userMessage }],
+      });
+
+      const generatedContent = response.content[0].type === 'text'
+        ? response.content[0].text
+        : '';
+
+      return {
+        content: [{
+          type: 'text',
+          text: generatedContent,
+        }],
       };
     }
 

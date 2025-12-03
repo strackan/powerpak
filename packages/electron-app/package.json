@@ -7,6 +7,8 @@
     "build": "tsc",
     "dev": "tsc && electron .",
     "start": "electron .",
+    "presentation": "tsc && electron . --presentation",
+    "demo": "tsc && electron . --presentation",
     "package": "electron-builder",
     "package:mac": "electron-builder --mac",
     "package:win": "electron-builder --win",
