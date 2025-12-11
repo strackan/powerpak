@@ -17,9 +17,9 @@
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
-    "@anthropic-ai/sdk": "^0.32.0",
-    "@modelcontextprotocol/sdk": "^1.0.4",
+    "@anthropic-ai/sdk": "^0.32.1",
     "@mcp-world/shared-types": "*",
+    "@modelcontextprotocol/sdk": "^1.0.4",
     "gray-matter": "^4.0.3",
     "zod": "^3.22.0"
   },

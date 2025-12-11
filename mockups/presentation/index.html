@@ -14,7 +14,7 @@
     <!-- ===== ACT 1: THE HOOK ===== -->
 
     <!-- SCENE 1: Title / Opening -->
-    <section class="scene active" data-scene="1">
+    <section class="scene" data-scene="1">
       <div class="scene-inner title-scene">
         <div class="title-content">
           <div class="powerpak-logo">
@@ -40,66 +40,91 @@
     <!-- SCENE 2: About Justin — The Credibility Foundation -->
     <section class="scene" data-scene="2">
       <div class="scene-inner credibility-scene">
-        <h1 class="scene-title">Before I show you what I built...</h1>
-        <p class="scene-subtitle">Quick context on who I am</p>
+        <h1 class="scene-title">About Me</h1>
+        <p class="scene-subtitle">Quick context before I show you what I built</p>
 
-        <div class="career-timeline">
-          <div class="timeline-era" data-delay="300">
-            <div class="era-year">2003</div>
-            <div class="era-content">
-              <div class="era-role">Employee #1</div>
-              <div class="era-company">SecureLink (PAM Solution)</div>
-              <div class="era-detail">Started in SaaS before it was called SaaS</div>
+        <div class="career-timeline two-column">
+          <!-- LEFT COLUMN: Building Phase -->
+          <div class="timeline-column building-phase">
+            <div class="column-header">Building SecureLink</div>
+
+            <div class="building-wrapper">
+              <div class="building-label">
+                <span class="building-title">Employee #1 — SecureLink</span>
+                <span class="building-metrics">Bootstrapped PAM SaaS → Exited to Vista</span>
+              </div>
+
+              <div class="building-stack">
+                <div class="timeline-era">
+                  <div class="era-year">2003</div>
+                  <div class="era-content">
+                    <div class="era-role">SDR</div>
+                    <div class="era-detail">200 cold calls every day</div>
+                  </div>
+                </div>
+
+                <div class="timeline-era">
+                  <div class="era-year">2005-11</div>
+                  <div class="era-content">
+                    <div class="era-role">Sales Engineer + "that CSM"</div>
+                    <div class="era-detail">The one who does everything</div>
+                  </div>
+                </div>
+
+                <div class="timeline-era">
+                  <div class="era-year">2012-16</div>
+                  <div class="era-content">
+                    <div class="era-role">VP of Sales</div>
+                    <div class="era-detail">$1M→$10M ARR • 5x ACV</div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
 
-          <div class="timeline-connector-vertical"></div>
+          <!-- RIGHT COLUMN: Exits Phase with CCO Wrapper -->
+          <div class="timeline-column exits-phase">
+            <div class="column-header">Three Exits</div>
 
-          <div class="timeline-era" data-delay="600">
-            <div class="era-year">0→1M</div>
-            <div class="era-content">
-              <div class="era-role">Main Generalist</div>
-              <div class="era-company">~4 years</div>
-              <div class="era-detail">Did everything from 0 to 1M ARR</div>
-            </div>
-          </div>
+            <div class="cco-wrapper">
+              <div class="cco-label">
+                <span class="cco-title">Chief Customer Officer</span>
+                <span class="cco-metrics">10M→50M ARR • 120% NRR</span>
+              </div>
 
-          <div class="timeline-connector-vertical"></div>
+              <div class="exits-stack">
+                <div class="timeline-era exit-card">
+                  <div class="era-year">2016</div>
+                  <div class="era-content">
+                    <div class="era-role">Exit #1: Vista Equity</div>
+                    <div class="era-detail">7x return</div>
+                  </div>
+                </div>
 
-          <div class="timeline-era" data-delay="900">
-            <div class="era-year">1M→10M</div>
-            <div class="era-content">
-              <div class="era-role">VP Sales → VP Marketing</div>
-              <div class="era-company">~5 years</div>
-              <div class="era-detail">Built the revenue engine</div>
-            </div>
-          </div>
+                <div class="timeline-era exit-card">
+                  <div class="era-year">2018</div>
+                  <div class="era-content">
+                    <div class="era-role">Exit #2: Secondary</div>
+                    <div class="era-detail">8x return</div>
+                  </div>
+                </div>
 
-          <div class="timeline-connector-vertical"></div>
-
-          <div class="timeline-era vista" data-delay="1200">
-            <div class="era-year">Vista</div>
-            <div class="era-content">
-              <div class="era-role">Acquisition</div>
-              <div class="era-company">PE Exit</div>
-              <div class="era-detail">The big win</div>
-            </div>
-          </div>
-
-          <div class="timeline-connector-vertical"></div>
-
-          <div class="timeline-era" data-delay="1500">
-            <div class="era-year">10M→15M</div>
-            <div class="era-content">
-              <div class="era-role">Chief Customer Officer</div>
-              <div class="era-company">Post-acquisition</div>
-              <div class="era-detail">Averaged <span class="stat-highlight">120% NRR</span></div>
+                <div class="timeline-era exit-card">
+                  <div class="era-year">2021</div>
+                  <div class="era-content">
+                    <div class="era-role">Exit #3: Imprivata</div>
+                    <div class="era-detail">3x return • $600M</div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
 
         <div class="credibility-pov">
-          <p class="pov-text">"Renewals motion as expansion lever. CS as predictable revenue engine — not cost center."</p>
+          <p class="pov-text">"Renewals motion as expansion lever."</p>
+          <p class="pov-text">"CS as predictable revenue engine — not cost center."</p>
+          <p class="pov-text">"Symbiotic ecosystem between vendor and customer."</p>
         </div>
       </div>
     </section>
@@ -116,250 +141,175 @@
               The last thing you want to be known as is the idea guy.
               <span class="quote-mark">"</span>
             </div>
-            <div class="moment-attribution">— My new boss, after the exit</div>
+            <div class="moment-attribution">— My new boss</div>
           </div>
 
-          <div class="wilderness-reaction">
-            <p class="reaction-line">But being the idea guy is my whole thing.</p>
-            <p class="reaction-line muted">As I got older with C-level titles...</p>
-            <p class="reaction-line muted">Being seen as disruptive became harder.</p>
-          </div>
-
-          <div class="wilderness-tension">
-            <div class="tension-box">
-              <p class="tension-text">The thing that made me <span class="highlight">valuable</span></p>
-              <p class="tension-text">was being treated as a <span class="danger">liability</span>.</p>
-            </div>
-          </div>
         </div>
       </div>
     </section>
 
-    <!-- SCENE 4: The Cambrian Explosion -->
+    <!-- SCENE 4: The Question -->
     <section class="scene" data-scene="4">
+      <div class="scene-inner question-scene">
+        <div class="question-content">
+          <h1 class="question-main">How can I be my authentic self<br>and also make a fuckton of money?</h1>
+        </div>
+      </div>
+    </section>
+
+    <!-- SCENE 5: The Cambrian Explosion -->
+    <section class="scene" data-scene="5">
       <div class="scene-inner cambrian-scene">
-        <h1 class="scene-title">Then vibe coding hit.</h1>
+        <h1 class="scene-title cambrian-title">Then vibe coding hit.</h1>
         <p class="scene-subtitle">April 2025</p>
 
-        <div class="cambrian-explosion">
-          <div class="explosion-center">
-            <div class="explosion-ring ring-1"></div>
-            <div class="explosion-ring ring-2"></div>
-            <div class="explosion-ring ring-3"></div>
-            <div class="explosion-core">
-              <span class="core-icon">🧠</span>
-              <span class="core-text">ADHD Brain</span>
+        <div class="cambrian-split-container">
+          <div class="cambrian-left">
+            <div class="cambrian-explosion">
+              <div class="explosion-center">
+                <div class="explosion-ring ring-1"></div>
+                <div class="explosion-ring ring-2"></div>
+                <div class="explosion-ring ring-3"></div>
+                <div class="explosion-core">
+                  <span class="core-icon">🧠</span>
+                  <span class="core-text">ADHD Brain</span>
+                </div>
+              </div>
+
+              <div class="explosion-projects">
+                <div class="project-bubble" style="--angle: 0deg; --distance: 200px;" data-delay="500">
+                  <span class="project-name">AI Consulting</span>
+                  <span class="project-type">Capital $</span>
+                </div>
+                <div class="project-bubble" style="--angle: 120deg; --distance: 200px;" data-delay="700">
+                  <span class="project-name">Renubu</span>
+                  <span class="project-type">Expansion Intelligence</span>
+                  <span class="project-sub">Bootstrapped SaaS</span>
+                </div>
+                <div class="project-bubble" style="--angle: 240deg; --distance: 200px;" data-delay="900">
+                  <span class="project-name">Good Hang</span>
+                  <span class="project-type">Community</span>
+                  <span class="project-sub">Founder Brand</span>
+                </div>
+              </div>
             </div>
           </div>
 
-          <div class="explosion-projects">
-            <div class="project-bubble" style="--angle: 0deg; --distance: 200px;" data-delay="500">
-              <span class="project-name">Renubu</span>
-              <span class="project-type">Main SaaS Bet</span>
-            </div>
-            <div class="project-bubble" style="--angle: 120deg; --distance: 200px;" data-delay="700">
-              <span class="project-name">Good Hang</span>
-              <span class="project-type">Weird/Fun</span>
-            </div>
-            <div class="project-bubble" style="--angle: 240deg; --distance: 200px;" data-delay="900">
-              <span class="project-name">GTM Consulting</span>
-              <span class="project-type">Advisory</span>
-            </div>
+          <div class="cambrian-right">
+            <h2 class="golden-god-text">I am a Golden God!</h2>
           </div>
-        </div>
-
-        <div class="cambrian-insight">
-          <p class="insight-main">Agentic workflows. AI-assisted development.</p>
-          <p class="insight-highlight">Throughput finally matches my brain.</p>
-          <p class="insight-regret">"My only regret is it didn't happen 20 years earlier."</p>
         </div>
       </div>
     </section>
 
     <!-- ===== ACT 3: THE TWO TENT POLES ===== -->
 
-    <!-- SCENE 5: Tent Pole 1 — The ADHD Problem -->
-    <section class="scene" data-scene="5">
+    <!-- SCENE 6: Tent Pole 1 — The ADHD Problem -->
+    <section class="scene" data-scene="6">
       <div class="scene-inner adhd-problem-scene">
-        <h1 class="scene-title">But I was drowning in context.</h1>
-
-        <div class="chaos-visualization">
-          <div class="chaos-items">
-            <div class="chaos-item claude" data-delay="200">
-              <span class="chaos-icon">💬</span>
-              <span class="chaos-label">4 Claude Projects</span>
-            </div>
-            <div class="chaos-item docs" data-delay="400">
-              <span class="chaos-icon">📄</span>
-              <span class="chaos-label">14 Reference Docs</span>
-            </div>
-            <div class="chaos-item frameworks" data-delay="600">
-              <span class="chaos-icon">🧩</span>
-              <span class="chaos-label">Decision frameworks in 3 places</span>
-            </div>
-            <div class="chaos-item broken" data-delay="800">
-              <span class="chaos-icon">🔗</span>
-              <span class="chaos-label">Nothing talks to each other</span>
-            </div>
-          </div>
-
-          <div class="chaos-error" data-delay="1200">
-            <div class="error-terminal">
-              <span class="error-prompt">$</span>
-              <span class="error-message">The tools don't know who I am.</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="adhd-truth">
-          <p>ADHD brain. Context fragmented everywhere.</p>
-        </div>
+        <h1 class="scene-title">But it was too much output for me to effectively manage.</h1>
       </div>
     </section>
 
-    <!-- SCENE 6: Tent Pole 1 — Founder OS Solution -->
-    <section class="scene" data-scene="6">
+    <!-- SCENE 7: Tent Pole 1 — Founder OS Solution -->
+    <section class="scene" data-scene="7">
       <div class="scene-inner founder-os-scene">
         <h1 class="scene-title">So I built myself an operating system.</h1>
-        <p class="scene-subtitle">Justin's Founder OS</p>
 
-        <div class="founder-os-stack">
-          <div class="os-layer" data-delay="300">
-            <div class="layer-icon">🧭</div>
-            <div class="layer-content">
-              <div class="layer-name">Decision Frameworks</div>
-              <div class="layer-desc">How I prioritize. How I choose.</div>
-            </div>
+        <div class="os-org-chart">
+          <!-- Root node -->
+          <div class="os-root" data-delay="200">
+            <div class="os-root-box">Founder OS</div>
           </div>
 
-          <div class="os-layer" data-delay="500">
-            <div class="layer-icon">📊</div>
-            <div class="layer-content">
-              <div class="layer-name">Priority Systems</div>
-              <div class="layer-desc">What matters now. What can wait.</div>
+          <!-- Branches -->
+          <div class="os-branches">
+            <div class="os-branch" data-delay="400">
+              <div class="branch-header">
+                <span class="branch-icon">🧭</span>
+                <span class="branch-title">Decision Frameworks</span>
+              </div>
+              <div class="branch-items">
+                <div class="branch-item">Prioritization</div>
+                <div class="branch-item">Trade-off Analysis</div>
+                <div class="branch-item">Risk Assessment</div>
+              </div>
+            </div>
+
+            <div class="os-branch" data-delay="600">
+              <div class="branch-header">
+                <span class="branch-icon">🎯</span>
+                <span class="branch-title">Goal-Setting</span>
+              </div>
+              <div class="branch-items">
+                <div class="branch-item">Personal OKRs</div>
+                <div class="branch-item">Professional OKRs</div>
+                <div class="branch-item">Work Priorities</div>
+              </div>
+            </div>
+
+            <div class="os-branch" data-delay="800">
+              <div class="branch-header">
+                <span class="branch-icon">💚</span>
+                <span class="branch-title">Emotional Regulation</span>
+              </div>
+              <div class="branch-items">
+                <div class="branch-item">Regulated State</div>
+                <div class="branch-item">Brainstorm Mode</div>
+                <div class="branch-item">How I'm Wired</div>
+              </div>
+            </div>
+
+            <div class="os-branch" data-delay="1000">
+              <div class="branch-header">
+                <span class="branch-icon">🪞</span>
+                <span class="branch-title">Core Identity</span>
+              </div>
+              <div class="branch-items">
+                <div class="branch-item">Personality</div>
+                <div class="branch-item">Dreams & Memories</div>
+                <div class="branch-item">Motivations</div>
+              </div>
             </div>
           </div>
-
-          <div class="os-layer" data-delay="700">
-            <div class="layer-icon">🚨</div>
-            <div class="layer-content">
-              <div class="layer-name">Crisis Protocols</div>
-              <div class="layer-desc">How to handle "Justin dysregulated"</div>
-            </div>
-          </div>
-
-          <div class="os-layer" data-delay="900">
-            <div class="layer-icon">🧠</div>
-            <div class="layer-content">
-              <div class="layer-name">ADHD Management</div>
-              <div class="layer-desc">Instructions for AI to work WITH my brain</div>
-            </div>
-          </div>
-        </div>
-
-        <div class="os-result">
-          <p class="result-text">Order from chaos.</p>
-          <p class="result-label">The "how I think" layer.</p>
         </div>
       </div>
     </section>
 
-    <!-- SCENE 7: Tent Pole 2 — The DevComX Insult -->
-    <section class="scene" data-scene="7">
-      <div class="scene-inner devcomx-scene">
-        <h1 class="scene-title">Then this company tells me they can emulate my voice.</h1>
-
-        <div class="devcomx-context">
-          <div class="context-card">
-            <div class="context-header">
-              <span class="context-company">DevComX</span>
-              <span class="context-type">GTM Engineering as a Service</span>
-            </div>
-            <div class="context-services">
-              <span class="service-tag">Clay tables</span>
-              <span class="service-tag">LinkedIn automation</span>
-              <span class="service-tag">AI personalization</span>
-            </div>
-            <div class="context-pitch">
-              <p>50 LinkedIn messages a day</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="devcomx-claim">
-          <div class="claim-bubble them">
-            <p>"We can emulate your voice."</p>
-          </div>
-        </div>
-
-        <div class="devcomx-reaction">
-          <div class="reaction-bubble me">
-            <p class="reaction-main">"No you can't."</p>
-            <p class="reaction-follow">"You don't know me."</p>
-          </div>
-        </div>
-
-        <div class="devcomx-feeling">
-          <p class="feeling-text">It felt like someone messing with my <span class="highlight">source code</span>.</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- SCENE 8: Tent Pole 2 — The Spite Project -->
+    <!-- SCENE 8: Tent Pole 2 — The DevComX Insult -->
     <section class="scene" data-scene="8">
-      <div class="scene-inner spite-scene">
-        <h1 class="scene-title">So I proved them wrong.</h1>
-
-        <div class="spite-process">
-          <div class="process-step" data-delay="300">
-            <div class="step-icon">📚</div>
-            <div class="step-content">
-              <div class="step-title">Loaded AI with everything</div>
-              <div class="step-desc">Everything I've ever written</div>
+      <div class="scene-inner devcomx-scene">
+        <div class="devcomx-split">
+          <div class="devcomx-left" data-delay="300">
+            <div class="devcomx-quote-card them">
+              <p class="devcomx-source">Gen Z AI Lead Gen Company</p>
+              <p class="devcomx-quote">"We can emulate your voice."</p>
             </div>
           </div>
-
-          <div class="process-connector"></div>
-
-          <div class="process-step" data-delay="600">
-            <div class="step-icon">🎭</div>
-            <div class="step-content">
-              <div class="step-title">Every spectrum</div>
-              <div class="step-desc">Professional. Personal. Vulnerable. Provocative.</div>
+          <div class="devcomx-right" data-delay="800">
+            <div class="devcomx-quote-card me">
+              <p class="devcomx-source">Justin</p>
+              <p class="devcomx-quote">"Not happening fellas."</p>
             </div>
           </div>
-
-          <div class="process-connector"></div>
-
-          <div class="process-step" data-delay="900">
-            <div class="step-icon">🔬</div>
-            <div class="step-content">
-              <div class="step-title">Analyzed patterns</div>
-              <div class="step-desc">Massive sample size. Every writing mode.</div>
-            </div>
-          </div>
-        </div>
-
-        <div class="spite-result">
-          <div class="result-stat-big">
-            <span class="stat-number">91%</span>
-            <span class="stat-label">accuracy replicating my voice</span>
-          </div>
-        </div>
-
-        <div class="spite-line">
-          <p>"Fine. <em>I'LL</em> emulate my voice."</p>
         </div>
       </div>
     </section>
 
-    <!-- SCENE 9: Tent Pole 2 — Voice OS -->
+    <!-- SCENE 9: Tent Pole 2 — The Spite Project -->
     <section class="scene" data-scene="9">
-      <div class="scene-inner voice-os-scene">
-        <h1 class="scene-title">I didn't just replicate my voice.</h1>
-        <h2 class="scene-subtitle">I <span class="highlight">MODELED</span> it.</h2>
+      <div class="scene-inner spite-scene">
+        <h1 class="scene-title">But maybe <em>I</em> could.</h1>
+      </div>
+    </section>
 
-        <div class="voice-architecture">
+    <!-- SCENE 10: Tent Pole 2 — Voice OS -->
+    <section class="scene" data-scene="10">
+      <div class="scene-inner voice-os-scene">
+        <h1 class="scene-title">Justin's Voice OS</h1>
+        <p class="voice-section-title">Style Variants</p>
+
+        <div class="voice-architecture wide">
           <div class="template-column" data-column="openings" data-delay="300">
             <h3>11 Openings</h3>
             <div class="template-items">
@@ -367,84 +317,113 @@
               <div class="template-item">Absurdist Observation</div>
               <div class="template-item">Scene-Setting</div>
               <div class="template-item">Pattern Recognition</div>
-              <div class="template-item">Provocative Question</div>
-              <div class="template-item">Specific Detail</div>
-              <div class="template-item">+ 5 more...</div>
+              <div class="template-item">+ 7 more...</div>
             </div>
           </div>
 
-          <div class="template-column" data-column="middles" data-delay="500">
+          <div class="template-column" data-column="middles" data-delay="400">
             <h3>7 Middles</h3>
             <div class="template-items">
               <div class="template-item">Story Arc</div>
               <div class="template-item">Philosophical Escalation</div>
               <div class="template-item">Technical Deep Dive</div>
               <div class="template-item">Analogy Game</div>
-              <div class="template-item">List-That-Isn't-A-List</div>
-              <div class="template-item">Dialogue-Driven</div>
-              <div class="template-item">Evidence + Vulnerability</div>
+              <div class="template-item">+ 3 more...</div>
             </div>
           </div>
 
-          <div class="template-column" data-column="endings" data-delay="700">
+          <div class="template-column" data-column="endings" data-delay="500">
             <h3>12 Endings</h3>
             <div class="template-items">
               <div class="template-item">Open Question</div>
               <div class="template-item">Invitation</div>
               <div class="template-item">Callback</div>
               <div class="template-item">Unexpected Twist</div>
-              <div class="template-item">Practical Application</div>
-              <div class="template-item">Philosophical Button</div>
-              <div class="template-item">+ 6 more...</div>
+              <div class="template-item">+ 8 more...</div>
+            </div>
+          </div>
+
+          <div class="template-column" data-column="viral" data-delay="600">
+            <h3>Viral Patterns</h3>
+            <div class="template-items">
+              <div class="template-item">Platform-Specific</div>
+              <div class="template-item">Hook Formulas</div>
+              <div class="template-item">Engagement Triggers</div>
+              <div class="template-item">Pattern Matching</div>
             </div>
           </div>
         </div>
 
-        <div class="voice-blend">
-          <p class="blend-intro">Blend recipes showing which templates pair together</p>
-          <p class="blend-result">The "how I sound" layer.</p>
+        <div class="voice-blends">
+          <p class="blends-title">Combination Templates = A/B Voice Testing</p>
+          <div class="blend-cards">
+            <div class="blend-card" data-delay="700">
+              <span class="blend-formula">3 + 7 + 11</span>
+              <span class="blend-result">Perfect Disruptive Post</span>
+            </div>
+            <div class="blend-card" data-delay="800">
+              <span class="blend-formula">2 + 5 + 3</span>
+              <span class="blend-result">Melancholy Post</span>
+            </div>
+            <div class="blend-card" data-delay="900">
+              <span class="blend-formula">1 + 4 + 8</span>
+              <span class="blend-result">Vulnerable Story</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="voice-accuracy" data-delay="1000">
+          <span class="accuracy-number">91%</span>
+          <span class="accuracy-label">Accuracy</span>
         </div>
       </div>
     </section>
 
     <!-- ===== ACT 4: THE CONVERGENCE ===== -->
 
-    <!-- SCENE 10: The Convergence -->
-    <section class="scene" data-scene="10">
+    <!-- SCENE 11: The Convergence -->
+    <section class="scene" data-scene="11">
       <div class="scene-inner convergence-scene">
-        <h1 class="scene-title">Then I realized what I'd actually built.</h1>
+        <h1 class="scene-title">Oh shit. Like in Weird Science.</h1>
 
-        <div class="convergence-visual">
-          <div class="branch-tree">
-            <div class="branch founder-branch" data-delay="300">
-              <div class="branch-label">Founder OS</div>
-              <div class="branch-desc">"How I think"</div>
-            </div>
-
-            <div class="merge-point" data-delay="800">
-              <div class="merge-icon">🔀</div>
-            </div>
-
-            <div class="branch voice-branch" data-delay="500">
-              <div class="branch-label">Voice OS</div>
-              <div class="branch-desc">"How I sound"</div>
+        <div class="convergence-boxes">
+          <div class="convergence-box" data-delay="300">
+            <h3 class="box-title">Identity OS</h3>
+            <p class="box-desc">How I think</p>
+            <div class="box-items">
+              <span>Decision Frameworks</span>
+              <span>Core Values</span>
             </div>
           </div>
 
-          <div class="convergence-result" data-delay="1200">
-            <p class="result-line">These aren't two things.</p>
-            <p class="result-line highlight">They're two branches of the same tree.</p>
-          </div>
-        </div>
+          <div class="convergence-plus" data-delay="500">+</div>
 
-        <div class="convergence-conclusion" data-delay="1600">
-          <p class="conclusion-text">Together = a complete, <span class="highlight">installable</span> version of Justin's expertise.</p>
+          <div class="convergence-box" data-delay="600">
+            <h3 class="box-title">Voice OS</h3>
+            <p class="box-desc">How I sound</p>
+            <div class="box-items">
+              <span>Style Templates</span>
+              <span>Viral Patterns</span>
+            </div>
+          </div>
+
+          <div class="convergence-plus" data-delay="800">+</div>
+
+          <div class="convergence-box" data-delay="900">
+            <h3 class="box-title">Virtual Chief of Staff</h3>
+            <p class="box-desc">How I operate</p>
+            <div class="box-items">
+              <span>SMART Goals</span>
+              <span>Daily Planning</span>
+              <span>String-Ties*</span>
+            </div>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- SCENE 11: The API Moment -->
-    <section class="scene" data-scene="11">
+    <!-- SCENE 12: The API Moment -->
+    <section class="scene" data-scene="12">
       <div class="scene-inner api-scene">
         <h1 class="scene-title">What if I made it callable?</h1>
 
@@ -469,58 +448,91 @@
         </div>
 
         <div class="api-insight">
-          <p>Now my team generates content in my voice <span class="highlight">programmatically</span>.</p>
+          <p>So, in theory I could <span class="highlight">license</span> this.</p>
+          <p>Like for <span class="money">money</span>.</p>
         </div>
       </div>
     </section>
 
-    <!-- SCENE 12: The MCP Moment -->
-    <section class="scene" data-scene="12">
-      <div class="scene-inner mcp-moment-scene">
-        <h1 class="scene-title">What if I made it installable?</h1>
-
-        <div class="mcp-evolution">
-          <div class="evolution-step" data-delay="300">
-            <div class="step-icon">📄</div>
-            <div class="step-label">Documents</div>
-            <div class="step-desc">Static. Copied. Forgotten.</div>
-          </div>
-
-          <div class="evolution-arrow" data-delay="600">→</div>
-
-          <div class="evolution-step" data-delay="700">
-            <div class="step-icon">🔌</div>
-            <div class="step-label">API</div>
-            <div class="step-desc">Callable. On demand.</div>
-          </div>
-
-          <div class="evolution-arrow" data-delay="1000">→</div>
-
-          <div class="evolution-step highlight" data-delay="1100">
-            <div class="step-icon">⚡</div>
-            <div class="step-label">MCP</div>
-            <div class="step-desc">Installable. Native.</div>
-          </div>
-        </div>
-
-        <div class="mcp-explanation">
-          <div class="explanation-card">
-            <h3>MCP = Model Context Protocol</h3>
-            <p>Anthropic's open standard for connecting AI to data and tools.</p>
-            <p class="highlight-text">Not just callable — <strong>INSTALLABLE</strong>.</p>
-          </div>
-        </div>
-
-        <div class="mcp-punchline">
-          <p>Anyone with Claude Desktop can "install" Justin.</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- SCENE 13: The Branching Permissions -->
+    <!-- SCENE 13: The MCP Moment -->
     <section class="scene" data-scene="13">
-      <div class="scene-inner permissions-scene">
-        <h1 class="scene-title">But it doesn't stop there.</h1>
+      <div class="scene-inner mcp-moment-scene">
+        <h1 class="scene-title">What about MCP?</h1>
+
+        <div class="mcp-bullets">
+          <div class="mcp-bullet" data-delay="300">
+            <h3>Installable, not callable</h3>
+            <p>MCP servers are capabilities you install into your AI — like adding a new skill to its brain.</p>
+          </div>
+
+          <div class="mcp-bullet" data-delay="500">
+            <h3>AI-native</h3>
+            <p>HTTP was built for browsers. REST for apps. MCP was built for AI agents to communicate.</p>
+          </div>
+
+          <div class="mcp-bullet" data-delay="700">
+            <h3>Discoverable skills</h3>
+            <p>No documentation to read. MCP servers expose semantic "skills" that AI finds automatically.</p>
+          </div>
+
+          <div class="mcp-bullet" data-delay="900">
+            <h3>Voice, not code</h3>
+            <p>Build MCP servers in markdown and natural language. Semantic, not syntactic.</p>
+          </div>
+
+          <div class="mcp-bullet" data-delay="1100">
+            <h3>Permissioned by context</h3>
+            <p>Granular, relationship-aware permissions. Your therapist sees different things than LinkedIn.</p>
+          </div>
+        </div>
+
+        <div class="mcp-footer" data-delay="1300">
+          <p>API = HTTP</p>
+          <p>MCP = <span class="highlight">???</span></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SCENE 14: Introducing PowerPak -->
+    <section class="scene" data-scene="14">
+      <div class="scene-inner intro-powerpak-scene">
+        <h1 class="scene-title">Introducing PowerPak</h1>
+        <p class="scene-subtitle">Your Native AI Identity Layer</p>
+
+        <div class="powerpak-features" data-delay="400">
+          <ul class="feature-list">
+            <li><strong>Native AI Discovery</strong> — Get found by ChatGPT, Claude, and other AI assistants</li>
+            <li><strong>Knowledge Graph</strong> — Semantic connections across expertise and relationships</li>
+            <li><strong>Tiered Access Control</strong> — Different permissions for different people</li>
+            <li><strong>Profile Pages</strong> — Human-readable landing pages with voice samples and tools</li>
+          </ul>
+        </div>
+
+        <div class="network-preview" data-delay="800">
+          <h3>The Expert Network</h3>
+          <div class="network-visualization">
+            <svg class="network-lines" viewBox="0 0 400 300">
+              <line x1="200" y1="150" x2="50" y2="70" stroke="#64748b" stroke-width="2"/>
+              <line x1="200" y1="150" x2="350" y2="90" stroke="#64748b" stroke-width="2"/>
+              <line x1="200" y1="150" x2="80" y2="250" stroke="#64748b" stroke-width="2"/>
+              <line x1="200" y1="150" x2="360" y2="240" stroke="#64748b" stroke-width="2"/>
+              <line x1="200" y1="150" x2="200" y2="20" stroke="#64748b" stroke-width="2"/>
+            </svg>
+            <div class="network-node central">You</div>
+            <div class="network-node" style="--x: -150px; --y: -80px;">Sales Expert</div>
+            <div class="network-node" style="--x: 150px; --y: -60px;">AI Engineer</div>
+            <div class="network-node" style="--x: -120px; --y: 100px;">Marketing Pro</div>
+            <div class="network-node" style="--x: 160px; --y: 90px;">Consultant</div>
+            <div class="network-node" style="--x: 0px; --y: -130px;">Founder</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SCENE 15: The Branching Permissions -->
+    <section class="scene" data-scene="15">
+      <div class="scene-inner permissions-scene-dark">
+        <h1 class="scene-title">Now I can do this:</h1>
 
         <div class="permission-tree">
           <div class="tree-root">
@@ -580,244 +592,335 @@
       </div>
     </section>
 
-    <!-- ===== ACT 5: THE SCOPE EXPLOSION ===== -->
-
-    <!-- SCENE 14: The Scope Explosion — Dating -->
-    <section class="scene" data-scene="14">
-      <div class="scene-inner dating-scope-scene">
-        <h1 class="scene-title">What if this works for dating?</h1>
-
-        <div class="dating-concept">
-          <div class="concept-insight">
-            <p>Same permission model.</p>
-            <p>Same progressive access.</p>
-            <p class="highlight">You control when someone gets access to what.</p>
-          </div>
-        </div>
-
-        <div class="dating-demo">
-          <div class="scenario-timeline">
-            <div class="timeline-step active" data-step="1">
-              <div class="step-number">1</div>
-              <div class="step-title">Discovery</div>
-            </div>
-            <div class="timeline-connector"></div>
-            <div class="timeline-step" data-step="2">
-              <div class="step-number">2</div>
-              <div class="step-title">Connection</div>
-            </div>
-            <div class="timeline-connector"></div>
-            <div class="timeline-step" data-step="3">
-              <div class="step-number">3</div>
-              <div class="step-title">Permission</div>
-            </div>
-            <div class="timeline-connector"></div>
-            <div class="timeline-step" data-step="4">
-              <div class="step-number">4</div>
-              <div class="step-title">Unlock</div>
-            </div>
-          </div>
-
-          <div class="dating-split-view">
-            <!-- Marcus's View -->
-            <div class="dating-panel his-view">
-              <div class="panel-header">
-                <div class="avatar-small">MT</div>
-                <div>
-                  <div class="panel-name">Marcus Thompson</div>
-                  <div class="panel-subtitle">What he sees</div>
+    <!-- SCENE 16: Professional Use Case -->
+    <section class="scene" data-scene="16">
+      <div class="scene-inner professional-scene">
+        <h1 class="scene-title">For Professionals</h1>
+        <div class="professional-split">
+          <div class="pro-panel marketplace" data-delay="300">
+            <h2>Expert Marketplace</h2>
+            <div class="mini-profiles">
+              <div class="mini-profile">
+                <div class="avatar">JS</div>
+                <div class="info">
+                  <span class="name">Justin Strackany</span>
+                  <span class="title">Revenue Engine Builder</span>
                 </div>
+                <span class="tier enhanced">Enhanced</span>
               </div>
-
-              <div class="scenario-content" data-scenario="1">
-                <div class="discovery-result">
-                  <p class="ai-prompt">"Find professionals who enjoy hiking and outdoor activities"</p>
-                  <div class="profile-discovery">
-                    <div class="avatar">SC</div>
-                    <div class="discovery-info">
-                      <div class="name">Sarah Chen</div>
-                      <div class="title">Product Marketing Manager</div>
-                      <div class="match-reason">Shared interest: Hiking, Trail Running</div>
-                    </div>
-                  </div>
+              <div class="mini-profile">
+                <div class="avatar">SL</div>
+                <div class="info">
+                  <span class="name">Scott Leese</span>
+                  <span class="title">Sales Leadership Expert</span>
                 </div>
+                <span class="tier premium">Premium</span>
               </div>
-
-              <div class="scenario-content hidden" data-scenario="2">
-                <div class="chat-preview">
-                  <div class="chat-bubble them">Hi! I saw we both love hiking. Have you done any trails in the Bay Area?</div>
-                  <div class="chat-bubble me">Yes! Just did Mission Peak last weekend. The sunrise views are incredible.</div>
-                  <div class="chat-bubble them">That's one of my favorites! We should compare trail notes sometime.</div>
+              <div class="mini-profile">
+                <div class="avatar">MT</div>
+                <div class="info">
+                  <span class="name">Marcus Thompson</span>
+                  <span class="title">SaaS Sales Strategist</span>
                 </div>
-              </div>
-
-              <div class="scenario-content hidden" data-scenario="3">
-                <div class="waiting-state">
-                  <div class="waiting-icon">🔒</div>
-                  <p>Waiting for Sarah to grant access...</p>
-                </div>
-              </div>
-
-              <div class="scenario-content hidden" data-scenario="4">
-                <div class="unlocked-state">
-                  <div class="unlock-icon">🔓</div>
-                  <p class="unlock-message">Sarah granted you access!</p>
-                  <div class="new-tools">
-                    <span class="tool-pill new">text_me</span>
-                    <span class="tool-pill new">view_photos</span>
-                  </div>
-                  <div class="photo-gallery">
-                    <div class="photo-placeholder">🏔️</div>
-                    <div class="photo-placeholder">🏖️</div>
-                    <div class="photo-placeholder">⛰️</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!-- Sarah's Settings View -->
-            <div class="dating-panel her-settings">
-              <div class="panel-header">
-                <div class="avatar-small">SC</div>
-                <div>
-                  <div class="panel-name">Sarah Chen</div>
-                  <div class="panel-subtitle">Her account settings</div>
-                </div>
-              </div>
-
-              <div class="settings-panel">
-                <h4>Access Controls for: Marcus Thompson</h4>
-
-                <div class="permission-toggles">
-                  <div class="toggle-row">
-                    <label>
-                      <input type="checkbox" class="permission-toggle" data-permission="text" id="toggle-text">
-                      <span class="toggle-label">Allow TEXT_ME tool</span>
-                    </label>
-                    <span class="toggle-status locked" id="status-text">Locked</span>
-                  </div>
-
-                  <div class="toggle-row">
-                    <label>
-                      <input type="checkbox" class="permission-toggle" data-permission="photos" id="toggle-photos">
-                      <span class="toggle-label">Show vacation photos</span>
-                    </label>
-                    <span class="toggle-status locked" id="status-photos">Locked</span>
-                  </div>
-
-                  <div class="toggle-row">
-                    <label>
-                      <input type="checkbox" class="permission-toggle" data-permission="location" id="toggle-location">
-                      <span class="toggle-label">Share general location</span>
-                    </label>
-                    <span class="toggle-status locked" id="status-location">Locked</span>
-                  </div>
-                </div>
+                <span class="tier basic">Basic</span>
               </div>
             </div>
           </div>
-
-          <div class="scenario-controls">
-            <button class="btn btn-secondary" id="prev-scenario" disabled>Previous</button>
-            <button class="btn btn-primary" id="next-scenario">Next Step</button>
+          <div class="pro-panel permissions" data-delay="600">
+            <h2>Permission Matrix</h2>
+            <p class="panel-desc">Control who sees what</p>
+            <div class="permission-matrix">
+              <table class="matrix-table">
+                <thead>
+                  <tr>
+                    <th>Access</th>
+                    <th>EA</th>
+                    <th>Friends</th>
+                    <th>Partners</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Calendar</td>
+                    <td><input type="checkbox" checked></td>
+                    <td><input type="checkbox"></td>
+                    <td><input type="checkbox"></td>
+                  </tr>
+                  <tr>
+                    <td>Pipeline</td>
+                    <td><input type="checkbox"></td>
+                    <td><input type="checkbox"></td>
+                    <td><input type="checkbox" checked></td>
+                  </tr>
+                  <tr>
+                    <td>Photos</td>
+                    <td><input type="checkbox"></td>
+                    <td><input type="checkbox" checked></td>
+                    <td><input type="checkbox"></td>
+                  </tr>
+                  <tr>
+                    <td>Meetings</td>
+                    <td><input type="checkbox" checked></td>
+                    <td><input type="checkbox"></td>
+                    <td><input type="checkbox" checked></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
           </div>
-        </div>
-
-        <div class="dating-insight">
-          <p>Professional context → Personal context → Intimate context</p>
         </div>
       </div>
     </section>
 
-    <!-- SCENE 15: The Scope Explosion — Enterprise -->
-    <section class="scene" data-scene="15">
-      <div class="scene-inner enterprise-scope-scene">
-        <h1 class="scene-title">What if this works for companies?</h1>
+    <!-- SCENE 17: Personal Use Case -->
+    <section class="scene" data-scene="17">
+      <div class="scene-inner personal-scene">
+        <h1 class="scene-title">Personal Discovery</h1>
+        <p class="scene-subtitle">A dating scenario — see how permissions unlock progressively</p>
 
-        <div class="company-showcase">
-          <!-- Company Profile Card -->
-          <div class="company-card">
-            <div class="company-header-bar">
-              <div class="company-logo">SF</div>
-              <div class="company-info">
-                <div class="company-name">Salesforce</div>
-                <div class="company-tagline">The Customer Company</div>
-              </div>
-              <span class="badge enterprise">Enterprise</span>
+        <div class="scenario-timeline" data-delay="300">
+          <div class="timeline-step active" data-step="1">
+            <div class="step-number">1</div>
+            <div class="step-title">Discovery</div>
+          </div>
+          <div class="timeline-connector"></div>
+          <div class="timeline-step" data-step="2">
+            <div class="step-number">2</div>
+            <div class="step-title">Connection</div>
+          </div>
+          <div class="timeline-connector"></div>
+          <div class="timeline-step" data-step="3">
+            <div class="step-number">3</div>
+            <div class="step-title">Permission</div>
+          </div>
+          <div class="timeline-connector"></div>
+          <div class="timeline-step" data-step="4">
+            <div class="step-number">4</div>
+            <div class="step-title">Unlock</div>
+          </div>
+        </div>
+
+        <div class="dating-panels" data-delay="500">
+          <div class="dating-panel his-view">
+            <div class="panel-header">
+              <div class="avatar-small">MT</div>
+              <span>Marcus — What he sees</span>
             </div>
-
-            <div class="company-stats">
-              <div class="company-stat">
-                <span class="stat-value">12</span>
-                <span class="stat-label">Executive Personas</span>
-              </div>
-              <div class="company-stat">
-                <span class="stat-value">5.2K</span>
-                <span class="stat-label">Monthly Queries</span>
-              </div>
-              <div class="company-stat">
-                <span class="stat-value">89%</span>
-                <span class="stat-label">Response Rate</span>
+            <div class="scenario-content active" data-scenario="1">
+              <p class="ai-prompt">"Find professionals who enjoy hiking"</p>
+              <div class="discovery-result">
+                <div class="avatar-small">SC</div>
+                <div class="result-info">
+                  <strong>Sarah Chen</strong>
+                  <span>Shared: Hiking, Trail Running</span>
+                </div>
               </div>
             </div>
+            <div class="scenario-content" data-scenario="2">
+              <div class="chat-bubble">Hi! I saw we both love hiking.</div>
+              <div class="chat-bubble reply">Just did Mission Peak!</div>
+            </div>
+            <div class="scenario-content" data-scenario="3">
+              <div class="waiting-state">🔒 Waiting for access...</div>
+            </div>
+            <div class="scenario-content" data-scenario="4">
+              <div class="unlocked-state">🔓 Access granted!
+                <div class="new-tools">
+                  <span class="tool-pill">text_me</span>
+                  <span class="tool-pill">view_photos</span>
+                </div>
+              </div>
+            </div>
+          </div>
 
-            <div class="executive-personas">
-              <h4>Published Executive Personas</h4>
+          <div class="dating-panel her-settings">
+            <div class="panel-header">
+              <div class="avatar-small">SC</div>
+              <span>Sarah — Her controls</span>
+            </div>
+            <div class="permission-toggles">
+              <label class="toggle-row">
+                <input type="checkbox" class="permission-toggle" data-permission="text">
+                <span>Allow TEXT_ME</span>
+              </label>
+              <label class="toggle-row">
+                <input type="checkbox" class="permission-toggle" data-permission="photos">
+                <span>Show photos</span>
+              </label>
+              <label class="toggle-row">
+                <input type="checkbox" class="permission-toggle" data-permission="location">
+                <span>Share location</span>
+              </label>
+            </div>
+          </div>
+        </div>
+
+        <div class="scenario-controls" data-delay="700">
+          <button class="btn-scenario" id="prev-scenario" disabled>← Previous</button>
+          <button class="btn-scenario" id="next-scenario">Next Step →</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- SCENE 18: Corporate Use Case -->
+    <section class="scene" data-scene="18">
+      <div class="scene-inner corporate-scene">
+        <h1 class="scene-title">For Enterprise</h1>
+        <p class="scene-subtitle">Company admin dashboard</p>
+
+        <div class="company-card" data-delay="300">
+          <div class="company-header-bar">
+            <div class="company-logo">SF</div>
+            <div class="company-info">
+              <div class="company-name">Salesforce</div>
+              <div class="company-tagline">The Customer Company</div>
+            </div>
+            <span class="badge-enterprise">Enterprise</span>
+          </div>
+        </div>
+
+        <div class="dashboard-container" data-delay="500">
+          <div class="dashboard-nav">
+            <button class="dash-nav-btn active" data-tab="personas">Personas</button>
+            <button class="dash-nav-btn" data-tab="analytics">Analytics</button>
+            <button class="dash-nav-btn" data-tab="brand">Company Brand</button>
+            <button class="dash-nav-btn" data-tab="team">Team</button>
+            <button class="dash-nav-btn" data-tab="settings">Settings</button>
+          </div>
+
+          <div class="dashboard-content">
+            <div class="dash-tab active" data-tab="personas">
               <div class="persona-grid">
                 <div class="persona-card">
                   <div class="persona-avatar">MB</div>
                   <div class="persona-name">Marc Benioff</div>
                   <div class="persona-role">CEO</div>
-                  <span class="persona-status active">Active</span>
+                  <span class="status-active">Active</span>
                 </div>
                 <div class="persona-card">
                   <div class="persona-avatar">ST</div>
                   <div class="persona-name">Sarah Thompson</div>
                   <div class="persona-role">CTO</div>
-                  <span class="persona-status active">Active</span>
+                  <span class="status-active">Active</span>
                 </div>
                 <div class="persona-card">
                   <div class="persona-avatar">JD</div>
                   <div class="persona-name">James Davis</div>
                   <div class="persona-role">VP Sales</div>
-                  <span class="persona-status active">Active</span>
+                  <span class="status-active">Active</span>
                 </div>
               </div>
             </div>
-          </div>
 
-          <!-- Enterprise Features -->
-          <div class="enterprise-features">
-            <div class="feature-item">
-              <span class="feature-icon">👥</span>
-              <span class="feature-text">Admin dashboard controls who sees what</span>
+            <div class="dash-tab" data-tab="analytics">
+              <div class="analytics-cards">
+                <div class="analytics-card">
+                  <div class="analytics-value">5,247</div>
+                  <div class="analytics-label">Total Queries</div>
+                  <div class="analytics-trend up">+23%</div>
+                </div>
+                <div class="analytics-card">
+                  <div class="analytics-value">342</div>
+                  <div class="analytics-label">Unique Visitors</div>
+                  <div class="analytics-trend up">+15%</div>
+                </div>
+                <div class="analytics-card">
+                  <div class="analytics-value">4.8s</div>
+                  <div class="analytics-label">Avg Response</div>
+                  <div class="analytics-trend down">-0.3s</div>
+                </div>
+              </div>
             </div>
-            <div class="feature-item">
-              <span class="feature-icon">📊</span>
-              <span class="feature-text">Analytics on who's querying</span>
-            </div>
-            <div class="feature-item">
-              <span class="feature-icon">🔐</span>
-              <span class="feature-text">Enterprise-grade permission management</span>
-            </div>
-          </div>
 
-          <!-- Pricing Preview -->
-          <div class="pricing-preview">
-            <h4>Enterprise Pricing</h4>
-            <div class="pricing-range">
-              <span class="price-low">$50K</span>
-              <span class="price-divider">—</span>
-              <span class="price-high">$500K</span>
-              <span class="price-unit">/year</span>
+            <div class="dash-tab" data-tab="brand">
+              <div class="brand-tools">
+                <p class="brand-intro">AI agents can discover and use your company's tools:</p>
+                <div class="tool-command">
+                  <span class="tool-icon">🔧</span>
+                  <code>BROWSE_SUMMER_LINEUP</code>
+                  <span class="tool-desc">View seasonal product catalog</span>
+                </div>
+                <div class="tool-command">
+                  <span class="tool-icon">📋</span>
+                  <code>VIEW_CONTACTS_PAGE</code>
+                  <span class="tool-desc">Get company contact information</span>
+                </div>
+                <div class="tool-command">
+                  <span class="tool-icon">💼</span>
+                  <code>UPDATE_OPP_RECORD_xyz123</code>
+                  <span class="tool-desc">Modify opportunity in CRM</span>
+                </div>
+                <div class="tool-command">
+                  <span class="tool-icon">📊</span>
+                  <code>GET_QUARTERLY_REPORT</code>
+                  <span class="tool-desc">Fetch latest financial data</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="dash-tab" data-tab="team">
+              <div class="team-list">
+                <div class="team-member">
+                  <div class="member-avatar">JS</div>
+                  <div class="member-info">
+                    <div class="member-name">John Smith</div>
+                    <div class="member-role">Admin</div>
+                  </div>
+                  <span class="member-status">Owner</span>
+                </div>
+                <div class="team-member">
+                  <div class="member-avatar">AW</div>
+                  <div class="member-info">
+                    <div class="member-name">Amy Wilson</div>
+                    <div class="member-role">Editor</div>
+                  </div>
+                  <span class="member-status edit">Edit</span>
+                </div>
+                <div class="team-member">
+                  <div class="member-avatar">MK</div>
+                  <div class="member-info">
+                    <div class="member-name">Mike Kim</div>
+                    <div class="member-role">Viewer</div>
+                  </div>
+                  <span class="member-status edit">Edit</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="dash-tab" data-tab="settings">
+              <div class="settings-list">
+                <div class="setting-row">
+                  <span class="setting-label">Public Discovery</span>
+                  <label class="toggle-switch">
+                    <input type="checkbox" checked>
+                    <span class="slider"></span>
+                  </label>
+                </div>
+                <div class="setting-row">
+                  <span class="setting-label">Analytics Tracking</span>
+                  <label class="toggle-switch">
+                    <input type="checkbox" checked>
+                    <span class="slider"></span>
+                  </label>
+                </div>
+                <div class="setting-row">
+                  <span class="setting-label">AI Integration</span>
+                  <label class="toggle-switch">
+                    <input type="checkbox" checked>
+                    <span class="slider"></span>
+                  </label>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- SCENE 16: The Holy Shit Moment -->
-    <section class="scene" data-scene="16">
+    <!-- ===== ACT 5: THE HOLY SHIT MOMENT ===== -->
+
+    <!-- SCENE 19: The Holy Shit Moment -->
+    <section class="scene" data-scene="19">
       <div class="scene-inner holyshit-scene">
         <h1 class="scene-title">And that's when I realized...</h1>
 
@@ -829,56 +932,50 @@
             <p>This isn't LinkedIn + Bumble + enterprise software.</p>
           </div>
           <div class="realization-line highlight" data-delay="1500">
-            <p>This is the <strong>STRUCTURE</strong>.</p>
+            <p>This is the <strong class="structure-text">STRUCTURE</strong>.</p>
           </div>
           <div class="realization-line final" data-delay="2000">
             <p>This is how humans exist when AI mediates everything.</p>
           </div>
         </div>
 
-        <div class="origin-story" data-delay="3000">
-          <div class="story-quote">
-            <p class="story-line">"It started as a spite project to prove DevComX wrong.</p>
-            <p class="story-line">Then I needed my decision frameworks too.</p>
-            <p class="story-line">Then I realized those were just two branches.</p>
-            <p class="story-line">Then I thought: what about dating?</p>
-            <p class="story-line">Then I thought: what about companies?</p>
-            <p class="story-line highlight">And that's when I realized —</p>
-            <p class="story-line big">this isn't a product. This is the structure.</p>
-            <p class="story-line big">This is how humans exist when AI is the interface.</p>
-            <p class="story-exclaim">Holy shit. This could be for anything.</p>
-            <p class="story-final">Just like the internet."</p>
-          </div>
+        <div class="holy-callout" data-delay="2500">
+          <p class="callout-text">Did I just invent the Internet?</p>
         </div>
       </div>
     </section>
 
-    <!-- SCENE 17: The New Internet -->
-    <section class="scene" data-scene="17">
+    <!-- SCENE 20: The New Internet -->
+    <section class="scene" data-scene="20">
       <div class="scene-inner internet-scene">
-        <h1 class="scene-title">HTTP was how humans found information.</h1>
-        <h2 class="scene-subtitle highlight">MCP is how AI finds people.</h2>
+        <h1 class="scene-title internet-title">HTTP was how humans found information.</h1>
+        <h2 class="scene-subtitle internet-subtitle highlight">MCP is HTTP for AI.</h2>
 
         <div class="timeline-comparison">
           <div class="timeline-col old-internet">
             <h3>The Old Internet</h3>
             <div class="timeline-items">
-              <div class="timeline-item" data-delay="300">
+              <div class="timeline-item">
+                <span class="year">1988</span>
+                <span class="tech">IRC</span>
+                <span class="desc">Prototype</span>
+              </div>
+              <div class="timeline-item">
                 <span class="year">1991</span>
                 <span class="tech">HTTP</span>
                 <span class="desc">Protocol</span>
               </div>
-              <div class="timeline-item" data-delay="500">
+              <div class="timeline-item">
                 <span class="year">1995</span>
                 <span class="tech">Browsers</span>
                 <span class="desc">Clients</span>
               </div>
-              <div class="timeline-item" data-delay="700">
+              <div class="timeline-item">
                 <span class="year">2000</span>
                 <span class="tech">Websites</span>
                 <span class="desc">Presence</span>
               </div>
-              <div class="timeline-item" data-delay="900">
+              <div class="timeline-item">
                 <span class="year">2004</span>
                 <span class="tech">Google</span>
                 <span class="desc">Discovery</span>
@@ -890,22 +987,27 @@
           <div class="timeline-col new-internet">
             <h3>The AI Internet</h3>
             <div class="timeline-items">
-              <div class="timeline-item" data-delay="400">
+              <div class="timeline-item">
+                <span class="year">2022</span>
+                <span class="tech">ChatGPT</span>
+                <span class="desc">Prototype</span>
+              </div>
+              <div class="timeline-item">
                 <span class="year">2024</span>
                 <span class="tech">MCP</span>
                 <span class="desc">Protocol</span>
               </div>
-              <div class="timeline-item" data-delay="600">
+              <div class="timeline-item">
                 <span class="year">2024</span>
                 <span class="tech">AI Assistants</span>
                 <span class="desc">Clients</span>
               </div>
-              <div class="timeline-item" data-delay="800">
+              <div class="timeline-item">
                 <span class="year">2025</span>
                 <span class="tech">PowerPaks</span>
                 <span class="desc">Presence</span>
               </div>
-              <div class="timeline-item" data-delay="1000">
+              <div class="timeline-item">
                 <span class="year">2025</span>
                 <span class="tech highlight">PowerPak Directory</span>
                 <span class="desc">Discovery</span>
@@ -916,16 +1018,15 @@
         </div>
 
         <div class="internet-quote">
-          <p>"We're not building an app.</p>
-          <p class="highlight">We're building the directory layer for the AI internet."</p>
+          <p class="highlight">We're building the Identity Layer for the new digital world.</p>
         </div>
       </div>
     </section>
 
     <!-- ===== ACT 6: THE DEMO ===== -->
 
-    <!-- SCENE 18: Live Demo -->
-    <section class="scene" data-scene="18">
+    <!-- SCENE 21: Live Demo -->
+    <section class="scene" data-scene="21">
       <div class="scene-inner demo-scene">
         <div class="demo-placeholder">
           <div class="demo-icon">🎬</div>
@@ -944,8 +1045,8 @@
       </div>
     </section>
 
-    <!-- SCENE 19: The Platform Showcase -->
-    <section class="scene" data-scene="19">
+    <!-- SCENE 22: The Platform Showcase -->
+    <section class="scene" data-scene="22">
       <div class="scene-inner platform-scene">
         <h1 class="scene-title">Now let me show you what this becomes at scale.</h1>
 
@@ -1011,8 +1112,8 @@
 
     <!-- ===== ACT 7: THE CLOSE ===== -->
 
-    <!-- SCENE 20: Why This Needs Both of Us -->
-    <section class="scene" data-scene="20">
+    <!-- SCENE 23: Why This Needs Both of Us -->
+    <section class="scene" data-scene="23">
       <div class="scene-inner whyus-scene">
         <h1 class="scene-title">Why This Needs Both of Us</h1>
         <p class="scene-subtitle">"I can build this alone. It'll take two years."</p>
@@ -1052,8 +1153,8 @@
       </div>
     </section>
 
-    <!-- SCENE 21: Three Paths Forward -->
-    <section class="scene" data-scene="21">
+    <!-- SCENE 24: Three Paths Forward -->
+    <section class="scene" data-scene="24">
       <div class="scene-inner paths-scene">
         <h1 class="scene-title">Three Paths Forward</h1>
         <p class="scene-subtitle">I'm not here to pressure you.</p>
@@ -1097,8 +1198,8 @@
       </div>
     </section>
 
-    <!-- SCENE 22: The Ask -->
-    <section class="scene" data-scene="22">
+    <!-- SCENE 25: The Ask -->
+    <section class="scene" data-scene="25">
       <div class="scene-inner ask-scene">
         <h1 class="scene-title">The Ask</h1>
 
@@ -1144,39 +1245,36 @@
   <!-- Scene Navigation -->
   <div class="scene-nav">
     <div class="scene-dots">
-      <span class="scene-dot active" data-scene="1" title="Title"></span>
-      <span class="scene-dot" data-scene="2" title="Credibility"></span>
-      <span class="scene-dot" data-scene="3" title="Wilderness"></span>
-      <span class="scene-dot" data-scene="4" title="Cambrian"></span>
-      <span class="scene-dot" data-scene="5" title="ADHD Problem"></span>
-      <span class="scene-dot" data-scene="6" title="Founder OS"></span>
-      <span class="scene-dot" data-scene="7" title="DevComX"></span>
-      <span class="scene-dot" data-scene="8" title="Spite Project"></span>
-      <span class="scene-dot" data-scene="9" title="Voice OS"></span>
-      <span class="scene-dot" data-scene="10" title="Convergence"></span>
-      <span class="scene-dot" data-scene="11" title="API Moment"></span>
-      <span class="scene-dot" data-scene="12" title="MCP Moment"></span>
-      <span class="scene-dot" data-scene="13" title="Permissions"></span>
-      <span class="scene-dot" data-scene="14" title="Dating"></span>
-      <span class="scene-dot" data-scene="15" title="Enterprise"></span>
-      <span class="scene-dot" data-scene="16" title="Holy Shit"></span>
-      <span class="scene-dot" data-scene="17" title="New Internet"></span>
-      <span class="scene-dot" data-scene="18" title="Live Demo"></span>
-      <span class="scene-dot" data-scene="19" title="Platform"></span>
-      <span class="scene-dot" data-scene="20" title="Why Us"></span>
-      <span class="scene-dot" data-scene="21" title="Three Paths"></span>
-      <span class="scene-dot" data-scene="22" title="The Ask"></span>
+      <span class="scene-dot active" data-scene="1" title="Title / Opening"></span>
+      <span class="scene-dot" data-scene="2" title="About Justin — The Credibility Foundation"></span>
+      <span class="scene-dot" data-scene="3" title="The Wilderness / The Tension"></span>
+      <span class="scene-dot" data-scene="4" title="The Question"></span>
+      <span class="scene-dot" data-scene="5" title="The Cambrian Explosion"></span>
+      <span class="scene-dot" data-scene="6" title="Tent Pole 1 — The ADHD Problem"></span>
+      <span class="scene-dot" data-scene="7" title="Tent Pole 1 — Founder OS Solution"></span>
+      <span class="scene-dot" data-scene="8" title="Tent Pole 2 — The DevComX Insult"></span>
+      <span class="scene-dot" data-scene="9" title="Tent Pole 2 — The Spite Project"></span>
+      <span class="scene-dot" data-scene="10" title="Tent Pole 2 — Voice OS"></span>
+      <span class="scene-dot" data-scene="11" title="The Convergence"></span>
+      <span class="scene-dot" data-scene="12" title="The API Moment"></span>
+      <span class="scene-dot" data-scene="13" title="The MCP Moment"></span>
+      <span class="scene-dot" data-scene="14" title="Introducing PowerPak"></span>
+      <span class="scene-dot" data-scene="15" title="The Branching Permissions"></span>
+      <span class="scene-dot" data-scene="16" title="Professional Use Case"></span>
+      <span class="scene-dot" data-scene="17" title="Personal Use Case"></span>
+      <span class="scene-dot" data-scene="18" title="Corporate Use Case"></span>
+      <span class="scene-dot" data-scene="19" title="The Holy Shit Moment"></span>
+      <span class="scene-dot" data-scene="20" title="The New Internet"></span>
+      <span class="scene-dot" data-scene="21" title="Live Demo"></span>
+      <span class="scene-dot" data-scene="22" title="The Platform Showcase"></span>
+      <span class="scene-dot" data-scene="23" title="Why This Needs Both of Us"></span>
+      <span class="scene-dot" data-scene="24" title="Three Paths Forward"></span>
+      <span class="scene-dot" data-scene="25" title="The Ask"></span>
     </div>
   </div>
 
   <div class="scene-progress">
     <div class="progress-bar" id="scene-progress"></div>
-  </div>
-
-  <!-- Scene title overlay -->
-  <div class="scene-title-overlay" id="scene-title-overlay">
-    <span class="scene-number">1/22</span>
-    <span class="scene-name">Title</span>
   </div>
 
   <script src="assets/presentation.js"></script>

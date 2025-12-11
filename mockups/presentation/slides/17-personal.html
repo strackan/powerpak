@@ -1,0 +1,88 @@
+<section class="scene" data-scene="17">
+  <div class="scene-inner personal-scene">
+    <h1 class="scene-title">Personal Discovery</h1>
+    <p class="scene-subtitle">A dating scenario — see how permissions unlock progressively</p>
+
+    <div class="scenario-timeline" data-delay="300">
+      <div class="timeline-step active" data-step="1">
+        <div class="step-number">1</div>
+        <div class="step-title">Discovery</div>
+      </div>
+      <div class="timeline-connector"></div>
+      <div class="timeline-step" data-step="2">
+        <div class="step-number">2</div>
+        <div class="step-title">Connection</div>
+      </div>
+      <div class="timeline-connector"></div>
+      <div class="timeline-step" data-step="3">
+        <div class="step-number">3</div>
+        <div class="step-title">Permission</div>
+      </div>
+      <div class="timeline-connector"></div>
+      <div class="timeline-step" data-step="4">
+        <div class="step-number">4</div>
+        <div class="step-title">Unlock</div>
+      </div>
+    </div>
+
+    <div class="dating-panels" data-delay="500">
+      <div class="dating-panel his-view">
+        <div class="panel-header">
+          <div class="avatar-small">MT</div>
+          <span>Marcus — What he sees</span>
+        </div>
+        <div class="scenario-content active" data-scenario="1">
+          <p class="ai-prompt">"Find professionals who enjoy hiking"</p>
+          <div class="discovery-result">
+            <div class="avatar-small">SC</div>
+            <div class="result-info">
+              <strong>Sarah Chen</strong>
+              <span>Shared: Hiking, Trail Running</span>
+            </div>
+          </div>
+        </div>
+        <div class="scenario-content" data-scenario="2">
+          <div class="chat-bubble">Hi! I saw we both love hiking.</div>
+          <div class="chat-bubble reply">Just did Mission Peak!</div>
+        </div>
+        <div class="scenario-content" data-scenario="3">
+          <div class="waiting-state">🔒 Waiting for access...</div>
+        </div>
+        <div class="scenario-content" data-scenario="4">
+          <div class="unlocked-state">🔓 Access granted!
+            <div class="new-tools">
+              <span class="tool-pill">text_me</span>
+              <span class="tool-pill">view_photos</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="dating-panel her-settings">
+        <div class="panel-header">
+          <div class="avatar-small">SC</div>
+          <span>Sarah — Her controls</span>
+        </div>
+        <div class="permission-toggles">
+          <label class="toggle-row">
+            <input type="checkbox" class="permission-toggle" data-permission="text">
+            <span>Allow TEXT_ME</span>
+          </label>
+          <label class="toggle-row">
+            <input type="checkbox" class="permission-toggle" data-permission="photos">
+            <span>Show photos</span>
+          </label>
+          <label class="toggle-row">
+            <input type="checkbox" class="permission-toggle" data-permission="location">
+            <span>Share location</span>
+          </label>
+        </div>
+      </div>
+    </div>
+
+    <div class="scenario-controls" data-delay="700">
+      <button class="btn-scenario" id="prev-scenario" disabled>← Previous</button>
+      <button class="btn-scenario" id="next-scenario">Next Step →</button>
+    </div>
+  </div>
+</section>

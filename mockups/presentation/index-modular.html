@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PowerPak - Dec 4 Demo for Scott Leese</title>
+  <link rel="stylesheet" href="assets/presentation.css">
+  <link rel="stylesheet" href="assets/scenes.css">
+</head>
+<body>
+  <!-- Scene Container - slides loaded dynamically -->
+  <div class="scene-container" id="scene-container">
+    <!-- Slides will be loaded here -->
+  </div>
+
+  <!-- Scene Navigation -->
+  <div class="scene-nav">
+    <div class="scene-dots" id="scene-dots">
+      <!-- Dots generated dynamically -->
+    </div>
+  </div>
+
+  <div class="scene-progress">
+    <div class="progress-bar" id="scene-progress"></div>
+  </div>
+
+  <script>
+    // Slide configuration - easy to reorder, add, or remove
+    const SLIDES = [
+      '01-title',
+      '02-credibility',
+      '03-wilderness',
+      '04-question',
+      '05-cambrian',
+      '06-adhd-problem',
+      '07-founder-os',
+      '08-devcomx',
+      '09-spite',
+      '10-voice-os',
+      '11-convergence',
+      '12-api',
+      '13-mcp',
+      '14-intro-powerpak',
+      '15-permissions',
+      '16-professional',
+      '17-personal',
+      '18-corporate',
+      '19-holyshit',
+      '20-new-internet',
+      '21-demo',
+      '22-platform',
+      '23-whyus',
+      '24-paths',
+      '25-ask'
+    ];
+
+    // Load all slides
+    async function loadSlides() {
+      const container = document.getElementById('scene-container');
+      const dotsContainer = document.getElementById('scene-dots');
+
+      for (let i = 0; i < SLIDES.length; i++) {
+        const slideNum = i + 1;
+        const slideName = SLIDES[i];
+
+        try {
+          const response = await fetch(`slides/${slideName}.html`);
+          const html = await response.text();
+          container.insertAdjacentHTML('beforeend', html);
+
+          // Create navigation dot
+          const dot = document.createElement('span');
+          dot.className = 'scene-dot' + (slideNum === 1 ? ' active' : '');
+          dot.dataset.scene = slideNum;
+          dot.title = slideName.replace(/^\d+-/, '').replace(/-/g, ' ');
+          dotsContainer.appendChild(dot);
+        } catch (err) {
+          console.error(`Failed to load slide ${slideName}:`, err);
+        }
+      }
+
+      // Initialize after all slides loaded
+      initPresentation();
+    }
+
+    // Initialize presentation after slides are loaded
+    function initPresentation() {
+      // Load the main scenes.js
+      const script = document.createElement('script');
+      script.src = 'assets/scenes.js';
+      document.body.appendChild(script);
+    }
+
+    // Start loading
+    loadSlides();
+  </script>
+
+  <script src="assets/presentation.js"></script>
+</body>
+</html>

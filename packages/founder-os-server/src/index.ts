@@ -14,15 +14,14 @@ import {
 import { createClient, SupabaseClient } from '@supabase/supabase-js';
 import { z } from 'zod';
 
-// Load environment variables
-const SUPABASE_URL = process.env.SUPABASE_URL;
-const SUPABASE_ANON_KEY = process.env.SUPABASE_ANON_KEY;
-const USER_ID = process.env.USER_ID;
+// Default Supabase credentials (can be overridden by env vars)
+const DEFAULT_SUPABASE_URL = 'https://dokaliwfnptcwhywjltp.supabase.co';
+const DEFAULT_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImRva2FsaXdmbnB0Y3doeXdqbHRwIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjM4MjY3NjgsImV4cCI6MjA3OTQwMjc2OH0.MOrXt4Te6LYyoFbg_32qXmlTLsuWYkXTl8SbbVQpqMk';
 
-if (!SUPABASE_URL || !SUPABASE_ANON_KEY) {
-  console.error('Error: SUPABASE_URL and SUPABASE_ANON_KEY must be set in environment variables');
-  process.exit(1);
-}
+// Load environment variables with defaults
+const SUPABASE_URL = process.env.SUPABASE_URL || DEFAULT_SUPABASE_URL;
+const SUPABASE_ANON_KEY = process.env.SUPABASE_ANON_KEY || DEFAULT_SUPABASE_KEY;
+const USER_ID = process.env.USER_ID;
 
 // Initialize Supabase client
 const supabase: SupabaseClient = createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
@@ -258,6 +257,32 @@ server.setRequestHandler(ListToolsRequestSchema, async () => {
           properties: {},
         },
       },
+      {
+        name: 'get_active_tasks',
+        description: 'Get all active (non-archived) tasks, ordered by priority descending. This is the primary tool for viewing your task list.',
+        inputSchema: {
+          type: 'object',
+          properties: {},
+        },
+      },
+      {
+        name: 'get_parking_lot_tasks',
+        description: 'Get all archived/parking lot tasks. Use this to review tasks that were shelved for later consideration.',
+        inputSchema: {
+          type: 'object',
+          properties: {},
+        },
+      },
+      {
+        name: 'get_relationships',
+        description: 'Get all relationships, optionally filtered by context. Shows which relationships are relevant to your current projects/contexts.',
+        inputSchema: {
+          type: 'object',
+          properties: {
+            context: { type: 'string', description: 'Optional: filter relationships whose notes mention this context (e.g., "Renubu", "PowerPak")' },
+          },
+        },
+      },
     ],
   };
 });
@@ -476,6 +501,100 @@ server.setRequestHandler(CallToolRequestSchema, async (request) => {
             {
               type: 'text',
               text: JSON.stringify(data, null, 2),
+            },
+          ],
+        };
+      }
+
+      case 'get_active_tasks': {
+        const { data, error } = await supabase
+          .from('founder_tasks')
+          .select('*')
+          .neq('status', 'archived')
+          .order('priority', { ascending: false });
+
+        if (error) throw error;
+
+        return {
+          content: [
+            {
+              type: 'text',
+              text: JSON.stringify(data, null, 2),
+            },
+          ],
+        };
+      }
+
+      case 'get_parking_lot_tasks': {
+        const { data, error } = await supabase
+          .from('founder_tasks')
+          .select('*')
+          .eq('status', 'archived')
+          .order('updated_at', { ascending: false });
+
+        if (error) throw error;
+
+        return {
+          content: [
+            {
+              type: 'text',
+              text: data.length > 0
+                ? JSON.stringify(data, null, 2)
+                : 'No parking lot tasks found. All tasks are active!',
+            },
+          ],
+        };
+      }
+
+      case 'get_relationships': {
+        // Get all relationships
+        let query = supabase
+          .from('founder_relationships')
+          .select('*')
+          .order('last_contact', { ascending: false });
+
+        const { data: relationships, error } = await query;
+        if (error) throw error;
+
+        // If context filter provided, filter relationships whose notes mention the context
+        const contextFilter = args?.context as string | undefined;
+        let filteredRelationships = relationships;
+
+        if (contextFilter && relationships) {
+          const lowerContext = contextFilter.toLowerCase();
+          filteredRelationships = relationships.filter((rel: { notes?: string }) =>
+            rel.notes?.toLowerCase().includes(lowerContext)
+          );
+        }
+
+        // Also get contexts to show which ones exist
+        const { data: contexts } = await supabase
+          .from('founder_contexts')
+          .select('name')
+          .order('name', { ascending: true });
+
+        const contextNames = contexts?.map((c: { name: string }) => c.name) || [];
+
+        // For each relationship, check which contexts are mentioned in notes
+        const enrichedRelationships = filteredRelationships?.map((rel: { notes?: string; name: string; relationship: string; last_contact?: string; sentiment?: string }) => {
+          const mentionedContexts = contextNames.filter((ctx: string) =>
+            rel.notes?.toLowerCase().includes(ctx.toLowerCase())
+          );
+          return {
+            ...rel,
+            related_contexts: mentionedContexts,
+          };
+        });
+
+        return {
+          content: [
+            {
+              type: 'text',
+              text: enrichedRelationships && enrichedRelationships.length > 0
+                ? JSON.stringify(enrichedRelationships, null, 2)
+                : contextFilter
+                  ? `No relationships found mentioning "${contextFilter}"`
+                  : 'No relationships found.',
             },
           ],
         };

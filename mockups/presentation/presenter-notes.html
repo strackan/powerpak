@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PowerPak - 5-Tab Demo Presentation</title>
+  <link rel="stylesheet" href="assets/presentation.css">
+</head>
+<body>
+  <!-- Main Navigation Tabs -->
+  <nav class="main-nav">
+    <div class="nav-brand">
+      <a href="../index.html" style="color: #6b7280; text-decoration: none; margin-right: 1rem;">← Back</a>
+      <span class="brand-icon">&#x26A1;</span>
+      <span class="brand-text">PowerPak</span>
+    </div>
+    <div class="nav-tabs">
+      <button class="tab-btn active" data-tab="benefits">
+        <span class="tab-icon">&#x2728;</span>
+        Benefits
+      </button>
+      <button class="tab-btn" data-tab="professional">
+        <span class="tab-icon">&#x1F4BC;</span>
+        Professional
+      </button>
+      <button class="tab-btn" data-tab="personal">
+        <span class="tab-icon">&#x2764;</span>
+        Personal
+      </button>
+      <button class="tab-btn" data-tab="corporate">
+        <span class="tab-icon">&#x1F3E2;</span>
+        Corporate
+      </button>
+      <button class="tab-btn" data-tab="summary">
+        <span class="tab-icon">&#x1F680;</span>
+        Summary
+      </button>
+    </div>
+  </nav>
+
+  <!-- Tab Content Container -->
+  <main class="tab-container">
+
+    <!-- TAB 1: Benefits / Discoverability -->
+    <section class="tab-content active" id="benefits">
+      <div class="hero-section">
+        <h1 class="hero-title">Your Native AI Identity Layer</h1>
+        <p class="hero-subtitle">Be discovered by AI. Control your narrative. Monetize your expertise.</p>
+        <div class="hero-stats">
+          <div class="stat-card">
+            <span class="stat-number">247</span>
+            <span class="stat-label">Expert Profiles</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-number">12K+</span>
+            <span class="stat-label">AI Discoveries</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-number">98%</span>
+            <span class="stat-label">Match Accuracy</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="benefits-grid">
+        <div class="benefit-card">
+          <div class="benefit-icon">&#x1F50D;</div>
+          <h3>Native AI Discovery</h3>
+          <p>Get found by ChatGPT, Claude, and other AI assistants through the MCP protocol. Your expertise becomes searchable by AI.</p>
+        </div>
+        <div class="benefit-card">
+          <div class="benefit-icon">&#x1F4C4;</div>
+          <h3>Advertised Profile Pages</h3>
+          <p>Human-readable landing pages that showcase your expertise, voice samples, and custom tools to potential clients.</p>
+        </div>
+        <div class="benefit-card">
+          <div class="benefit-icon">&#x1F5A7;</div>
+          <h3>Knowledge Graph Integration</h3>
+          <p>Complex discovery through semantic connections. "Find someone who knows sales AND worked at Salesforce AND likes hiking."</p>
+        </div>
+        <div class="benefit-card">
+          <div class="benefit-icon">&#x1F511;</div>
+          <h3>Tiered Access Control</h3>
+          <p>Grant different permissions to different people. Professional contacts see one thing, personal connections see another.</p>
+        </div>
+      </div>
+
+      <div class="network-preview">
+        <h2 class="section-title">The Expert Network</h2>
+        <div class="network-visualization">
+          <div class="network-node central">You</div>
+          <div class="network-node" style="--x: -150px; --y: -80px;">Sales Expert</div>
+          <div class="network-node" style="--x: 150px; --y: -60px;">AI Engineer</div>
+          <div class="network-node" style="--x: -120px; --y: 100px;">Marketing Pro</div>
+          <div class="network-node" style="--x: 160px; --y: 90px;">Consultant</div>
+          <div class="network-node" style="--x: 0px; --y: -130px;">Founder</div>
+          <svg class="network-lines">
+            <line x1="50%" y1="50%" x2="calc(50% - 150px)" y2="calc(50% - 80px)" />
+            <line x1="50%" y1="50%" x2="calc(50% + 150px)" y2="calc(50% - 60px)" />
+            <line x1="50%" y1="50%" x2="calc(50% - 120px)" y2="calc(50% + 100px)" />
+            <line x1="50%" y1="50%" x2="calc(50% + 160px)" y2="calc(50% + 90px)" />
+            <line x1="50%" y1="50%" x2="50%" y2="calc(50% - 130px)" />
+          </svg>
+        </div>
+      </div>
+    </section>
+
+    <!-- TAB 2: Professional Use Case -->
+    <section class="tab-content" id="professional">
+      <div class="split-view">
+        <!-- Left: Marketplace Preview -->
+        <div class="split-panel">
+          <h2 class="panel-title">Expert Marketplace</h2>
+          <div class="mini-marketplace">
+            <div class="profile-card-mini">
+              <div class="avatar">JS</div>
+              <div class="info">
+                <div class="name">Justin Strackany</div>
+                <div class="title">Revenue Engine Builder</div>
+              </div>
+              <span class="badge enhanced">Enhanced</span>
+            </div>
+            <div class="profile-card-mini">
+              <div class="avatar">SL</div>
+              <div class="info">
+                <div class="name">Scott Leese</div>
+                <div class="title">Sales Leadership Expert</div>
+              </div>
+              <span class="badge premium">Premium</span>
+            </div>
+            <div class="profile-card-mini">
+              <div class="avatar">MT</div>
+              <div class="info">
+                <div class="name">Marcus Thompson</div>
+                <div class="title">SaaS Sales Strategist</div>
+              </div>
+              <span class="badge basic">Basic</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: My Account / Permissions -->
+        <div class="split-panel">
+          <h2 class="panel-title">My Account - Permission Sharing</h2>
+          <p class="panel-description">Control who sees what parts of your knowledge base</p>
+
+          <div class="permission-matrix">
+            <table class="matrix-table">
+              <thead>
+                <tr>
+                  <th>Knowledge Area</th>
+                  <th>Exec Assistant</th>
+                  <th>Friends</th>
+                  <th>Spouse</th>
+                  <th>Biz Partners</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Calendar Access</td>
+                  <td><input type="checkbox" checked></td>
+                  <td><input type="checkbox"></td>
+                  <td><input type="checkbox" checked></td>
+                  <td><input type="checkbox"></td>
+                </tr>
+                <tr>
+                  <td>Deal Pipeline</td>
+                  <td><input type="checkbox"></td>
+                  <td><input type="checkbox"></td>
+                  <td><input type="checkbox"></td>
+                  <td><input type="checkbox" checked></td>
+                </tr>
+                <tr>
+                  <td>Personal Photos</td>
+                  <td><input type="checkbox"></td>
+                  <td><input type="checkbox" checked></td>
+                  <td><input type="checkbox" checked></td>
+                  <td><input type="checkbox"></td>
+                </tr>
+                <tr>
+                  <td>Contact Info</td>
+                  <td><input type="checkbox" checked></td>
+                  <td><input type="checkbox" checked></td>
+                  <td><input type="checkbox" checked></td>
+                  <td><input type="checkbox" checked></td>
+                </tr>
+                <tr>
+                  <td>Book Meetings</td>
+                  <td><input type="checkbox" checked></td>
+                  <td><input type="checkbox"></td>
+                  <td><input type="checkbox" checked></td>
+                  <td><input type="checkbox" checked></td>
+                </tr>
+                <tr>
+                  <td>Client List</td>
+                  <td><input type="checkbox"></td>
+                  <td><input type="checkbox"></td>
+                  <td><input type="checkbox"></td>
+                  <td><input type="checkbox" checked></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="tool-access-preview">
+            <h3>Tool Access by Relationship</h3>
+            <div class="access-cards">
+              <div class="access-card">
+                <div class="access-role">Executive Assistant</div>
+                <div class="access-tools">
+                  <span class="tool-pill">book_meeting</span>
+                  <span class="tool-pill">view_calendar</span>
+                  <span class="tool-pill">send_message</span>
+                </div>
+              </div>
+              <div class="access-card">
+                <div class="access-role">Business Partners</div>
+                <div class="access-tools">
+                  <span class="tool-pill">view_pipeline</span>
+                  <span class="tool-pill">share_clients</span>
+                  <span class="tool-pill">book_meeting</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TAB 3: Personal / Dating Use Case -->
+    <section class="tab-content" id="personal">
+      <h2 class="section-header">Personal Discovery - A Dating Scenario</h2>
+      <p class="section-intro">See how PowerPak enables meaningful personal connections through controlled access</p>
+
+      <div class="scenario-timeline">
+        <div class="timeline-step active" data-step="1">
+          <div class="step-number">1</div>
+          <div class="step-title">Discovery</div>
+        </div>
+        <div class="timeline-connector"></div>
+        <div class="timeline-step" data-step="2">
+          <div class="step-number">2</div>
+          <div class="step-title">Connection</div>
+        </div>
+        <div class="timeline-connector"></div>
+        <div class="timeline-step" data-step="3">
+          <div class="step-number">3</div>
+          <div class="step-title">Permission</div>
+        </div>
+        <div class="timeline-connector"></div>
+        <div class="timeline-step" data-step="4">
+          <div class="step-number">4</div>
+          <div class="step-title">Unlock</div>
+        </div>
+      </div>
+
+      <div class="dating-split-view">
+        <!-- Marcus's View -->
+        <div class="dating-panel his-view">
+          <div class="panel-header">
+            <div class="avatar-small">MT</div>
+            <div>
+              <div class="panel-name">Marcus Thompson</div>
+              <div class="panel-subtitle">What he sees</div>
+            </div>
+          </div>
+
+          <div class="scenario-content" data-scenario="1">
+            <div class="discovery-result">
+              <p class="ai-prompt">"Find professionals who enjoy hiking and outdoor activities"</p>
+              <div class="profile-discovery">
+                <div class="avatar">SC</div>
+                <div class="discovery-info">
+                  <div class="name">Sarah Chen</div>
+                  <div class="title">Product Marketing Manager</div>
+                  <div class="match-reason">Shared interest: Hiking, Trail Running</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="scenario-content hidden" data-scenario="2">
+            <div class="chat-preview">
+              <div class="chat-bubble them">Hi! I saw we both love hiking. Have you done any trails in the Bay Area?</div>
+              <div class="chat-bubble me">Yes! Just did Mission Peak last weekend. The sunrise views are incredible.</div>
+              <div class="chat-bubble them">That's one of my favorites! We should compare trail notes sometime.</div>
+            </div>
+          </div>
+
+          <div class="scenario-content hidden" data-scenario="3">
+            <div class="waiting-state">
+              <div class="waiting-icon">&#x1F512;</div>
+              <p>Waiting for Sarah to grant access...</p>
+            </div>
+          </div>
+
+          <div class="scenario-content hidden" data-scenario="4">
+            <div class="unlocked-state">
+              <div class="unlock-icon">&#x1F513;</div>
+              <p class="unlock-message">Sarah granted you access!</p>
+              <div class="new-tools">
+                <span class="tool-pill new">text_me</span>
+                <span class="tool-pill new">view_photos</span>
+              </div>
+              <div class="photo-gallery">
+                <div class="photo-placeholder">&#x1F3D4;</div>
+                <div class="photo-placeholder">&#x1F3D6;</div>
+                <div class="photo-placeholder">&#x26F0;</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Sarah's Settings View -->
+        <div class="dating-panel her-settings">
+          <div class="panel-header">
+            <div class="avatar-small">SC</div>
+            <div>
+              <div class="panel-name">Sarah Chen</div>
+              <div class="panel-subtitle">Her account settings</div>
+            </div>
+          </div>
+
+          <div class="settings-panel">
+            <h4>Access Controls for: Marcus Thompson</h4>
+
+            <div class="permission-toggles">
+              <div class="toggle-row">
+                <label>
+                  <input type="checkbox" class="permission-toggle" data-permission="text" id="toggle-text">
+                  <span class="toggle-label">Allow TEXT_ME tool</span>
+                </label>
+                <span class="toggle-status locked" id="status-text">Locked</span>
+              </div>
+
+              <div class="toggle-row">
+                <label>
+                  <input type="checkbox" class="permission-toggle" data-permission="photos" id="toggle-photos">
+                  <span class="toggle-label">Show vacation photos</span>
+                </label>
+                <span class="toggle-status locked" id="status-photos">Locked</span>
+              </div>
+
+              <div class="toggle-row">
+                <label>
+                  <input type="checkbox" class="permission-toggle" data-permission="location" id="toggle-location">
+                  <span class="toggle-label">Share general location</span>
+                </label>
+                <span class="toggle-status locked" id="status-location">Locked</span>
+              </div>
+            </div>
+
+            <div class="settings-note">
+              <p>&#x1F6E1; Your professional profile remains separate. Personal permissions only affect this connection.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="scenario-controls">
+        <button class="btn btn-secondary" id="prev-scenario" disabled>Previous</button>
+        <button class="btn btn-primary" id="next-scenario">Next Step</button>
+      </div>
+    </section>
+
+    <!-- TAB 4: Corporate Use Case -->
+    <section class="tab-content" id="corporate">
+      <div class="corporate-header">
+        <h2>Enterprise AI Identity</h2>
+        <p>Company pages, executive personas, and admin control</p>
+      </div>
+
+      <div class="company-showcase">
+        <!-- Company Profile Card -->
+        <div class="company-card">
+          <div class="company-header-bar">
+            <div class="company-logo">SF</div>
+            <div class="company-info">
+              <div class="company-name">Salesforce</div>
+              <div class="company-tagline">The Customer Company</div>
+            </div>
+            <span class="badge enterprise">Enterprise</span>
+          </div>
+
+          <div class="company-stats">
+            <div class="company-stat">
+              <span class="stat-value">12</span>
+              <span class="stat-label">Executive Personas</span>
+            </div>
+            <div class="company-stat">
+              <span class="stat-value">5.2K</span>
+              <span class="stat-label">Monthly Queries</span>
+            </div>
+            <div class="company-stat">
+              <span class="stat-value">89%</span>
+              <span class="stat-label">Response Rate</span>
+            </div>
+          </div>
+
+          <div class="executive-personas">
+            <h4>Published Executive Personas</h4>
+            <div class="persona-grid">
+              <div class="persona-card">
+                <div class="persona-avatar">MB</div>
+                <div class="persona-name">Marc Benioff</div>
+                <div class="persona-role">CEO</div>
+                <span class="persona-status active">Active</span>
+              </div>
+              <div class="persona-card">
+                <div class="persona-avatar">ST</div>
+                <div class="persona-name">Sarah Thompson</div>
+                <div class="persona-role">CTO</div>
+                <span class="persona-status active">Active</span>
+              </div>
+              <div class="persona-card">
+                <div class="persona-avatar">JD</div>
+                <div class="persona-name">James Davis</div>
+                <div class="persona-role">VP Sales</div>
+                <span class="persona-status active">Active</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Admin Dashboard Preview -->
+        <div class="admin-dashboard">
+          <div class="dashboard-header">
+            <h3>Company Admin Dashboard</h3>
+            <span class="admin-role">Admin: john.smith@salesforce.com</span>
+          </div>
+
+          <div class="dashboard-nav">
+            <button class="dash-nav-btn active">Personas</button>
+            <button class="dash-nav-btn">Analytics</button>
+            <button class="dash-nav-btn">Team</button>
+            <button class="dash-nav-btn">Settings</button>
+          </div>
+
+          <div class="dashboard-content">
+            <div class="dashboard-section">
+              <h4>Persona Management</h4>
+              <table class="admin-table">
+                <thead>
+                  <tr>
+                    <th>Name</th>
+                    <th>Role</th>
+                    <th>Status</th>
+                    <th>Queries (30d)</th>
+                    <th>Actions</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Marc Benioff</td>
+                    <td>CEO</td>
+                    <td><span class="status-dot active"></span> Published</td>
+                    <td>1,247</td>
+                    <td><button class="btn-small">Edit</button></td>
+                  </tr>
+                  <tr>
+                    <td>Sarah Thompson</td>
+                    <td>CTO</td>
+                    <td><span class="status-dot active"></span> Published</td>
+                    <td>892</td>
+                    <td><button class="btn-small">Edit</button></td>
+                  </tr>
+                  <tr>
+                    <td>James Davis</td>
+                    <td>VP Sales</td>
+                    <td><span class="status-dot active"></span> Published</td>
+                    <td>2,156</td>
+                    <td><button class="btn-small">Edit</button></td>
+                  </tr>
+                  <tr>
+                    <td>Amy Wilson</td>
+                    <td>VP Marketing</td>
+                    <td><span class="status-dot draft"></span> Draft</td>
+                    <td>-</td>
+                    <td><button class="btn-small">Publish</button></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <div class="analytics-preview">
+              <h4>Quick Analytics</h4>
+              <div class="analytics-cards">
+                <div class="analytics-card">
+                  <div class="analytics-value">5,247</div>
+                  <div class="analytics-label">Total Queries</div>
+                  <div class="analytics-trend up">+23% vs last month</div>
+                </div>
+                <div class="analytics-card">
+                  <div class="analytics-value">342</div>
+                  <div class="analytics-label">Unique Visitors</div>
+                  <div class="analytics-trend up">+15% vs last month</div>
+                </div>
+                <div class="analytics-card">
+                  <div class="analytics-value">4.8s</div>
+                  <div class="analytics-label">Avg Response Time</div>
+                  <div class="analytics-trend down">-0.3s vs last month</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TAB 5: Summary / Journey -->
+    <section class="tab-content" id="summary">
+      <div class="journey-container">
+        <div class="journey-slide active" data-slide="1">
+          <div class="slide-content">
+            <div class="slide-icon">&#x1F6AB;</div>
+            <h1>The Problem</h1>
+            <p class="slide-text">AI can't find you. Your expertise is invisible to the systems that are increasingly making decisions about who to hire, consult, or connect with.</p>
+            <div class="slide-visual">
+              <div class="invisible-box">
+                <span>Your Knowledge</span>
+                <span class="invisible-label">Invisible to AI</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="journey-slide" data-slide="2">
+          <div class="slide-content">
+            <div class="slide-icon">&#x26A1;</div>
+            <h1>The Solution: PowerPak</h1>
+            <p class="slide-text">Your native AI identity layer. Be discovered, control your narrative, and monetize your expertise through the MCP protocol.</p>
+            <div class="solution-pillars">
+              <div class="pillar">
+                <span class="pillar-icon">&#x1F50D;</span>
+                <span>Discovery</span>
+              </div>
+              <div class="pillar">
+                <span class="pillar-icon">&#x1F512;</span>
+                <span>Control</span>
+              </div>
+              <div class="pillar">
+                <span class="pillar-icon">&#x1F4B0;</span>
+                <span>Monetize</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="journey-slide" data-slide="3">
+          <div class="slide-content">
+            <div class="slide-icon">&#x1F4BC;</div>
+            <h1>For Professionals</h1>
+            <p class="slide-text">Showcase your expertise with rich profile pages, voice samples, and custom MCP tools. Get discovered by AI agents seeking your specific knowledge.</p>
+            <ul class="slide-list">
+              <li>Expert profile pages with tier options</li>
+              <li>Custom tools (book_meeting, get_advice, hire_me)</li>
+              <li>Voice extraction and personality capture</li>
+              <li>Permission-based access control</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="journey-slide" data-slide="4">
+          <div class="slide-content">
+            <div class="slide-icon">&#x2764;</div>
+            <h1>For Personal Connections</h1>
+            <p class="slide-text">Control who sees what. Grant access to personal details progressively as relationships develop - from professional contact to personal connection.</p>
+            <div class="personal-flow">
+              <div class="flow-step">Professional Profile</div>
+              <div class="flow-arrow">&#x2192;</div>
+              <div class="flow-step">Shared Interests</div>
+              <div class="flow-arrow">&#x2192;</div>
+              <div class="flow-step">Personal Access</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="journey-slide" data-slide="5">
+          <div class="slide-content">
+            <div class="slide-icon">&#x1F3E2;</div>
+            <h1>For Enterprise</h1>
+            <p class="slide-text">Company pages, executive personas, and admin control. Manage your organization's AI presence from a single dashboard.</p>
+            <ul class="slide-list">
+              <li>Branded company profiles</li>
+              <li>Executive persona management</li>
+              <li>Analytics and visitor insights</li>
+              <li>Team access controls</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="journey-slide" data-slide="6">
+          <div class="slide-content">
+            <div class="slide-icon">&#x1F3AF;</div>
+            <h1>The Platform</h1>
+            <p class="slide-text">A complete ecosystem for AI identity management.</p>
+            <div class="platform-tiers">
+              <div class="tier-box basic">
+                <h4>Basic</h4>
+                <p>Free</p>
+                <span>Public profile</span>
+              </div>
+              <div class="tier-box enhanced">
+                <h4>Enhanced</h4>
+                <p>$49/mo</p>
+                <span>Voice + Custom Tools</span>
+              </div>
+              <div class="tier-box premium">
+                <h4>Premium</h4>
+                <p>$25,000</p>
+                <span>White-glove service</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="journey-slide" data-slide="7">
+          <div class="slide-content">
+            <div class="slide-icon">&#x1F680;</div>
+            <h1>Get Started</h1>
+            <p class="slide-text">Join the AI identity revolution. Create your PowerPak today.</p>
+            <div class="cta-buttons">
+              <button class="btn btn-primary btn-large">Create Your Profile</button>
+              <button class="btn btn-secondary btn-large">Schedule Demo</button>
+            </div>
+            <div class="contact-info">
+              <p>Questions? Contact us at <strong>hello@powerpak.ai</strong></p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Slide Navigation -->
+      <div class="slide-nav">
+        <button class="slide-nav-btn" id="prev-slide">&#x2190; Previous</button>
+        <div class="slide-dots">
+          <span class="slide-dot active" data-slide="1"></span>
+          <span class="slide-dot" data-slide="2"></span>
+          <span class="slide-dot" data-slide="3"></span>
+          <span class="slide-dot" data-slide="4"></span>
+          <span class="slide-dot" data-slide="5"></span>
+          <span class="slide-dot" data-slide="6"></span>
+          <span class="slide-dot" data-slide="7"></span>
+        </div>
+        <button class="slide-nav-btn" id="next-slide">Next &#x2192;</button>
+      </div>
+      <div class="slide-progress">
+        <div class="progress-bar" id="slide-progress"></div>
+      </div>
+    </section>
+  </main>
+
+  <script src="assets/presentation.js"></script>
+</body>
+</html>

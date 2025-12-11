@@ -28,6 +28,9 @@ const __dirname = dirname(__filename);
 // Load data
 const skillsData = JSON.parse(readFileSync(join(__dirname, 'data/skills.json'), 'utf-8'));
 const correlationsData = JSON.parse(readFileSync(join(__dirname, 'data/skill-correlations.json'), 'utf-8'));
+const profilesData = JSON.parse(readFileSync(join(__dirname, 'data/profiles.json'), 'utf-8'));
+const connectionsData = JSON.parse(readFileSync(join(__dirname, 'data/connections.json'), 'utf-8'));
+const networkStatsData = JSON.parse(readFileSync(join(__dirname, 'data/network-stats.json'), 'utf-8'));
 
 // Types
 interface ExpertProfile {

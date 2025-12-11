@@ -19,7 +19,9 @@
     "@typescript-eslint/eslint-plugin": "^6.13.0",
     "@typescript-eslint/parser": "^6.13.0",
     "eslint": "^8.55.0",
+    "pdf-lib": "^1.17.1",
     "prettier": "^3.1.0",
+    "puppeteer": "^24.32.0",
     "turbo": "^1.11.0",
     "typescript": "^5.3.3",
     "vitest": "^1.0.4"

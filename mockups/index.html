@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>MCP Universe - Mockups Overview</title>
+  <title>PowerPak Demo Hub - Dec 4, 2025</title>
   <style>
     * {
       margin: 0;
@@ -12,233 +12,490 @@
     }
 
     body {
-      font-family: -apple-system, BlinkMacSystemFont, 'Inter', 'SF Pro Display', 'Segoe UI', sans-serif;
-      background: linear-gradient(135deg, #2563eb 0%, #7c3aed 100%);
-      color: white;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
       min-height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+      color: #e4e4e7;
       padding: 2rem;
     }
 
     .container {
-      max-width: 900px;
-      background: rgba(255, 255, 255, 0.1);
-      backdrop-filter: blur(10px);
-      border-radius: 24px;
-      padding: 3rem;
-      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 3rem;
     }
 
     h1 {
-      font-size: 3rem;
-      margin-bottom: 1rem;
-      text-align: center;
-    }
-
-    .tagline {
-      font-size: 1.5rem;
-      text-align: center;
-      opacity: 0.9;
-      margin-bottom: 3rem;
-    }
-
-    .links {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 1.5rem;
-      margin-bottom: 3rem;
-    }
-
-    .link-card {
-      background: white;
-      color: #111827;
-      padding: 2rem;
-      border-radius: 12px;
-      text-decoration: none;
-      transition: all 0.2s;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    }
-
-    .link-card:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
-    }
-
-    .link-card-icon {
       font-size: 2.5rem;
-      margin-bottom: 1rem;
-      display: block;
-    }
-
-    .link-card-title {
-      font-size: 1.25rem;
-      font-weight: 700;
       margin-bottom: 0.5rem;
-      color: #2563eb;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
     }
 
-    .link-card-description {
-      color: #6b7280;
-      font-size: 0.9375rem;
-      line-height: 1.5;
+    .subtitle {
+      color: #a1a1aa;
+      font-size: 1.1rem;
     }
 
-    .info {
-      background: rgba(255, 255, 255, 0.15);
-      border-radius: 12px;
-      padding: 1.5rem;
-      margin-top: 2rem;
-    }
-
-    .info h3 {
-      margin-bottom: 0.5rem;
-      font-size: 1.125rem;
-    }
-
-    .info p {
-      opacity: 0.9;
-      line-height: 1.6;
-    }
-
-    .docs-links {
-      display: flex;
-      gap: 1rem;
-      flex-wrap: wrap;
+    .official-badge {
+      display: inline-block;
+      background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+      color: white;
+      padding: 0.25rem 0.75rem;
+      border-radius: 9999px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      text-transform: uppercase;
       margin-top: 1rem;
     }
 
-    .docs-link {
-      color: white;
+    .section {
+      margin-bottom: 2.5rem;
+    }
+
+    .section-title {
+      font-size: 1.25rem;
+      color: #a1a1aa;
+      margin-bottom: 1rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 1px solid #374151;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 12px;
+      padding: 1.5rem;
+      transition: all 0.3s ease;
       text-decoration: none;
-      padding: 0.5rem 1rem;
-      background: rgba(255, 255, 255, 0.2);
-      border-radius: 6px;
-      font-size: 0.9375rem;
-      transition: all 0.2s;
+      color: inherit;
+      display: block;
     }
 
-    .docs-link:hover {
-      background: rgba(255, 255, 255, 0.3);
+    .card:hover {
+      background: rgba(255, 255, 255, 0.1);
+      border-color: rgba(255, 255, 255, 0.2);
+      transform: translateY(-2px);
     }
 
-    .footer {
+    .card.official {
+      border-color: #10b981;
+      background: rgba(16, 185, 129, 0.1);
+    }
+
+    .card.official:hover {
+      background: rgba(16, 185, 129, 0.15);
+    }
+
+    .card-header {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      margin-bottom: 0.75rem;
+    }
+
+    .card-icon {
+      font-size: 1.5rem;
+    }
+
+    .card-title {
+      font-size: 1.1rem;
+      font-weight: 600;
+    }
+
+    .card-badge {
+      font-size: 0.65rem;
+      padding: 0.15rem 0.5rem;
+      border-radius: 9999px;
+      background: #374151;
+      color: #9ca3af;
+      margin-left: auto;
+    }
+
+    .card-badge.official {
+      background: #10b981;
+      color: white;
+    }
+
+    .card-badge.backup {
+      background: #f59e0b;
+      color: white;
+    }
+
+    .card-badge.reference {
+      background: #6366f1;
+      color: white;
+    }
+
+    .card-description {
+      color: #a1a1aa;
+      font-size: 0.9rem;
+      margin-bottom: 1rem;
+      line-height: 1.5;
+    }
+
+    .card-meta {
+      display: flex;
+      gap: 1rem;
+      font-size: 0.8rem;
+      color: #71717a;
+    }
+
+    .card-meta span {
+      display: flex;
+      align-items: center;
+      gap: 0.25rem;
+    }
+
+    .command-box {
+      background: #0f172a;
+      border: 1px solid #334155;
+      border-radius: 8px;
+      padding: 1rem;
+      margin-top: 1.5rem;
+    }
+
+    .command-box h3 {
+      font-size: 0.9rem;
+      color: #94a3b8;
+      margin-bottom: 0.75rem;
+    }
+
+    .command {
+      font-family: 'Monaco', 'Menlo', monospace;
+      font-size: 0.85rem;
+      color: #10b981;
+      background: #1e293b;
+      padding: 0.5rem 0.75rem;
+      border-radius: 4px;
+      margin-bottom: 0.5rem;
+      display: block;
+    }
+
+    .command-label {
+      color: #64748b;
+      font-size: 0.75rem;
+      margin-bottom: 0.25rem;
+    }
+
+    footer {
       text-align: center;
-      margin-top: 2rem;
-      opacity: 0.8;
-      font-size: 0.875rem;
+      margin-top: 3rem;
+      padding-top: 2rem;
+      border-top: 1px solid #374151;
+      color: #71717a;
+    }
+
+    .footer-links {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      margin-top: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .footer-links a {
+      color: #a1a1aa;
+      text-decoration: none;
+      font-size: 0.9rem;
+    }
+
+    .footer-links a:hover {
+      color: #e4e4e7;
     }
 
     @media (max-width: 768px) {
-      h1 {
-        font-size: 2rem;
-      }
-
-      .tagline {
-        font-size: 1.125rem;
-      }
-
-      .links {
-        grid-template-columns: 1fr;
-      }
+      h1 { font-size: 1.75rem; }
+      .cards { grid-template-columns: 1fr; }
+      .footer-links { flex-direction: column; gap: 0.5rem; }
     }
   </style>
 </head>
 <body>
   <div class="container">
-    <h1>MCP Universe</h1>
-    <div class="tagline">LinkedIn for AI - Demo Mockups</div>
+    <header>
+      <h1>PowerPak Demo Hub</h1>
+      <p class="subtitle">Scott Leese Meeting - December 4, 2025</p>
+      <span class="official-badge">Demo Day</span>
+    </header>
 
-    <div class="links">
-      <a href="marketplace-ui/index.html" class="link-card">
-        <span class="link-card-icon">🏪</span>
-        <div class="link-card-title">Marketplace</div>
-        <div class="link-card-description">
-          Browse 15 expert profiles, filter by category and tier, search and discover MCP servers.
-        </div>
-      </a>
+    <!-- OFFICIAL DEMO -->
+    <section class="section">
+      <h2 class="section-title">Official Demo (27 Scenes)</h2>
+      <div class="cards">
+        <a href="presentation/index.html" class="card official">
+          <div class="card-header">
+            <span class="card-icon">🎬</span>
+            <span class="card-title">27-Scene Origin Story</span>
+            <span class="card-badge official">OFFICIAL</span>
+          </div>
+          <p class="card-description">
+            Full presentation: Credibility, Wilderness, Vibe Coding, ADHD Problem,
+            Founder OS, Voice OS, MCP Moment, Dating, Enterprise, Live Demo, The Ask.
+          </p>
+          <div class="card-meta">
+            <span>📄 27 scenes</span>
+            <span>⏱️ 20-30 min</span>
+          </div>
+        </a>
 
-      <a href="profile-pages/basic.html" class="link-card">
-        <span class="link-card-icon">👤</span>
-        <div class="link-card-title">Basic Tier</div>
-        <div class="link-card-description">
-          Simple, free profile with expertise areas and basic MCP installation.
-        </div>
-      </a>
+        <a href="presentation/presenter-notes.html" class="card">
+          <div class="card-header">
+            <span class="card-icon">📝</span>
+            <span class="card-title">Presenter Notes / Script</span>
+            <span class="card-badge reference">SCRIPT</span>
+          </div>
+          <p class="card-description">
+            Verbose version with full talking points. Use for rehearsal and reference.
+          </p>
+          <div class="card-meta">
+            <span>📄 Full script</span>
+          </div>
+        </a>
 
-      <a href="profile-pages/enhanced.html" class="link-card">
-        <span class="link-card-icon">⭐</span>
-        <div class="link-card-title">Enhanced Tier</div>
-        <div class="link-card-description">
-          Voice extraction, custom tools, personality blend, and specialized frameworks.
-        </div>
-      </a>
-
-      <a href="profile-pages/premium.html" class="link-card">
-        <span class="link-card-icon">💎</span>
-        <div class="link-card-title">Premium Tier</div>
-        <div class="link-card-description">
-          Unlimited tools, white-glove onboarding, private templates, and full customization.
-        </div>
-      </a>
-
-      <a href="marketplace-ui/onboarding.html" class="link-card">
-        <span class="link-card-icon">🚀</span>
-        <div class="link-card-title">Onboarding Flow</div>
-        <div class="link-card-description">
-          4-step installation wizard from choosing a tier to getting your first prompts.
-        </div>
-      </a>
-
-      <a href="marketplace-ui/network.html" class="link-card">
-        <span class="link-card-icon">🕸️</span>
-        <div class="link-card-title">Network Graph</div>
-        <div class="link-card-description">
-          Visual connections showing "people who installed X also installed Y" recommendations.
-        </div>
-      </a>
-
-      <a href="presentation/index.html" class="link-card" style="border: 3px solid #f59e0b;">
-        <span class="link-card-icon">🎯</span>
-        <div class="link-card-title">5-Tab Presentation</div>
-        <div class="link-card-description">
-          NEW: Full demo with Benefits, Professional, Personal (Dating), Corporate, and Summary slides.
-        </div>
-      </a>
-    </div>
-
-    <div class="info">
-      <h3>About These Mockups</h3>
-      <p>
-        High-fidelity, clickable HTML mockups demonstrating the MCP Universe vision.
-        All pages are fully functional and interlinked. No backend required - just open
-        in any modern browser and explore.
-      </p>
-      <div class="docs-links">
-        <a href="QUICK-START.md" class="docs-link">Quick Start Guide</a>
-        <a href="DEMO-GUIDE.md" class="docs-link">Demo Script</a>
-        <a href="README.md" class="docs-link">Full Documentation</a>
+        <a href="presentation/index-backup.html" class="card">
+          <div class="card-header">
+            <span class="card-icon">📑</span>
+            <span class="card-title">5-Tab Demo Version</span>
+            <span class="card-badge backup">ALTERNATE</span>
+          </div>
+          <p class="card-description">
+            Tab-based presentation: Benefits, Professional, Personal, Corporate, Summary.
+            Original format before scene-based redesign.
+          </p>
+          <div class="card-meta">
+            <span>📄 5 tabs</span>
+            <span>⏱️ 15-20 min</span>
+          </div>
+        </a>
       </div>
-    </div>
 
-    <div class="footer">
-      Built for the December 4 demo • MCP Universe © 2024
-    </div>
+      <div class="command-box">
+        <h3>Run in Electron (Recommended)</h3>
+        <span class="command-label">Presentation Mode:</span>
+        <code class="command">cd packages/electron-app && npm run demo</code>
+        <span class="command-label">Chatbot Mode (for Act 6 live demo):</span>
+        <code class="command">cd packages/electron-app && npm run dev</code>
+        <span class="command-label">Better Chatbot (if using separately):</span>
+        <code class="command">cd packages/better-chatbot && pnpm dev</code>
+      </div>
+    </section>
+
+    <!-- MARKETPLACE MOCKUPS -->
+    <section class="section">
+      <h2 class="section-title">Marketplace Mockups</h2>
+      <div class="cards">
+        <a href="marketplace-ui/index.html" class="card">
+          <div class="card-header">
+            <span class="card-icon">🏪</span>
+            <span class="card-title">Expert Marketplace</span>
+            <span class="card-badge backup">BACKUP</span>
+          </div>
+          <p class="card-description">
+            Browse 15 expert profiles. Filter by category, tier. Search functionality.
+            Click any card to view profile.
+          </p>
+          <div class="card-meta">
+            <span>👥 15 profiles</span>
+            <span>🔍 Search & filter</span>
+          </div>
+        </a>
+
+        <a href="marketplace-ui/network.html" class="card">
+          <div class="card-header">
+            <span class="card-icon">🕸️</span>
+            <span class="card-title">Network Graph</span>
+            <span class="card-badge backup">BACKUP</span>
+          </div>
+          <p class="card-description">
+            Visual connection graph. "People who installed X also installed Y."
+            Correlation percentages and recommendations.
+          </p>
+          <div class="card-meta">
+            <span>📊 Correlations</span>
+            <span>🔗 Network effects</span>
+          </div>
+        </a>
+
+        <a href="marketplace-ui/onboarding.html" class="card">
+          <div class="card-header">
+            <span class="card-icon">🚀</span>
+            <span class="card-title">Onboarding Flow</span>
+            <span class="card-badge backup">BACKUP</span>
+          </div>
+          <p class="card-description">
+            4-step installation flow. Choose tier, configure, test, get started.
+            Shows the user journey.
+          </p>
+          <div class="card-meta">
+            <span>📝 4 steps</span>
+            <span>✨ Interactive</span>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <!-- PROFILE TIERS -->
+    <section class="section">
+      <h2 class="section-title">Profile Tier Examples</h2>
+      <div class="cards">
+        <a href="profile-pages/basic.html" class="card">
+          <div class="card-header">
+            <span class="card-icon">📋</span>
+            <span class="card-title">Basic Tier</span>
+            <span class="card-badge">FREE</span>
+          </div>
+          <p class="card-description">
+            Simple profile page. Bio, skills, install button.
+            Entry-level for lead generation.
+          </p>
+        </a>
+
+        <a href="profile-pages/enhanced.html" class="card">
+          <div class="card-header">
+            <span class="card-icon">⚡</span>
+            <span class="card-title">Enhanced Tier</span>
+            <span class="card-badge">$49/mo</span>
+          </div>
+          <p class="card-description">
+            Voice samples, 5 custom tools, personality blend.
+            Recurring revenue tier.
+          </p>
+        </a>
+
+        <a href="profile-pages/premium.html" class="card">
+          <div class="card-header">
+            <span class="card-icon">👑</span>
+            <span class="card-title">Premium Tier</span>
+            <span class="card-badge">$25,000</span>
+          </div>
+          <p class="card-description">
+            Video intro, 12+ tools, white-glove onboarding.
+            Full digital twin experience.
+          </p>
+        </a>
+      </div>
+    </section>
+
+    <!-- REFERENCE DOCS -->
+    <section class="section">
+      <h2 class="section-title">Reference Documents</h2>
+      <div class="cards">
+        <a href="../sales-docs/DEC_4_MEETING_DECK_OUTLINE.md" class="card" target="_blank">
+          <div class="card-header">
+            <span class="card-icon">📊</span>
+            <span class="card-title">14-Slide Deck Outline</span>
+            <span class="card-badge reference">SCRIPT</span>
+          </div>
+          <p class="card-description">
+            Full meeting script with what to say on each slide.
+            Objection handling and post-meeting actions.
+          </p>
+          <div class="card-meta">
+            <span>📄 14 slides + backups</span>
+            <span>🎯 30-45 min</span>
+          </div>
+        </a>
+
+        <a href="DEMO-GUIDE.md" class="card" target="_blank">
+          <div class="card-header">
+            <span class="card-icon">📖</span>
+            <span class="card-title">Demo Guide</span>
+            <span class="card-badge reference">SCRIPT</span>
+          </div>
+          <p class="card-description">
+            5-minute and 15-minute demo scripts. Talking points
+            for investors, experts, and technical audiences.
+          </p>
+        </a>
+
+        <a href="../packages/mcp-network-sandbox/DEMO-SCRIPT.md" class="card" target="_blank">
+          <div class="card-header">
+            <span class="card-icon">🔌</span>
+            <span class="card-title">MCP Network Demo</span>
+            <span class="card-badge reference">CLAUDE</span>
+          </div>
+          <p class="card-description">
+            3-5 minute script for live Claude Desktop demo.
+            Network stats, expert browsing, correlations.
+          </p>
+          <div class="card-meta">
+            <span>🤖 Live MCP</span>
+            <span>⏱️ 3-5 min</span>
+          </div>
+        </a>
+
+        <a href="../docs/demo/START-HERE.md" class="card" target="_blank">
+          <div class="card-header">
+            <span class="card-icon">🎯</span>
+            <span class="card-title">Build Plan (Start Here)</span>
+            <span class="card-badge reference">ARCHIVE</span>
+          </div>
+          <p class="card-description">
+            2-day build plan with Claude Code prompts.
+            Profile schemas and search service specs.
+          </p>
+        </a>
+
+        <a href="../sales-docs/MCP_UNIVERSE_COMPREHENSIVE_SUMMARY.md" class="card" target="_blank">
+          <div class="card-header">
+            <span class="card-icon">📚</span>
+            <span class="card-title">Full Vision Document</span>
+            <span class="card-badge reference">8000+ lines</span>
+          </div>
+          <p class="card-description">
+            Comprehensive synthesis from Scott Leese conversations.
+            Business model, technical architecture, GTM.
+          </p>
+        </a>
+
+        <a href="../docs/demo/decisions.md" class="card" target="_blank">
+          <div class="card-header">
+            <span class="card-icon">✅</span>
+            <span class="card-title">Your Decisions</span>
+            <span class="card-badge reference">CHOICES</span>
+          </div>
+          <p class="card-description">
+            Dating: Keep. 20 profiles. 3 companies. Interactive graph. Live demo.
+          </p>
+        </a>
+      </div>
+    </section>
+
+    <footer>
+      <p>PowerPak - Your Native AI Identity Layer</p>
+      <div class="footer-links">
+        <a href="QUICK-START.md" target="_blank">Quick Start</a>
+        <a href="README.md" target="_blank">Full Docs</a>
+        <a href="../CLAUDE.md" target="_blank">Project Overview</a>
+        <a href="../POWERPAK-DEMO-STATUS.md" target="_blank">Status (Nov 22)</a>
+      </div>
+    </footer>
   </div>
 
   <script>
-    // Add subtle animation on load
     document.addEventListener('DOMContentLoaded', function() {
-      const cards = document.querySelectorAll('.link-card');
+      const cards = document.querySelectorAll('.card');
       cards.forEach((card, index) => {
         card.style.opacity = '0';
         card.style.transform = 'translateY(20px)';
         setTimeout(() => {
-          card.style.transition = 'all 0.5s ease';
+          card.style.transition = 'all 0.4s ease';
           card.style.opacity = '1';
           card.style.transform = 'translateY(0)';
-        }, index * 100);
+        }, index * 50);
       });
     });
   </script>
