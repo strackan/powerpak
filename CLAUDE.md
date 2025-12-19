@@ -142,6 +142,66 @@ cd packages/knowledge-graph
 npm run load
 ```
 
+## Presentation Deck (mockups/presentation/)
+
+The PowerPak pitch deck is a 27-scene HTML presentation with a modular architecture.
+
+### Structure
+```
+mockups/presentation/
+  index.html              - Main presentation (all slides)
+  index-modular.html      - Modular loader version
+  scene-manager.js        - CLI tool for slide management
+  slides/                 - Individual slide files (01-title.html, etc.)
+  assets/
+    scenes.css            - All slide styles
+    scenes.js             - Navigation and animations
+    presentation.css/js   - Base presentation styles
+```
+
+### SOP: Managing Slides
+
+**ALWAYS use the scene-manager.js tool for slide operations:**
+
+```bash
+cd mockups/presentation
+
+# View current slides
+node scene-manager.js list          # Brief list
+node scene-manager.js view          # Detailed view with headlines
+
+# Add a new slide
+node scene-manager.js add <position> "<title>"
+
+# Delete a slide
+node scene-manager.js delete <position>
+
+# Reorder slides
+node scene-manager.js move <from> <to>
+node scene-manager.js swap <pos1> <pos2>
+
+# Fix numbering after manual edits
+node scene-manager.js renumber
+```
+
+**When adding new slides manually:**
+1. Create slide file: `slides/XX-name.html` with `<section class="scene" data-scene="XX">`
+2. Add CSS for new scene class in `assets/scenes.css`
+3. Add animation function in `assets/scenes.js` (triggerSceneAnimations switch)
+4. Run `node scene-manager.js renumber` to sync index.html and navigation
+
+**Files that need updating for new slides:**
+- `slides/XX-name.html` - The slide content
+- `index.html` - Scene section, navigation dots
+- `assets/scenes.css` - Styles for `.your-scene-class`
+- `assets/scenes.js` - Animation in triggerSceneAnimations(), totalScenes count
+
+### Keyboard Shortcuts (in presentation)
+- Arrow keys / Space: Navigate
+- 1-9: Jump to scenes 1-9
+- Shift+0-9: Scenes 10-19
+- Ctrl+1-8: Scenes 20-27
+
 ## Documentation
 - `QUICK-START.md` - 5-minute setup
 - `README.md` - Project overview
