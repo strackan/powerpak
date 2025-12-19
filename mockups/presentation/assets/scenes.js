@@ -1,20 +1,20 @@
 /**
  * PowerPak Scene-Based Presentation JavaScript
- * 23-scene narrative for Dec 4 Scott Leese Demo
- * Expanded from 13 to 23 scenes with full origin story
+ * 27-scene narrative with GTM slides
+ * Expanded from 25 to 27 scenes with MVP/GTM slides
  *
  * Controls:
  * - Arrow Right / Space: Next scene
  * - Arrow Left: Previous scene
  * - 1-9: Jump to scenes 1-9
  * - Shift+0-9: Jump to scenes 10-19
- * - Ctrl+1-6: Jump to scenes 20-25
+ * - Ctrl+1-8: Jump to scenes 20-27
  * - Click dots: Jump to scene
  */
 
 // Scene state
 let currentScene = 1;
-const totalScenes = 25;
+const totalScenes = 27;
 
 // Initialize on DOM ready
 document.addEventListener('DOMContentLoaded', () => {
@@ -23,12 +23,12 @@ document.addEventListener('DOMContentLoaded', () => {
   updateScene();
   // Trigger initial scene animation with slight delay
   setTimeout(() => triggerSceneAnimations(1), 300);
-  console.log('PowerPak Presentation v3.0.0 - 25 Scene Edition');
+  console.log('PowerPak Presentation v4.0.0 - 27 Scene Edition');
   console.log('Controls:');
   console.log('  Arrow keys / Space: Navigate');
   console.log('  1-9: Scenes 1-9');
   console.log('  Shift+0-9: Scenes 10-19');
-  console.log('  Ctrl+1-6: Scenes 20-25');
+  console.log('  Ctrl+1-8: Scenes 20-27');
 });
 
 // ===================== SCENE NAVIGATION =====================
@@ -106,8 +106,8 @@ function handleKeyPress(e) {
   }
 
   // Number key navigation
-  // Ctrl + 1-6 for scenes 20-25
-  if (e.ctrlKey && e.key >= '1' && e.key <= '6') {
+  // Ctrl + 1-8 for scenes 20-27
+  if (e.ctrlKey && e.key >= '1' && e.key <= '8') {
     e.preventDefault();
     goToScene(19 + parseInt(e.key));
     return;
@@ -239,18 +239,24 @@ function triggerSceneAnimations(sceneNum) {
       animateNewInternet();
       break;
     case 21:
-      // Live Demo - no animation needed
+      animateGTM();
       break;
     case 22:
-      // Platform Showcase - no animation needed
+      animateTrustedNetwork();
       break;
     case 23:
-      animateWhyUs();
+      // Live Demo - no animation needed
       break;
     case 24:
-      animatePaths();
+      // Platform Showcase - no animation needed
       break;
     case 25:
+      animateWhyUs();
+      break;
+    case 26:
+      animatePaths();
+      break;
+    case 27:
       animateAsk();
       break;
   }
@@ -696,11 +702,58 @@ function handleNewInternetReveal() {
   return false;
 }
 
-// ===================== SCENE 21: WHY US =====================
+// ===================== SCENE 21: GTM / MVP =====================
+
+function animateGTM() {
+  const splitItems = document.querySelectorAll('[data-scene="21"] .split-item');
+  const valueProps = document.querySelectorAll('[data-scene="21"] .value-prop');
+  const insight = document.querySelector('[data-scene="21"] .gtm-insight');
+
+  splitItems.forEach((item, index) => {
+    setTimeout(() => item.classList.add('visible'), 300 + index * 400);
+  });
+
+  valueProps.forEach((prop, index) => {
+    setTimeout(() => prop.classList.add('visible'), 1200 + index * 200);
+  });
+
+  if (insight) {
+    setTimeout(() => insight.classList.add('visible'), 2000);
+  }
+}
+
+// ===================== SCENE 22: TRUSTED NETWORK =====================
+
+function animateTrustedNetwork() {
+  const pingSteps = document.querySelectorAll('[data-scene="22"] .ping-step');
+  const processing = document.querySelector('[data-scene="22"] .ping-processing');
+  const pingInsight = document.querySelector('[data-scene="22"] .ping-insight');
+  const trajectorySteps = document.querySelectorAll('[data-scene="22"] .trajectory-step');
+
+  pingSteps.forEach(step => {
+    const delay = parseInt(step.dataset.delay) || 300;
+    setTimeout(() => step.classList.add('visible'), delay);
+  });
+
+  if (processing) {
+    const delay = parseInt(processing.dataset.delay) || 800;
+    setTimeout(() => processing.classList.add('visible'), delay);
+  }
+
+  if (pingInsight) {
+    setTimeout(() => pingInsight.classList.add('visible'), 2000);
+  }
+
+  trajectorySteps.forEach((step, index) => {
+    setTimeout(() => step.classList.add('visible'), 2500 + index * 300);
+  });
+}
+
+// ===================== SCENE 25: WHY US =====================
 
 function animateWhyUs() {
-  const panels = document.querySelectorAll('[data-scene="23"] .founder-panel');
-  const result = document.querySelector('[data-scene="23"] .together-result');
+  const panels = document.querySelectorAll('[data-scene="25"] .founder-panel');
+  const result = document.querySelector('[data-scene="25"] .together-result');
 
   panels.forEach((panel, index) => {
     setTimeout(() => panel.classList.add('visible'), 300 + index * 400);
@@ -711,21 +764,21 @@ function animateWhyUs() {
   }
 }
 
-// ===================== SCENE 22: THREE PATHS =====================
+// ===================== SCENE 26: THREE PATHS =====================
 
 function animatePaths() {
-  const cards = document.querySelectorAll('[data-scene="24"] .path-card');
+  const cards = document.querySelectorAll('[data-scene="26"] .path-card');
 
   cards.forEach((card, index) => {
     setTimeout(() => card.classList.add('visible'), 300 + index * 300);
   });
 }
 
-// ===================== SCENE 23: THE ASK =====================
+// ===================== SCENE 27: THE ASK =====================
 
 function animateAsk() {
-  const items = document.querySelectorAll('[data-scene="25"] .ask-item');
-  const finalLine = document.querySelector('[data-scene="25"] .final-line');
+  const items = document.querySelectorAll('[data-scene="27"] .ask-item');
+  const finalLine = document.querySelector('[data-scene="27"] .final-line');
 
   items.forEach((item, index) => {
     setTimeout(() => item.classList.add('visible'), 500 + index * 500);
